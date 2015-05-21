@@ -18,7 +18,7 @@
 #           returned value >= 0 
 #           returned value is in kilograms per meter cubed.
 # Purpose: Consumes two numbers, mass and volume. Returns the
-#   calculated density.
+# calculated density.
 def density(mass, volume)
   return mass / volume.to_f
 end
