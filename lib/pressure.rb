@@ -8,6 +8,8 @@
 
 # Pressure module (pressure.rb)
 
+require 'constants'
+
 # pressure: (union Int Float) (union Int Float) -> Float
 # Conditions:
 #     PRE: force >= 0
