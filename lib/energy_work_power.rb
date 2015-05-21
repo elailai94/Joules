@@ -58,6 +58,7 @@ end
 # work_done: (union Int Float) (union Int Float) -> Float
 # Conditions:
 #     PRE: force is in newtons.
+#          distance >= 0
 #          distance is in meters.
 #     POST: Returns a Float.
 #           returned value is in joules.
@@ -65,4 +66,35 @@ end
 # calculated work done.
 def work_done(force, distance)
   return force * distance.to_f
+end
+
+# power: (union Int Float) (union Int Float) -> Float
+# Condition:
+#     PRE: work_done is in joules.
+#          time > 0
+#          time is in seconds.
+#     POST: Returns a Float.
+#           returned value is in watts.
+# Purpose: Consumes two numbers, work done and time. Returns the
+# calculated power.
+def power(work_done, time)
+  return work_done / time.to_f
+end
+
+# energy_efficiency: (union Int Float) (union Int Float) -> Float
+# Conditions:
+#     PRE:
+#     POST: Returns a Float.
+# Purpose:
+def energy_efficiency(useful_energy_output, energy_input)
+  return (useful_energy_output / energy_input.to_f) * 100
+end
+
+# power_efficiency: (union Int Float) (union Int Float) -> Float
+# Conditions:
+#     PRE: 
+#     POST: Returns a Float.
+# Purpose:
+def power_efficiency(useful_power_output, power_input)
+  return (useful_power_output / power_input.to_f) * 100
 end
