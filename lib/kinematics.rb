@@ -37,7 +37,7 @@ def avg_velocity(displacement, time)
 end
 
 # acceleration: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# -> Float
 # Conditions:
 #     PRE: initial_velocity and final_velocity are in meters per second.
 #          time > 0
@@ -50,8 +50,8 @@ def acceleration(initial_velocity, final_velocity, time)
   return (final_velocity - initial_velocity) / time.to_f
 end
 
-# final_velocity: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# final_velocity_v1: (union Int Float) (union Int Float) (union Int Float)
+# -> Float
 # Conditions: 
 #     PRE: initial_velocity is in meters per second.
 #          acceleration is in meters per second squared.
@@ -66,7 +66,7 @@ def final_velocity_v1(initial_velocity, acceleration, time)
 end
 
 # final_velocity_v2: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# -> Float
 # Conditions:
 #     PRE: initial_velocity is in meters per second.
 #          acceleration is in meters per second squared.
@@ -79,7 +79,7 @@ def final_velocity_v2(initial_velocity, acceleration, displacement)
   return ((initial_velocity ** 2) + (2 * acceleration * displacement)) ** 0.5
 
 # displacement_v1: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# -> Float
 # Conditions:
 #     PRE: initial_velocity and final_velocity are in meters per second.
 #          time >= 0
@@ -93,7 +93,7 @@ def displacement_v1(initial_velocity, final_velocity, time)
 end
 
 # displacement_v2: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# -> Float
 # Conditions:
 #     PRE: initial_velocity is in meters per second.
 #          acceleration is in meters per second squared.
@@ -108,7 +108,7 @@ def displacement_v2(initial_velocity, acceleration, time)
 end
 
 # displacement_v3: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# -> Float
 # Conditions:
 #     PRE: final_velocity is in meters per second.
 #          acceleration is in meters per second squared.
