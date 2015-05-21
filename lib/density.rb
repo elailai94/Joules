@@ -1,7 +1,7 @@
 #==============================================================================
 # Joules
 #
-# @description: Module for providing density equations
+# @description: Module for providing density formulas
 # @author: Elisha Lai
 # @version: 0.0.1 16/05/2015
 #==============================================================================
