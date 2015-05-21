@@ -35,7 +35,7 @@ def impulse_v1(force, time)
 end
 
 # impulse_v2: (union Int Float) (union Int Float) (union Int Float)
-#   -> Float
+# -> Float
 # Condition:
 #     PRE: initial_velocity and final_velocity are in meters per second.
 #          mass >= 0
