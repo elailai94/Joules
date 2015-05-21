@@ -16,7 +16,7 @@ require 'constants'
 #          mass is in kilograms.
 #     POST: Returns a Float.
 #           returned value >= 0
-#           returned value is in kilogram meters per second squared/newtons.
+#           returned value is in newtons.
 # Purpose: Consumes a number, mass, and returns the calculated weight.
 def weight(mass)
   return mass * FREE_FALL_ACCELERATION 
@@ -25,7 +25,7 @@ end
 # mass: (union Int Float) -> Float
 # Conditions:
 #     PRE: weight >= 0
-#          weight is in kilogram meters per second squared/newtons. 
+#          weight is in newtons. 
 #     POST: Returns a Float.
 #           returned value >= 0
 #           returned value is in kilograms.
