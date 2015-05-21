@@ -1,12 +1,12 @@
 #==============================================================================
 # Joules
 #
-# @description: Module for providing momentum/impulse equations
+# @description: Module for providing momentum and impulse equations
 # @author: Elisha Lai
 # @version: 0.0.1 16/05/2015
 #==============================================================================
 
-# Momentum_impulse module (momentum_impulse.rb)
+# Momentum and impulse module (momentum_impulse.rb)
 
 # momentum: (union Int Float) (union Int Float) -> Float
 # Conditions:
