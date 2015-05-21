@@ -1,6 +1,6 @@
 # Joules
 ### About
-Joules is a library (gem) for providing Physics formulas.
+Joules is a library (gem) for providing Physics formulas. It is written entirely in Ruby.
 
 ### Library Import
 ```Ruby
