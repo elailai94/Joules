@@ -83,18 +83,26 @@ end
 
 # energy_efficiency: (union Int Float) (union Int Float) -> Float
 # Conditions:
-#     PRE:
+#     PRE: energy_input > 0
+#          0 <= useful_energy_output <= energy_input
+#          useful_energy_output and energy_input are in joules.
 #     POST: Returns a Float.
-# Purpose:
+#           returned value >= 0
+# Purpose: Consumes two numbers, useful_energy_output and energy_input.
+# Returns the calculated energy efficiency.
 def energy_efficiency(useful_energy_output, energy_input)
   return (useful_energy_output / energy_input.to_f) * 100
 end
 
 # power_efficiency: (union Int Float) (union Int Float) -> Float
 # Conditions:
-#     PRE: 
+#     PRE: power_input > 0
+#          0 <= useful_power_output <= power_input
+#          useful_power_output and power_input are in joules.
 #     POST: Returns a Float.
-# Purpose:
+#           returned value >= 0
+# Purpose: Consumes two numbers, useful_power_output and power_input.
+# Returns the calculated power efficiency.
 def power_efficiency(useful_power_output, power_input)
   return (useful_power_output / power_input.to_f) * 100
 end
