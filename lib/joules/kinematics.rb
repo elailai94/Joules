@@ -3,7 +3,7 @@
 #
 # @description: Module for providing kinematics formulas
 # @author: Elisha Lai
-# @version: 0.0.1 16/05/2015
+# @version: 0.0.2 16/05/2015
 #==============================================================================
 
 # Kinematics module (kinematics.rb)
