@@ -9,7 +9,8 @@ require 'joules'
 
 ### Change Log
 #### Version 0.0.1
-* Added Physics formulas  
+* Added Physics formulas in kinematics, mass, weight, density, forces, momentum, impulse, energy, work, power, and pressure
+* Added the following Physics constants: speed of light in free space and acceleration of free fall
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
