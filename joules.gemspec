@@ -11,7 +11,7 @@
 Gem::Specification.new do |s|
   s.name        = 'joules'
   s.version     = '0.0.3'
-  s.date        = '2015-05-16'
+  s.date        = '2015-05-22'
   s.summary     = 'A library (gem) for providing Physics formulas'
   s.description = <<-EOF
     Joules is a library (gem) for providing simple Physics formulas
