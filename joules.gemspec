@@ -3,14 +3,14 @@
 #
 # @description: Module for providing library (gem) specifications
 # @author: Elisha Lai
-# @version: 0.0.2 16/05/2015
+# @version: 0.0.3 16/05/2015
 #==============================================================================
 
 # Gemspec module (joules.gemspec)
 
 Gem::Specification.new do |s|
   s.name        = 'joules'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = '2015-05-16'
   s.summary     = 'A library (gem) for providing Physics formulas'
   s.description = <<-EOF
