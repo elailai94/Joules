@@ -77,6 +77,7 @@ end
 # displacement. Returns the calculated final velocity.
 def final_velocity_v2(initial_velocity, acceleration, displacement)
   return ((initial_velocity ** 2) + (2 * acceleration * displacement)) ** 0.5
+end
 
 # displacement_v1: (union Int Float) (union Int Float) (union Int Float)
 # -> Float
