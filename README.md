@@ -12,6 +12,7 @@ require 'joules'
 #### Version 0.0.1
 * Added Physics formulas in kinematics, mass, weight, density, forces, momentum, impulse, energy, work, power, and pressure
 * Added the following Physics constants: speed of light in free space and acceleration of free fall
+
 #### Version 0.0.2
 * Fixed publishing date in gem specification
 
