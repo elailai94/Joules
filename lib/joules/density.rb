@@ -3,7 +3,7 @@
 #
 # @description: Module for providing density formulas
 # @author: Elisha Lai
-# @version: 0.0.2 16/05/2015
+# @version: 0.0.3 16/05/2015
 #==============================================================================
 
 # Density module (density.rb)
