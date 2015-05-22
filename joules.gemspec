@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'Joules'
+  s.name        = 'joules'
   s.version     = '0.0.1'
   s.date        = '2010-05-11'
   s.summary     = 'A library (gem) for providing Physics formulas'
