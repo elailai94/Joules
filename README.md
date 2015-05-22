@@ -4,7 +4,7 @@ Joules is a library (gem) for providing simple Physics formulas in kinematics, f
 
 ### Library Installation
 ```Bash
-gem install joules-0.0.2.gem
+gem install joules-0.0.3.gem
 ```
 
 ### Library Import
@@ -19,6 +19,9 @@ require 'joules'
 
 #### Version 0.0.2
 * Fixed publishing date in gem specification
+
+#### Version 0.0.3
+* Added the following Physics constants: permeability of free space, permittivity of free space, elementary charge, Planck constant, unified atomic mass unit, rest mass of electron, rest mass of proton, molar gas constant, avogadro constant, boltzmann constant, and gravitational constant
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
