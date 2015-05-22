@@ -8,7 +8,7 @@
 
 # Pressure module (pressure.rb)
 
-require 'constants'
+require_relative 'constants'
 
 # pressure: (union Int Float) (union Int Float) -> Float
 # Conditions:
