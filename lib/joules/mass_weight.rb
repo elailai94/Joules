@@ -8,7 +8,7 @@
 
 # Mass and weight module (mass_weight.rb)
 
-require 'constants'
+require_relative 'constants'
 
 # weight: (union Int Float) -> Float
 # Conditions:
