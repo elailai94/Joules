@@ -8,7 +8,7 @@
 
 # Energy, work, and power module (energy_work_power.rb)
 
-require 'constants'
+require_relative 'constants'
 
 # gravitational_potential_energy: (union Int Float) (union Int Float)
 # -> Float
