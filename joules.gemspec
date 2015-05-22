@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   EOF
   s.authors     = ['Elisha Lai']
   s.email       = 'elisha.lai@outlook.com'
-  s.file        = ['lib/joules.rb', 'lib/joules/constants.rb', \
-    'lib/joules/kinematics.rb', 'lib/joules/mass_weight.rb', \
-    'lib/joules/density.rb', 'lib/joules/forces.rb', \
-    'lib/joules/momentum_impulse.rb', 'lib/joules/energy_work_power.rb', \
+  s.files       = ['lib/joules.rb', 'lib/joules/constants.rb', 
+    'lib/joules/kinematics.rb', 'lib/joules/mass_weight.rb', 
+    'lib/joules/density.rb', 'lib/joules/forces.rb',
+    'lib/joules/momentum_impulse.rb', 'lib/joules/energy_work_power.rb',
     'lib/joules/pressure.rb']
   s.homepage    = 'http://elailai94.github.io/Joules'
   s.license     = 'MIT'
