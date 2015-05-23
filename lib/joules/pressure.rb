@@ -25,4 +25,3 @@ end
 def hydrostatic_pressure(density, height)
   return density * FREE_FALL_ACCELERATION * height
 end
-
