@@ -3,106 +3,100 @@
 #
 # @description: Module for providing energy, work, and power formulas
 # @author: Elisha Lai
-# @version: 0.0.3 16/05/2015
+# @version: 0.1.0 23/05/2015
 #==============================================================================
 
 # Energy, work, and power module (energy_work_power.rb)
 
 require_relative 'constants'
 
-# gravitational_potential_energy: (union Int Float) (union Int Float)
-# -> Float
-# Conditions:
-#     PRE: mass >= 0
-#          mass is in kilograms.
-#          height >= 0
-#          height is in meters.
-#     POST: Returns a Float.
-#           returned value >= 0
-#           returned value is in joules.
-# Purpose: Consumes two numbers, mass and height. Returns the calculated
-# gravitational potential energy.
+# Calculates the gravitational potential energy given mass and height.
+# @param mass [Int, Float]
+#   mass >= 0; mass is in kilograms
+# @param height [Int, Float]
+#   height >= 0; height is in meters
+# @return [Float]
+#   returned value >= 0; returned value is in joules
+# @example
+#   gravitational_potential_energy(0.5, 6) #=> 29.43
 def gravitational_potential_energy(mass, height)
   return mass * FREE_FALL_ACCELERATION * height
 end
 
-# elastic_potential_energy: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: spring_constant >= 0
-#          spring constant is in newtons per meter.
-#          extension >= 0
-#          extension is in meters.
-#     POST: Returns a Float.
-#           returned value >= 0
-#           returned value is in joules.
-# Purpose: Consumes two numbers, spring_constant and extension. Returns
-# the calculated elastic potential energy.
+# Calculates the elastic potential energy given spring constant and extension.
+# @param spring_constant [Int, Float]
+#   spring_constant >= 0; spring_constant is in newtons per meter
+# @param extension [Int, Float]
+#   extension >= 0; extension is in meters
+# @return [Float]
+#   returned value is in joules
+# @example
+#   elastic_potential_energy(81.75, 2.4) #=> 235.44
 def elastic_potential_energy(spring_constant, extension)
   return 0.5 * spring_constant * (extension ** 2)
 end
 
-# kinetic_energy: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: mass >= 0
-#          mass is in kilograms.
-#          velocity is in meters per second.
-#     POST: Returns a Float.
-#           returned value >= 0
-#           returned value is in joules.
-# Purpose: Consumes two numbers, mass and velocity. Returns the calculated
-# kinetic energy.
+# Calculates the kinetic energy given mass and velocity.
+# @param mass [Int, Float]
+#   mass >= 0; mass is in kilograms
+# @param velocity [Int, Float]
+#   velocity is in meters per second
+# @return [Float]
+#   returned value >= 0; returned value is in joules
+# @example
+#   kinetic_energy(500, 22) #=> 121000.0 
 def kinetic_energy(mass, velocity)
   return 0.5 * mass * (velocity ** 2)
 end
 
-# work_done: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: force is in newtons.
-#          distance >= 0
-#          distance is in meters.
-#     POST: Returns a Float.
-#           returned value is in joules.
-# Purpose: Consumes two numbers, force and distance. Returns the
-# calculated work done.
+# Calculates the work done given force and distance.
+# @param force [Int, Float]
+#   force is in newtons
+# @param distance [Int, Float]
+#   distance >= 0; distance is in meters
+# @return [Float]
+#   returned value is in joules
+# @example
+#   work_done(40, 2.34) #=> 93.6
 def work_done(force, distance)
   return force * distance.to_f
 end
 
-# power: (union Int Float) (union Int Float) -> Float
-# Condition:
-#     PRE: work_done is in joules.
-#          time > 0
-#          time is in seconds.
-#     POST: Returns a Float.
-#           returned value is in watts.
-# Purpose: Consumes two numbers, work done and time. Returns the
-# calculated power.
+# Calculates the power given work done and time.
+# @param work_done [Int, Float]
+#   work_done is in joules
+# @param time [Int, Float]
+#   time > 0; time is in seconds
+# @return [Float]
+#   returned value is in watts
+# @example
+#   power(28, 7) #=> 4.0
 def power(work_done, time)
   return work_done / time.to_f
 end
 
-# energy_efficiency: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: energy_input > 0
-#          0 <= useful_energy_output <= energy_input
-#          useful_energy_output and energy_input are in joules.
-#     POST: Returns a Float.
-#           returned value >= 0
-# Purpose: Consumes two numbers, useful_energy_output and energy_input.
-# Returns the calculated energy efficiency.
+# Calculates the energy efficiency given useful energy output and energy input.
+# @param useful_energy_output [Int, Float]
+#   0 <= useful_energy_output <= energy_input; useful_energy_output is in joules
+# @param energy_input [Int, Float]
+#   energy_input > 0; energy_input is in joules
+# @return [Float]
+#   returned value >= 0
+# @example
+#   energy_efficiency(16, 20) #=> 80.0 
 def energy_efficiency(useful_energy_output, energy_input)
   return (useful_energy_output / energy_input.to_f) * 100
 end
 
-# power_efficiency: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: power_input > 0
-#          0 <= useful_power_output <= power_input
-#          useful_power_output and power_input are in joules.
-#     POST: Returns a Float.
-#           returned value >= 0
-# Purpose: Consumes two numbers, useful_power_output and power_input.
-# Returns the calculated power efficiency.
+# Calculates the power efficiency given useful power output and power input.
+# @param useful_power_output [Int, Float]
+#   0 <= useful_power_output <= power_input; useful_power_output is in watts
+# @param power_input [Int, Float]
+#   power_input > 0; power_input is in watts
+# @return [Float]
+#   returned value >= 0
+# @example
+#   power_efficiency(26, 40) #=> 65.0
 def power_efficiency(useful_power_output, power_input)
   return (useful_power_output / power_input.to_f) * 100
 end
