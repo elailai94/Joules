@@ -24,6 +24,7 @@ require 'joules'
 * Added the following Physics constants: permeability of free space, permittivity of free space, elementary charge, Planck constant, unified atomic mass unit, rest mass of electron, rest mass of proton, molar gas constant, avogadro constant, boltzmann constant, and gravitational constant
 
 #### Version 0.1.0
+* Added the following Physics constants: rest mass of neutron
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
