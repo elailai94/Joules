@@ -21,10 +21,10 @@ require 'joules'
 * Fixed publishing date in gem specification
 
 #### Version 0.0.3
-* Added the following Physics constants: permeability of free space, permittivity of free space, elementary charge, Planck constant, unified atomic mass unit, rest mass of electron, rest mass of proton, molar gas constant, avogadro constant, boltzmann constant, and gravitational constant
+* Added the following Physics constants: permeability of free space, permittivity of free space, elementary charge, Planck constant, unified atomic mass unit, rest mass of electron, rest mass of proton, molar gas constant, avogadro constant, Boltzmann constant, and gravitational constant
 
 #### Version 0.1.0
-* Added the following Physics constants: rest mass of neutron
+* Added the following Physics constants: rest mass of neutron, Stefan constant, and Wien constant
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
