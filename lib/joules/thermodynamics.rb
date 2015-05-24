@@ -17,7 +17,7 @@
 #   temperature_change is in celcius
 # @return [Float]
 #   returned value is in joules
-# @example3
+# @example
 #   energy_v1(500, 2.46, 3.6) #=> 4428.0
 # @note There is one other method for calculating energy.
 def energy_v1(mass, specific_heat_capacity, temperature_change)
