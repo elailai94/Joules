@@ -7,7 +7,7 @@ Joules is a library (gem) for providing simple Physics formulas in kinematics, f
 
 ### Library Installation
 ```Bash
-gem install joules-0.0.3.gem
+gem install joules-0.1.0.gem
 ```
 
 ### Library Import
