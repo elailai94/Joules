@@ -25,7 +25,8 @@ Gem::Specification.new do |s|
     'lib/joules/kinematics.rb', 'lib/joules/mass_weight.rb', 
     'lib/joules/density.rb', 'lib/joules/forces.rb',
     'lib/joules/momentum_impulse.rb', 'lib/joules/energy_work_power.rb',
-    'lib/joules/pressure.rb', 'lib/joules/waves.rb']
+    'lib/joules/pressure.rb', 'lib/joules/thermodynamics.rb',
+    'lib/joules/waves.rb']
   s.homepage    = 'http://elailai94.github.io/Joules'
   s.license     = 'MIT'
 end
