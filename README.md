@@ -26,6 +26,7 @@ This would return 29.43.
 power(work_done(40, 2.34), 4)
 ```
 This would return 23.4.
+> Note: For documentation on methods and constants, please visit [http://www.rubydoc.info/gems/joules/](http://www.rubydoc.info/gems/joules/).
 
 ### Change Log
 #### Version 0.0.1
