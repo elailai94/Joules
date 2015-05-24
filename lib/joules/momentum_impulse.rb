@@ -3,47 +3,50 @@
 #
 # @description: Module for providing momentum and impulse formulas
 # @author: Elisha Lai
-# @version: 0.0.3 16/05/2015
+# @version: 0.1.0 23/05/2015
 #==============================================================================
 
 # Momentum and impulse module (momentum_impulse.rb)
 
-# momentum: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: mass >= 0
-#          mass is in kilograms.
-#          velocity is in meters per second.
-#     POST: Returns a Float.
-#           returned value is in newton seconds.
-# Purpose: Consumes two numbers, mass and velocity. Returns the calculated
-# momentum.
+# Calculates the momentum given mass and velocity.
+# @param mass [Int, Float]
+#   mass >= 0; mass is in kilograms
+# @param velocity [Int, Float]
+#   velocity is in meters per second
+# @return [Float]
+#   returned value is in newton seconds
+# @example
+#   momentum(52, 4.7) #=> 244.4
 def momentum(mass, velocity)
   return mass * velocity.to_f
 end
 
-# impulse_v1: (union Int Float) (union Int Float) -> Float
-# Conditions:
-#     PRE: force is in newtons.
-#          time >= 0
-#          time is in seconds.
-#     POST: Returns a Float.
-#           returned value is in newton seconds.
-# Purpose: Consumes two numbers, force and time. Returns the calculated
-# impulse.
+# Calculates the impulse given force and time.
+# @param force [Int, Float]
+#   force is in newtons
+# @param time [Int, Float]
+#   time >= 0; time is in seconds
+# @return [Float]
+#   returned value is in newton seconds
+# @example
+#   impulse_v1(30.8, 9.6) #=> 295.68
+# @note There is one other method for calculating impulse.
 def impulse_v1(force, time)
   return force * time.to_f
 end
 
-# impulse_v2: (union Int Float) (union Int Float) (union Int Float)
-# -> Float
-# Condition:
-#     PRE: initial_velocity and final_velocity are in meters per second.
-#          mass >= 0
-#          mass is in kilograms.
-#     POST: Returns a Float.
-#           returned value is in newton seconds.
-# Purpose: Consumes three numbers, initial_velocity, final_velocity, and
-# mass. Returns the calculated impulse.
+# Calculates the impulse given initial velocity, final velocity, and mass.
+# @param initial_velocity [Int, Float]
+#   initial_velocity is in meters per second
+# @param final_velocity [Int, Float]
+#   final_velocity is in meters per second
+# @param mass [Int, Float]
+#   mass >= 0; mass is in kilograms
+# @return [Float]
+#   returned value is in newton seconds
+# @example
+#   impulse_v2(20, 35, 2.4) #=> 36.0
+# @note There is one other method for calculating impulse.
 def impulse_v2(initial_velocity, final_velocity, mass)
   return (final_velocity - initial_velocity) * mass.to_f
 end
