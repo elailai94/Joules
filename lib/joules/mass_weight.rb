@@ -3,33 +3,31 @@
 #
 # @description: Module for providing mass and weight formulas
 # @author: Elisha Lai
-# @version: 0.0.3 16/05/2015
+# @version: 0.1.0 23/05/2015
 #==============================================================================
 
 # Mass and weight module (mass_weight.rb)
 
 require_relative 'constants'
 
-# weight: (union Int Float) -> Float
-# Conditions:
-#     PRE: mass >= 0
-#          mass is in kilograms.
-#     POST: Returns a Float.
-#           returned value >= 0
-#           returned value is in newtons.
-# Purpose: Consumes a number, mass, and returns the calculated weight.
+# Calculates the weight given mass.
+# @param mass [Int, Float]
+#   mass >= 0; mass is in kilograms
+# @return [Float]
+#   returned value >= 0; returned value is in newtons
+# @example
+#   weight(79.41) #=> 779.0121
 def weight(mass)
   return mass * FREE_FALL_ACCELERATION 
 end
 
-# mass: (union Int Float) -> Float
-# Conditions:
-#     PRE: weight >= 0
-#          weight is in newtons. 
-#     POST: Returns a Float.
-#           returned value >= 0
-#           returned value is in kilograms.
-# Purpose: Consumes a numberm weight, and returns the calculated mass.
+# Calculates the mass given weight.
+# @param weight [Int, Float]
+#   weight >= 0; weight is in newtons
+# @return [Float]
+#   returned value >= 0; returned value is in kilograms
+# @example
+#   mass(779.0121) #=> 79.41
 def mass(weight)
   return weight / FREE_FALL_ACCELERATION
 end
