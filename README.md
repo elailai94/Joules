@@ -27,7 +27,7 @@ require 'joules'
 * Added the following Physics constants: permeability of free space, permittivity of free space, elementary charge, Planck constant, unified atomic mass unit, rest mass of electron, rest mass of proton, molar gas constant, avogadro constant, Boltzmann constant, and gravitational constant
 
 #### Version 0.1.0
-* Added Physics formulas in waves
+* Added Physics formulas in waves and thermodynamics
 * Added the following Physics constants: rest mass of neutron, Stefan constant, and Wien constant
 * Updated existing documentation style to YARD documentation style
 
