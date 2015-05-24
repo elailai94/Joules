@@ -3,7 +3,7 @@
 #
 # @description: Module for testing the Joules module
 # @author: Elisha Lai
-# @version: 0.0.2 16/05/2015
+# @version: 0.1.0 23/05/2015
 #==============================================================================
 
 # Testing module for joules.rb (test_joules.rb)
