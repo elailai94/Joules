@@ -15,6 +15,18 @@ gem install joules-0.1.0.gem
 require 'joules'
 ```
 
+### Usage
+#### Simple Method Call
+```Ruby
+gravitational_potential_energy(0.5, 6)
+```
+This would return 29.43.
+#### Method Composition
+```Ruby
+power(work_done(40, 2.34), 4)
+```
+This would return 23.4.
+
 ### Change Log
 #### Version 0.0.1
 * Added Physics formulas in kinematics, mass, weight, density, forces, momentum, impulse, energy, work, power, and pressure
