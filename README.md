@@ -46,5 +46,7 @@ This would return 23.4.
 * Added the following Physics constants: rest mass of neutron, Stefan constant, and Wien constant
 * Updated existing documentation style to YARD documentation style
 
+#### Version 0.2.0 (Next Release)
+
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
