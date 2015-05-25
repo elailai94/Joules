@@ -3,7 +3,6 @@
 [![forthebadge](http://forthebadge.com/images/badges/built-with-ruby.svg)](http://forthebadge.com)
 
 [![Gem Version](https://badge.fury.io/rb/joules.svg)](http://badge.fury.io/rb/joules)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/elailai94/joules/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ### About
 Joules is a library (gem) for providing simple Physics formulas in kinematics, forces, waves, electricity, and so much more. A selection of fundamental constants are also provided. It is written entirely in Ruby.
