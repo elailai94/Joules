@@ -53,6 +53,7 @@ This would return 23.4.
 
 #### Version 0.2.0 (Next Release)
 * Added Physics formulas in electricity
+* Added geometric and conversion formulas commonly used in Physics
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
