@@ -52,6 +52,7 @@ This would return 23.4.
 * Updated existing documentation style to YARD documentation style
 
 #### Version 0.2.0 (Next Release)
+* Added Physics formulas in electricity
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
