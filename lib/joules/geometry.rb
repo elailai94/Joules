@@ -75,7 +75,7 @@ end
 # @example
 #   cylinder_surface_area(6.5, 3) #=> 122.522113490002
 def cylinder_surface_area(radius, height)
-  return 2 * Math::PI * radius * height
+  return circumference(radius) * height
 end
 
 # Calculates the volume of a cylinder given radius and height.
@@ -88,5 +88,5 @@ end
 # @example
 #   cylinder_volume(6.5, 3) #=> 398.196868842506 
 def cylinder_volume(radius, height)
-  return Math::PI * (radius ** 2) * height
+  return circle_area(radius) * height
 end
