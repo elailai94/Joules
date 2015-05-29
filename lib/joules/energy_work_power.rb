@@ -3,7 +3,7 @@
 #
 # @description: Module for providing energy, work, and power formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Energy, work, and power module (energy_work_power.rb)
@@ -16,7 +16,7 @@ require_relative 'constants'
 # @param height [Int, Float]
 #   height >= 0; height is in meters
 # @return [Float]
-#   returned value >= 0; returned value is in joules
+#   return value >= 0; return value is in joules
 # @example
 #   gravitational_potential_energy(0.5, 6) #=> 29.43
 def gravitational_potential_energy(mass, height)
@@ -29,7 +29,7 @@ end
 # @param extension [Int, Float]
 #   extension >= 0; extension is in meters
 # @return [Float]
-#   returned value is in joules
+#   return value >= 0; return value is in joules
 # @example
 #   elastic_potential_energy(81.75, 2.4) #=> 235.44
 def elastic_potential_energy(spring_constant, extension)
@@ -42,7 +42,7 @@ end
 # @param velocity [Int, Float]
 #   velocity is in meters per second
 # @return [Float]
-#   returned value >= 0; returned value is in joules
+#   return value >= 0; return value is in joules
 # @example
 #   kinetic_energy(500, 22) #=> 121000.0 
 def kinetic_energy(mass, velocity)
@@ -55,7 +55,7 @@ end
 # @param distance [Int, Float]
 #   distance >= 0; distance is in meters
 # @return [Float]
-#   returned value is in joules
+#   return value is in joules
 # @example
 #   work_done(40, 2.34) #=> 93.6
 def work_done(force, distance)
@@ -68,10 +68,11 @@ end
 # @param time [Int, Float]
 #   time > 0; time is in seconds
 # @return [Float]
-#   returned value is in watts
+#   return value is in watts
 # @example
-#   power(28, 7) #=> 4.0
-def power(work_done, time)
+#   power_v2(28, 7) #=> 4.0
+# @note There are three other methods for calculating power.
+def power_v1(work_done, time)
   return work_done / time.to_f
 end
 
@@ -81,7 +82,7 @@ end
 # @param energy_input [Int, Float]
 #   energy_input > 0; energy_input is in joules
 # @return [Float]
-#   returned value >= 0
+#   return value >= 0
 # @example
 #   energy_efficiency(16, 20) #=> 80.0 
 def energy_efficiency(useful_energy_output, energy_input)
@@ -94,7 +95,7 @@ end
 # @param power_input [Int, Float]
 #   power_input > 0; power_input is in watts
 # @return [Float]
-#   returned value >= 0
+#   return value >= 0
 # @example
 #   power_efficiency(26, 40) #=> 65.0
 def power_efficiency(useful_power_output, power_input)
