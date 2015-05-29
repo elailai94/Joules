@@ -56,6 +56,8 @@ This would return 23.4.
 * Added Physics formulas in electricity
 * Added geometric and conversion formulas commonly used in Physics
 
+#### Version 0.2.1 (Next Release)
+
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
 
