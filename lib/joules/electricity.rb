@@ -91,8 +91,23 @@ end
 #   voltage != 0; voltage is in volts
 # @return [Float]
 #   return value is in farads
+# @example
+#   capacitance(2e-3, 100) #=> 2.0e-05
 def capacitance(charge, voltage)
   return charge / voltage.to_f
+end
+
+# Calculates the capacitor potential energy given charge and voltage.
+# @param charge [Int, Float]
+#   charge is in coulombs
+# @param voltage [Int, Float]
+#   voltage is in volts
+# @return [Float]
+#   return value is in joules
+# @example
+#   capacitor_potential_energy(1.5, 30) #=> 22.5
+def capacitor_potential_energy(charge, voltage)
+  return 0.5 * charge * voltage
 end
 
 # Calculates the total capacitance of capacitors in series.
