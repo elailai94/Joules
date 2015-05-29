@@ -105,9 +105,38 @@ end
 # @return [Float]
 #   return value is in joules
 # @example
-#   capacitor_potential_energy(1.5, 30) #=> 22.5
-def capacitor_potential_energy(charge, voltage)
+#   capacitor_potential_energy_v1(1.5, 30) #=> 22.5
+# @note There are two other methods for calculating capacitor potential energy.
+def capacitor_potential_energy_v1(charge, voltage)
   return 0.5 * charge * voltage
+end
+
+# Calculates the capacitor potential energy given capacitance and voltage.
+# @param capacitance [Int, Float]
+#   capacitance is in farads
+# @param voltage [Int, Float]
+#   voltage is in volts
+# @return [Float]
+#   return value is in joules
+# @example
+#   capacitor_potential_energy_v2(10e-6, 20) #=> 0.002
+# @note There are two other methods for calculating capacitor potential energy.
+def capacitor_potential_energy_v2(capacitance, voltage)
+  return 0.5 * capacitance * (voltage ** 2)
+end
+
+# Calculates the capacitor potential energy given charge and capacitance.
+# @param charge [Int, Float]
+#   charge is in coulombs
+# @param capacitance [Int, Float]
+#   capacitance is in farads
+# @return [Float]
+#   return value is in joules
+# @example
+#   capacitor_potential_energy_v3(25, 50) #=> 6.25
+# @note There are two other methods for calculating capacitor potential energy.
+def capacitor_potential_energy_v3(charge, capacitance)
+  return (0.5 * (charge ** 2)) / capacitance
 end
 
 # Calculates the total capacitance of capacitors in series.
