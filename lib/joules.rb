@@ -9,7 +9,6 @@
 # Joules module (joules.rb)
 
 require 'joules/constants'
-require 'joules/geometry'
 require 'joules/kinematics'
 require 'joules/mass_weight'
 require 'joules/density'
@@ -20,3 +19,5 @@ require 'joules/pressure'
 require 'joules/thermodynamics'
 require 'joules/waves'
 require 'joules/electricity'
+require 'joules/geometry'
+require 'joules/conversion'
