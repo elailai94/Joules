@@ -3,12 +3,13 @@
 #
 # @description: Module for providing Physics formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Joules module (joules.rb)
 
 require 'joules/constants'
+require 'joules/geometry'
 require 'joules/kinematics'
 require 'joules/mass_weight'
 require 'joules/density'
@@ -18,3 +19,4 @@ require 'joules/energy_work_power'
 require 'joules/pressure'
 require 'joules/thermodynamics'
 require 'joules/waves'
+require 'joules/electricity'
