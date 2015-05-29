@@ -3,7 +3,7 @@
 #
 # @description: Module for providing momentum and impulse formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Momentum and impulse module (momentum_impulse.rb)
@@ -14,7 +14,7 @@
 # @param velocity [Int, Float]
 #   velocity is in meters per second
 # @return [Float]
-#   returned value is in newton seconds
+#   return value is in newton seconds
 # @example
 #   momentum(52, 4.7) #=> 244.4
 def momentum(mass, velocity)
@@ -27,7 +27,7 @@ end
 # @param time [Int, Float]
 #   time >= 0; time is in seconds
 # @return [Float]
-#   returned value is in newton seconds
+#   return value is in newton seconds
 # @example
 #   impulse_v1(30.8, 9.6) #=> 295.68
 # @note There is one other method for calculating impulse.
@@ -43,7 +43,7 @@ end
 # @param mass [Int, Float]
 #   mass >= 0; mass is in kilograms
 # @return [Float]
-#   returned value is in newton seconds
+#   return value is in newton seconds
 # @example
 #   impulse_v2(20, 35, 2.4) #=> 36.0
 # @note There is one other method for calculating impulse.
