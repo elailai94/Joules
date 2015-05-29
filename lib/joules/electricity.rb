@@ -79,9 +79,9 @@ def resistance_in_parallel(resistances)
   end
   total_resistance = 0
   resistances.each do |resistance|
-    total_resistance += (1 / resistance.to_f)
+    total_resistance += (1.0 / resistance)
   end
-  return 1 / total_resistance.to_f
+  return 1 / total_resistance
 end
 
 # Calculates the total capacitance given charge and voltage.
@@ -108,9 +108,9 @@ def capacitance_in_series(capacitances)
   end
   total_capacitance = 0
   capacitances.each do |capacitance|
-  	total_capacitance += (1 / capacitance.to_f)
+  	total_capacitance += (1.0 / capacitance)
   end
-  return 1 / total_capacitance.to_f
+  return 1 / total_capacitance
 end
 
 # Calculates the total capacitance in parallel given capacitances.
