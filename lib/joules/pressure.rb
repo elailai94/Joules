@@ -3,7 +3,7 @@
 #
 # @description: Module for providing pressure formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Pressure module (pressure.rb)
@@ -16,7 +16,7 @@ require_relative 'constants'
 # @param area [Int, Float]
 #   area > 0; area is in meters cubed
 # @return [Float]
-#   returned value >= 0; returned value is in pascals
+#   return value >= 0; return value is in pascals
 # @example
 #   pressure(98, 0.04) #=> 2450.0 
 def pressure(force, area)
@@ -29,7 +29,7 @@ end
 # @param height [Int, Float]
 #   height >= 0; height is in meters
 # @return [Float]
-#   returned value >= 0; returned value is in pascals
+#   return value >= 0; return value is in pascals
 # @example
 #   hydrostatic_pressure(1000, 5) #=> 49050.0
 def hydrostatic_pressure(density, height)
