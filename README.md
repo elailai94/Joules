@@ -57,6 +57,7 @@ This would return 23.4.
 * Added geometric and conversion formulas commonly used in Physics
 
 #### Version 0.2.1 (Next Release)
+* Added Physics formulas in quantum
 
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
