@@ -121,7 +121,7 @@ end
 # @example
 #   focal_length(45.7, 22.8) #=> 15.21109489051095
 def focal_length(object_distance, image_distance)
-  return 1 / ((1.0 / object_distance) + (1 / image_distance))
+  return 1 / ((1.0 / object_distance) + (1.0 / image_distance))
 end
 
 # Calculates the power of a lens given focal length.
