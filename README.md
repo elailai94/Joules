@@ -6,6 +6,7 @@
 
 ### About
 Joules is a library (gem) for providing simple Physics formulas in kinematics, forces, waves, electricity, and so much more. A selection of fundamental constants are also provided. It is written entirely in Ruby.
+> Note: For library download, please visit [https://www.rubygems.org/gems/joules](https://www.rubygems.org/gems/joules).
 
 ### Library Compilation
 ```Bash
