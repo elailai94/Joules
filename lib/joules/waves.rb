@@ -97,3 +97,40 @@ end
 def refractive_index_v2(critical_angle)
   return 1.0 / Math.sin(to_radians(critical_angle))
 end
+
+# Calculates the magnification given image_height and object_height.
+# @param image_height [Int, Float]
+#   image_height >= 0; image_height is in a unit of length
+# @param object_height [Int, Float]
+#   object_height > 0; object_height has the same units as image_height
+# @return [Float]
+#   return value >= 0
+# @example
+#   magnification(10, 5) #=> 2.0 
+def magnification(image_height, object_height)
+  return image_height / object_height.to_f
+end
+
+# Calculates the focal length of a lens given object distance and image distance.
+# @param object_distance [Int, Float]
+#   object_distance > 0; object_distance is in meters
+# @param image_distance [Int, Float]
+#   image_distance > 0; image_distance is in meters
+# @return [Float]
+#   return value >= 0; return value is in meters
+# @example
+#   focal_length(45.7, 22.8) #=> 15.21109489051095
+def focal_length(object_distance, image_distance)
+  return 1 / ((1.0 / object_distance) + (1 / image_distance))
+end
+
+# Calculates the power of a lens given focal length.
+# @param focal_length [Int, Float]
+#   focal_length > 0; focal_length is in meters
+# @return [Float]
+#   return value > 0; return value is in dioptres
+# @example
+#   power_of_lens(2) #=> 0.5
+def power_of_lens(focal_length)
+  return 1.0 / focal_length
+end
