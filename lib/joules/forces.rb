@@ -3,7 +3,7 @@
 #
 # @description: Module for providing forces formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Forces module (forces.rb)
@@ -14,7 +14,7 @@
 # @param acceleration [Int, Float]
 #   acceleration is in meters per second squared
 # @return [Float]
-#   returned value is in newtons
+#   return value is in newtons
 # @example
 #   force_v1(120, 2.67) #=> 320.4
 # @note There are two other methods for calculating force. 
@@ -28,7 +28,7 @@ end
 # @param extension [Int, Float]
 #   extension >= 0; extension is in meters
 # @return [Float]
-#   returned value >= 0; returned value is in newtons
+#   return value >= 0; return value is in newtons
 # @example
 #   force_v2(81.75, 2.4) #=> 196.2
 # @note There are two other methods for calculating force.
@@ -46,7 +46,7 @@ end
 # @param time [Int, Float]
 #   time > 0; time is in seconds
 # @return [Float]
-#   returned value is in newtons
+#   return value is in newtons
 # @example
 #   force_v3(20, 35, 50, 2.4) #=> 312.5
 # @note There are two other methods for calculating force.
@@ -60,7 +60,7 @@ end
 # @param distance [Int, Float]
 #   distance >= 0; distance is in meters
 # @return [Float]
-#   returned value is in newton metres
+#   return value is in newton metres
 # @example
 #   moment(23, 4.5) #=> 103.5
 def moment(force, distance)
