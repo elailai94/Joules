@@ -3,7 +3,7 @@
 #
 # @description: Module for providing kinematics formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Kinematics module (kinematics.rb)
@@ -14,7 +14,7 @@
 # @param time [Int, Float]
 #   time > 0; time is in seconds
 # @return [Float]
-#   returned value >= 0; returned value is in meters per second
+#   return value >= 0; return value is in meters per second
 # @example
 #   avg_speed(30, 2.4) #=> 12.5
 def avg_speed(distance, time)
@@ -27,7 +27,7 @@ end
 # @param time [Int, Float]
 #   time > 0; time is in seconds
 # @return [Float]
-#   returned value is in meters per second
+#   return value is in meters per second
 # @example
 #   avg_velocity(180, 4.8) #=> 37.5 
 def avg_velocity(displacement, time)
@@ -42,7 +42,7 @@ end
 # @param time [Int, Float]
 #   time > 0; time is in seconds
 # @return [Float]
-#   returned value is in meters per second squared
+#   return value is in meters per second squared
 # @example
 #   acceleration(20, 35, 2.4) #=> 6.25
 def acceleration(initial_velocity, final_velocity, time)
@@ -57,7 +57,7 @@ end
 # @param time [Int, Float]
 #   time >= 0; time is in seconds
 # @return [Float]
-#   returned value is in meters per second
+#   return value is in meters per second
 # @example
 #   final_velocity_v1(20, 6.25, 2.4) #=> 35.0
 # @note There is one other method for calculating final velocity.
@@ -73,7 +73,7 @@ end
 # @param displacement [Int, Float]
 #   displacement is in meters
 # @return [Float]
-#   returned value is in meters per second
+#   return value is in meters per second
 # @example
 #   final_velocity_v2(20, 6.25, 66) #=> 35.0
 # @note There is one other method for calculating final velocity.
@@ -89,7 +89,7 @@ end
 # @param time [Int, Float]
 #   time >= 0; time is in seconds
 # @return [Float]
-#   returned value is in meters
+#   return value is in meters
 # @example
 #   displacement_v1(20, 35, 2.4) #=> 66.0
 # @note There are two other methods for calculating displacement.
@@ -105,7 +105,7 @@ end
 # @param time [Int, Float]
 #   time >= 0; time is in seconds
 # @return [Float]
-#   returned value is in meters
+#   return value is in meters
 # @example
 #   displacement_v2(20, 6.25, 2.4) #=> 66.0
 # @note There are two other methods for calculating displacement.
@@ -121,7 +121,7 @@ end
 # @param time [Int, Float]
 #   time >= 0; time is in seconds
 # @return [Float]
-#   returned value is in meters
+#   return value is in meters
 # @example
 #   displacement_v3(35, 6.25, 2.4) #=> 66.0
 # @note There are two other methods for calculating displacement.
