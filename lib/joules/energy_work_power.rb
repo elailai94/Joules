@@ -70,7 +70,7 @@ end
 # @return [Float]
 #   return value is in watts
 # @example
-#   power_v2(28, 7) #=> 4.0
+#   power_v1(28, 7) #=> 4.0
 # @note There are three other methods for calculating power.
 def power_v1(work_done, time)
   return work_done / time.to_f
