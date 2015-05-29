@@ -3,7 +3,7 @@
 #
 # @description: Module for providing constants
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.3.0 29/05/2015
 #==============================================================================
 
 # Constants module (constants.rb)
