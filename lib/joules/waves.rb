@@ -73,8 +73,7 @@ def time_period(frequency)
   return 1.0 / frequency
 end
 
-# Calculates the refractive index of a substance given angle of incidence.
-#   and angle of refraction.
+# Calculates the refractive index of a substance given angle of incidence and angle of refraction.
 # @param angle_of_incidence [Int, Float]
 #   angle_of_incidence is in degrees
 # @param angle_of_refraction [Int, Float]
