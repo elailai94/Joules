@@ -3,7 +3,7 @@
 #
 # @description: Module for providing energy, work, and power formulas
 # @author: Elisha Lai
-# @version: 0.2.0 25/05/2015
+# @version: 0.3.0 29/05/2015
 #==============================================================================
 
 # Energy, work, and power module (energy_work_power.rb)
