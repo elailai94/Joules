@@ -21,7 +21,8 @@ Gem::Specification.new do |s|
   EOF
   s.authors     = ['Elisha Lai']
   s.email       = 'elisha.lai@outlook.com'
-  s.files       = Dir['lib/**/*.rb'] + Dir['test/**/*.rb'] + ['Rakefile']
+  s.files       = Dir['lib/**/*.rb']
   s.homepage    = 'http://elailai94.github.io/Joules'
   s.license     = 'MIT'
 end
+
