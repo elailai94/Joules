@@ -3,7 +3,7 @@
 #
 # @description: Module for providing waves formulas
 # @author: Elisha Lai
-# @version: 0.1.0 23/05/2015
+# @version: 0.2.0 25/05/2015
 #==============================================================================
 
 # Waves module (waves.rb)
@@ -14,7 +14,7 @@
 # @param wavelength [Int, Float]
 #   wavelength >= 0; wavelength is in meters
 # @return [Float]
-#   returned value >= 0; returned value is in meters per second
+#   return value >= 0; return value is in meters per second
 # @example
 #    wave_speed(3250, 0.1) #=> 325.0
 def wave_speed(frequency, wavelength)
@@ -27,7 +27,7 @@ end
 # @param frequency [Int, Float]
 #   frequency > 0; frequency is in hertz
 # @return [Float]
-#   returned value is in meters
+#   return value is in meters
 # @example
 #   wavelength(325, 3250) #=> 0.1
 def wavelength(wave_speed, frequency)
@@ -40,7 +40,7 @@ end
 # @param wavelength [Int, Float]
 #   wavelength > 0; wavelength is in meters
 # @return [Float]
-#   returned value is in hertz
+#   return value is in hertz
 # @example
 #   frequency_v1(325, 0.1) #=> 3250.0
 # @note There is one other method for calculating frequency.
@@ -52,7 +52,7 @@ end
 # @param time_period [Int, Float]
 #   time_period > 0; time_period is in seconds
 # @return [Float]
-#   returned value > 0; returned value is in hertz
+#   return value > 0; return value is in hertz
 # @example
 #   frequency_v2(12.5) #=> 0.08
 # @note There is one other method for calculating frequency.
@@ -64,7 +64,7 @@ end
 # @param frequency [Int, Float]
 #   frequency > 0; frequency is in hertz
 # @return [Float]
-#   returned value > 0; returned value is in hertz
+#   return value > 0; return value is in hertz
 # @example
 #   time_period(0.08) #=> 12.5
 def time_period(frequency)
