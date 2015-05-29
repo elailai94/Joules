@@ -15,7 +15,7 @@ gem build joules.gemspec
 
 ### Library Installation
 ```Bash
-gem install joules-0.1.0.gem
+gem install joules-0.2.0.gem
 ```
 
 ### Library Import
