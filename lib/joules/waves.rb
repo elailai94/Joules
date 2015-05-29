@@ -8,6 +8,8 @@
 
 # Waves module (waves.rb)
 
+require_relative 'conversion'
+
 # Calculates the wave speed given frequency and wavelength.
 # @param frequency [Int, Float]
 #   frequency > 0; frequency is in hertz
@@ -69,4 +71,30 @@ end
 #   time_period(0.08) #=> 12.5
 def time_period(frequency)
   return 1.0 / frequency
+end
+
+# Calculates the refractive index of a substance given angle of incidence.
+#   and angle of refraction.
+# @param angle_of_incidence [Int, Float]
+#   angle_of_incidence is in degrees
+# @param angle_of_refraction [Int, Float]
+#   angle_of_refraction is in degrees
+# @return [Float]
+# @example
+#   refractive_index_v1(50, 35) #=> 1.3355577296591308
+# @note There is one other method for calculating refractive index.
+def refractive_index_v1(angle_of_incidence, angle_of_refraction)
+  return Math.sin(to_radians(angle_of_incidence)) /
+         Math.sin(to_radians(angle_of_refraction))
+end
+
+# Calculates the refractive index of a substance given critical angle.
+# @param critical_angle [Int, Float]
+#   critical_angle != 0; critical_angle is in degrees
+# @return [Float]
+# @example
+#   refractive_index_v2(48.7535) #=> 1.3299993207924483
+# @note There is one other method for calculating refractive index.
+def refractive_index_v2(critical_angle)
+  return 1.0 / Math.sin(to_radians(critical_angle))
 end
