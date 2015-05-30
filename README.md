@@ -58,6 +58,7 @@ This would return 23.4.
 
 #### Version 0.3.0
 * Added Physics formulas in quantum
+* Added more geometric formulas commonly used in Physics
 
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
