@@ -8,6 +8,19 @@
 
 # Geometry module (geometry.rb)
 
+# Calculates the area of a rectangle given length and width.
+# @param length [Int, Float]
+#   length >= 0; length is in a unit of length
+# @param width [Int, Float]
+#   width >= 0; width has the same units as length
+# @return [Float]
+#   return value >= 0; return value has the same units as length
+# @example
+#   rectangle_area(2, 3.4) #=> 6.8
+def rectangle_area(length, width)
+  return length * width.to_f
+end
+
 # Calculates the arc length of a circle given radius and central angle.
 # @param radius [Int, Float]
 #   radius >= 0; radius is in a unit of length
@@ -49,9 +62,9 @@ end
 # @return [Float]
 #   return value >= 0; return value has the same units as radius
 # @example
-#   sphere_surface_area(12) #=> 1809.55736846772
+#   sphere_surface_area(12) #=> 1809.5573684677208
 def sphere_surface_area(radius)
-  return 4 * Math::PI * (radius ** 2)
+  return 4 * circle_area(radius)
 end
 
 # Calculates the volume of a sphere given radius.
@@ -60,9 +73,35 @@ end
 # @return [Float]
 #   return value >= 0; return value has the same units as radius
 # @example
-#   sphere_volume(12) #=> 7238.22947387088
+#   sphere_volume(12) #=> 7238.229473870883
 def sphere_volume(radius)
-  return (4 * Math::PI * (radius ** 3)) / 3
+  return (4 * circle_area(radius) * radius) / 3
+end
+
+# Calculates the surface area of a cone given radius and slant height.
+# @param radius [Int, Float]
+#   radius >= 0; radius is in a unit of length
+# @param slant_height [Int, Float]
+#   slant_height >= 0; slant_height has the same units as radius
+# @return [Float]
+#   return value >= 0; return value has the same units as radius
+# @example
+#   cone_surface_area(3, 5.83) #=> 83.22078939359362
+def cone_surface_area(radius, slant_height)
+  return circle_area(radius) + (Math::PI * radius * slant_height)
+end
+
+# Calculates the volume of a cone given radius and height.
+# @param radius [Int, Float]
+#   radius >= 0; radius is in a unit of length
+# @param height [Int, Float]
+#   height >= 0; height has the same units as radius
+# @return [Float]
+#   return value >= 0; return value has the same units as radius
+# @example
+#   cone_volume(6.5, 3) #=> 132.73228961416876
+def cone_volume(radius, height)
+  return (circle_area(radius) * height) / 3
 end
 
 # Calulates the surface area of a cylinder given radius and height.
