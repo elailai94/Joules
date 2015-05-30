@@ -43,3 +43,14 @@ end
 def half_life(decay_constant)
   return Math.log(2) / decay_constant
 end
+
+# Calculates the decay constant of a decaying quantity given half-life.
+# @param half_life [Int, Float]
+#   half_life != 0; half_life is in seconds
+# @return [Float]
+#   return value is in per second
+# @example
+#   decay_constant(9) #=> 0.0770163533955495
+def decay_constant(half_life)
+  return Math.log(2) / half_life
+end

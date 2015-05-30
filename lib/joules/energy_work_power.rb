@@ -49,17 +49,17 @@ def kinetic_energy(mass, velocity)
   return 0.5 * mass * (velocity ** 2)
 end
 
-# Calculates the work done given force and distance.
+# Calculates the work done given force and displacement.
 # @param force [Int, Float]
 #   force is in newtons
-# @param distance [Int, Float]
-#   distance >= 0; distance is in meters
+# @param displacement [Int, Float]
+#   displacement is in meters
 # @return [Float]
 #   return value is in joules
 # @example
 #   work_done(40, 2.34) #=> 93.6
-def work_done(force, distance)
-  return force * distance.to_f
+def work_done(force, displacement)
+  return force * displacement.to_f
 end
 
 # Calculates the power given work done and time.
@@ -71,9 +71,23 @@ end
 #   return value is in watts
 # @example
 #   power_v1(28, 7) #=> 4.0
-# @note There are three other methods for calculating power.
+# @note There are four other methods for calculating power.
 def power_v1(work_done, time)
   return work_done / time.to_f
+end
+
+# Calculates the power given force and velocity.
+# @param force [Int, Float]
+#   force is in newtons
+# @param velocity [Int, Float]
+#   velocity is in meters per second
+# @return [Float]
+#   return value is in watts
+# @example
+#   power_v2(42, 2.3) #=> 96.6
+# @note There are four other methods for calculating power.
+def power_v2(force, velocity)
+  return force * velocity.to_f
 end
 
 # Calculates the energy efficiency given useful energy output and energy input.

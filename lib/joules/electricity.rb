@@ -208,9 +208,9 @@ end
 # @return [Float]
 #   return value is in watts
 # @example
-#   power_v2(1.8, 0.6) #=> 1.08
-# @note There are three other methods for calculating power.
-def power_v2(voltage, current)
+#   power_v3(1.8, 0.6) #=> 1.08
+# @note There are four other methods for calculating power.
+def power_v3(voltage, current)
   return voltage * current.to_f
 end
 
@@ -222,9 +222,9 @@ end
 # @return [Float]
 #   return value is in watts
 # @example
-#   power_v3(0.6, 3) #=> 1.08
-# @note There are three other methods for calculating power.
-def power_v3(current, resistance)
+#   power_v4(0.6, 3) #=> 1.08
+# @note There are four other methods for calculating power.
+def power_v4(current, resistance)
   return (current ** 2.0) * resistance
 end
 
@@ -236,9 +236,9 @@ end
 # @return [Float]
 #   return value is in watts
 # @example
-#   power_v4(1.8, 3) #=> 1.08
-# @note There are three other methods for calculating power.
-def power_v4(voltage, resistance)
+#   power_v5(1.8, 3) #=> 1.08
+# @note There are four other methods for calculating power.
+def power_v5(voltage, resistance)
   return (voltage ** 2.0) / resistance
 end
 
