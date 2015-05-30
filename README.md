@@ -1,8 +1,8 @@
 ![Joules Logo](https://cloud.githubusercontent.com/assets/7763904/7764836/ef617b0a-0024-11e5-8044-3cf354a4a306.png)
 
-![forthebadge](http://forthebadge.com/images/badges/built-with-ruby.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-ruby.svg)](http://forthebadge.com)
 
-![Gem Version](https://badge.fury.io/rb/joules.svg)](http://badge.fury.io/rb/joules)
+[![Gem Version](https://badge.fury.io/rb/joules.svg)](http://badge.fury.io/rb/joules)
 
 ### About
 Joules is a library (gem) for providing simple Physics formulas in kinematics, forces, waves, electricity, and so much more. A selection of fundamental constants are also provided. It is written entirely in Ruby.
