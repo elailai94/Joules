@@ -8,8 +8,6 @@
 
 # Waves module (waves.rb)
 
-require_relative 'conversion'
-
 module Joules
   module_function
 
