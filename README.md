@@ -63,7 +63,7 @@ This would return 23.4.
 #### Version 0.3.1
 * Added Physics formulas in gravitational fields and electric fields
 
-#### Version 0.4.0 (Next Release)
+#### Version 0.3.2 (Next Release)
 
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
