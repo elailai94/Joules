@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in meters per second
   # @example
-  #    wave_speed(3250, 0.1) #=> 325.0
+  #   Joules.wave_speed(3250, 0.1) #=> 325.0
   def wave_speed(frequency, wavelength)
     return frequency * wavelength.to_f
   end
@@ -32,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value is in meters
   # @example
-  #   wavelength(325, 3250) #=> 0.1
+  #   Joules.wavelength(325, 3250) #=> 0.1
   def wavelength(wave_speed, frequency)
     return wave_speed / frequency.to_f
   end
@@ -45,7 +45,7 @@ module Joules
   # @return [Float]
   #   return value is in hertz
   # @example
-  #   frequency_v1(325, 0.1) #=> 3250.0
+  #   Joules.frequency_v1(325, 0.1) #=> 3250.0
   # @note There is one other method for calculating frequency.
   def frequency_v1(wave_speed, wavelength)
     return wave_speed / wavelength.to_f
@@ -57,7 +57,7 @@ module Joules
   # @return [Float]
   #   return value > 0; return value is in hertz
   # @example
-  #   frequency_v2(12.5) #=> 0.08
+  #   Joules.frequency_v2(12.5) #=> 0.08
   # @note There is one other method for calculating frequency.
   def frequency_v2(time_period)
     return 1.0 / time_period
@@ -69,7 +69,7 @@ module Joules
   # @return [Float]
   #   return value > 0; return value is in hertz
   # @example
-  #   time_period(0.08) #=> 12.5
+  #   Joules.time_period(0.08) #=> 12.5
   def time_period(frequency)
     return 1.0 / frequency
   end
@@ -81,7 +81,7 @@ module Joules
   #   angle_of_refraction is in degrees
   # @return [Float]
   # @example
-  #   refractive_index_v1(50, 35) #=> 1.3355577296591308
+  #   Joules.refractive_index_v1(50, 35) #=> 1.3355577296591308
   # @note There is one other method for calculating refractive index.
   def refractive_index_v1(angle_of_incidence, angle_of_refraction)
     return Math.sin(to_radians(angle_of_incidence)) /
@@ -93,7 +93,7 @@ module Joules
   #   critical_angle != 0; critical_angle is in degrees
   # @return [Float]
   # @example
-  #   refractive_index_v2(48.7535) #=> 1.3299993207924483
+  #   Joules.refractive_index_v2(48.7535) #=> 1.3299993207924483
   # @note There is one other method for calculating refractive index.
   def refractive_index_v2(critical_angle)
     return 1.0 / Math.sin(to_radians(critical_angle))
@@ -107,7 +107,7 @@ module Joules
   # @return [Float]
   #   return value >= 0
   # @example
-  #   magnification(10, 5) #=> 2.0 
+  #   Joules.magnification(10, 5) #=> 2.0 
   def magnification(image_height, object_height)
     return image_height / object_height.to_f
   end
@@ -120,7 +120,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in meters
   # @example
-  #   focal_length(45.7, 22.8) #=> 15.21109489051095
+  #   Joules.focal_length(45.7, 22.8) #=> 15.21109489051095
   def focal_length(object_distance, image_distance)
     return 1 / ((1.0 / object_distance) + (1.0 / image_distance))
   end
@@ -131,7 +131,7 @@ module Joules
   # @return [Float]
   #   return value > 0; return value is in dioptres
   # @example
-  #   power_of_lens(2) #=> 0.5
+  #   Joules.power_of_lens(2) #=> 0.5
   def power_of_lens(focal_length)
     return 1.0 / focal_length
   end

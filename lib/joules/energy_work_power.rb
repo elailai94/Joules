@@ -8,8 +8,6 @@
 
 # Energy, work, and power module (energy_work_power.rb)
 
-require_relative 'constants'
-
 module Joules
   module_function
 
@@ -21,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
-  #   gravitational_potential_energy(0.5, 6) #=> 29.43
+  #   Joules.gravitational_potential_energy(0.5, 6) #=> 29.43
   def gravitational_potential_energy(mass, height)
     return mass * FREE_FALL_ACCELERATION * height
   end
@@ -34,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
-  #   elastic_potential_energy(81.75, 2.4) #=> 235.44
+  #   Joules.elastic_potential_energy(81.75, 2.4) #=> 235.44
   def elastic_potential_energy(spring_constant, extension)
     return 0.5 * spring_constant * (extension ** 2)
   end
@@ -47,7 +45,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
-  #   kinetic_energy(500, 22) #=> 121000.0 
+  #   Joules.kinetic_energy(500, 22) #=> 121000.0 
   def kinetic_energy(mass, velocity)
     return 0.5 * mass * (velocity ** 2)
   end
@@ -60,7 +58,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   work_done(40, 2.34) #=> 93.6
+  #   Joules.work_done(40, 2.34) #=> 93.6
   def work_done(force, displacement)
     return force * displacement.to_f
   end
@@ -73,7 +71,7 @@ module Joules
   # @return [Float]
   #   return value is in watts
   # @example
-  #   power_v1(28, 7) #=> 4.0
+  #   Joules.power_v1(28, 7) #=> 4.0
   # @note There are four other methods for calculating power.
   def power_v1(work_done, time)
     return work_done / time.to_f
@@ -87,7 +85,7 @@ module Joules
   # @return [Float]
   #   return value is in watts
   # @example
-  #   power_v2(42, 2.3) #=> 96.6
+  #   Joules.power_v2(42, 2.3) #=> 96.6
   # @note There are four other methods for calculating power.
   def power_v2(force, velocity)
     return force * velocity.to_f
@@ -101,7 +99,7 @@ module Joules
   # @return [Float]
   #   return value >= 0
   # @example
-  #   energy_efficiency(16, 20) #=> 80.0 
+  #   Joules.energy_efficiency(16, 20) #=> 80.0 
   def energy_efficiency(useful_energy_output, energy_input)
     return (useful_energy_output / energy_input.to_f) * 100
   end
@@ -114,7 +112,7 @@ module Joules
   # @return [Float]
   #   return value >= 0
   # @example
-  #   power_efficiency(26, 40) #=> 65.0
+  #   Joules.power_efficiency(26, 40) #=> 65.0
   def power_efficiency(useful_power_output, power_input)
     return (useful_power_output / power_input.to_f) * 100
   end

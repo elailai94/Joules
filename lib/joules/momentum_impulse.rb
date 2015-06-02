@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value is in newton seconds
   # @example
-  #   momentum(52, 4.7) #=> 244.4
+  #   Joules.momentum(52, 4.7) #=> 244.4
   def momentum(mass, velocity)
     return mass * velocity.to_f
   end
@@ -32,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value is in newton seconds
   # @example
-  #   impulse_v1(30.8, 9.6) #=> 295.68
+  #   Joules.impulse_v1(30.8, 9.6) #=> 295.68
   # @note There is one other method for calculating impulse.
   def impulse_v1(force, time)
     return force * time.to_f
@@ -48,7 +48,7 @@ module Joules
   # @return [Float]
   #   return value is in newton seconds
   # @example
-  #   impulse_v2(20, 35, 2.4) #=> 36.0
+  #   Joules.impulse_v2(20, 35, 2.4) #=> 36.0
   # @note There is one other method for calculating impulse.
   def impulse_v2(initial_velocity, final_velocity, mass)
     return (final_velocity - initial_velocity) * mass.to_f

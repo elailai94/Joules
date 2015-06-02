@@ -8,8 +8,6 @@
 
 # Quantum module (quantum.rb)
 
-require_relative 'constants'
-
 module Joules
   module_function
 
@@ -19,7 +17,7 @@ module Joules
   # @return [Float]
   #   return value > 0; return value is in joules
   # @example
-  #   photon_energy(509337860780984.75) #=> 3.376910016977929e-19
+  #   Joules.photon_energy(509337860780984.75) #=> 3.376910016977929e-19
   def photon_energy(frequency)
     return PLANCK_CONSTANT * frequency
   end
@@ -30,7 +28,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
-  #   energy_v4(60.5) #=> 5.445e+18
+  #   Joules.energy_v4(60.5) #=> 5.445e+18
   # @note There are three other methods for calculating energy.
   def energy_v4(mass)
     return mass * (SPEED_OF_LIGHT ** 2)
@@ -42,7 +40,7 @@ module Joules
   # @return [Float]
   #   return value is in seconds
   # @example
-  #   half_life(7.7e4) #=> 9.001911435843445e-06
+  #   Joules.half_life(7.7e4) #=> 9.001911435843445e-06
   def half_life(decay_constant)
     return Math.log(2) / decay_constant
   end
@@ -53,7 +51,7 @@ module Joules
   # @return [Float]
   #   return value is in per second
   # @example
-  #   decay_constant(9) #=> 0.0770163533955495
+  #   Joules.decay_constant(9) #=> 0.0770163533955495
   def decay_constant(half_life)
     return Math.log(2) / half_life
   end

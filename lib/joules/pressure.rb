@@ -8,8 +8,6 @@
 
 # Pressure module (pressure.rb)
 
-require_relative 'constants'
-
 module Joules
   module_function
 
@@ -21,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in pascals
   # @example
-  #   pressure(98, 0.04) #=> 2450.0 
+  #   Joules.pressure(98, 0.04) #=> 2450.0 
   def pressure(force, area)
     return force / area.to_f
   end
@@ -34,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in pascals
   # @example
-  #   hydrostatic_pressure(1000, 5) #=> 49050.0
+  #   Joules.hydrostatic_pressure(1000, 5) #=> 49050.0
   def hydrostatic_pressure(density, height)
     return density * FREE_FALL_ACCELERATION * height
   end

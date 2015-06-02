@@ -21,7 +21,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   energy_v1(500, 2.46, 3.6) #=> 4428.0
+  #   Joules.energy_v1(500, 2.46, 3.6) #=> 4428.0
   # @note There are two other methods for calculating energy.
   def energy_v1(mass, specific_heat_capacity, temperature_change)
     return mass * specific_heat_capacity * temperature_change.to_f
@@ -35,7 +35,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   energy_v2(84.3, 72.1) #=> 6078.03
+  #   Joules.energy_v2(84.3, 72.1) #=> 6078.03
   # @note There are two other methods for calculating energy.
   def energy_v2(mass, specific_latent_heat)
     return mass * specific_latent_heat.to_f

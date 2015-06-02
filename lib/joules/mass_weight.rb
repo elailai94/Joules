@@ -8,8 +8,6 @@
 
 # Mass and weight module (mass_weight.rb)
 
-require_relative 'constants'
-
 module Joules
   module_function
 
@@ -19,7 +17,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in newtons
   # @example
-  #   weight(79.41) #=> 779.0121
+  #   Joules.weight(79.41) #=> 779.0121
   def weight(mass)
     return mass * FREE_FALL_ACCELERATION 
   end
@@ -30,7 +28,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in kilograms
   # @example
-  #   mass(779.0121) #=> 79.41
+  #   Joules.mass(779.0121) #=> 79.41
   def mass(weight)
     return weight / FREE_FALL_ACCELERATION
   end

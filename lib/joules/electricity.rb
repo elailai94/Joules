@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value is in amperes
   # @example
-  #   current(325, 5) #=> 65.0
+  #   Joules.current(325, 5) #=> 65.0
   def current(charge, time)
     return charge / time.to_f
   end
@@ -32,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value is in ohms
   # @example
-  #   resistance(1.8, 0.6) #=> 3.0
+  #   Joules.resistance_v1(1.8, 0.6) #=> 3.0
   # @note There is one other method for calculating resistance.
   def resistance_v1(voltage, current)
     return voltage / current.to_f	
@@ -48,7 +48,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in ohms
   # @example
-  #   resistance_v2(1e13, 250, 0.4) #=> 6.25e+15
+  #   Joules.resistance_v2(1e13, 250, 0.4) #=> 6.25e+15
   # @note There is one other method for calculating resistance.
   def resistance_v2(resistivity, wire_length, cross_sectional_area)
     return (resistivity * wire_length) / cross_sectional_area.to_f
@@ -60,7 +60,7 @@ module Joules
   # @return [Float]
   #   return value is in ohms
   # @example
-  #   resistance_in_series([10, 5, 3.4, 6.3]) #=> 24.7
+  #   Joules.resistance_in_series([10, 5, 3.4, 6.3]) #=> 24.7
   def resistance_in_series(resistances)
     total_resistance = 0
     resistances.each do |resistance|
@@ -75,7 +75,7 @@ module Joules
   # @return [Float]
   #   return value is in ohms
   # @example
-  #   resistance_in_parallel([0.5, 0.25, 0.125]) #=> 0.07142857142857142
+  #   Joules.resistance_in_parallel([0.5, 0.25, 0.125]) #=> 0.07142857142857142
   def resistance_in_parallel(resistances)
     total_resistance = 0
     if resistances.empty?
@@ -96,7 +96,7 @@ module Joules
   # @return [Float]
   #   return value is in farads
   # @example
-  #   capacitance(2e-3, 100) #=> 2.0e-05
+  #   Joules.capacitance(2e-3, 100) #=> 2.0e-05
   def capacitance(charge, voltage)
     return charge / voltage.to_f
   end
@@ -109,7 +109,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   capacitor_potential_energy_v1(1.5, 30) #=> 22.5
+  #   Joules.capacitor_potential_energy_v1(1.5, 30) #=> 22.5
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v1(charge, voltage)
     return 0.5 * charge * voltage
@@ -123,7 +123,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   capacitor_potential_energy_v2(10e-6, 20) #=> 0.002
+  #   Joules.capacitor_potential_energy_v2(10e-6, 20) #=> 0.002
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v2(capacitance, voltage)
     return 0.5 * capacitance * (voltage ** 2)
@@ -137,7 +137,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   capacitor_potential_energy_v3(25, 50) #=> 6.25
+  #   Joules.capacitor_potential_energy_v3(25, 50) #=> 6.25
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v3(charge, capacitance)
     return (0.5 * (charge ** 2)) / capacitance
@@ -149,7 +149,7 @@ module Joules
   # @return [Float]
   #   return value is in farads
   # @example
-  #   capacitance_in_series([0.5, 0.25, 0.125]) #=> 0.07142857142857142
+  #   Joules.capacitance_in_series([0.5, 0.25, 0.125]) #=> 0.07142857142857142
   def capacitance_in_series(capacitances)
     total_capacitance = 0
     if capacitances.empty?
@@ -168,7 +168,7 @@ module Joules
   # @return [Float]
   #   return value is in farads
   # @example
-  #   capacitance_in_parallel([10, 5, 3.4, 6.3]) #=> 24.7
+  #   Joules.capacitance_in_parallel([10, 5, 3.4, 6.3]) #=> 24.7
   def capacitance_in_parallel(capacitances)
     total_capacitance = 0
     capacitances.each do |capacitance|
@@ -185,7 +185,7 @@ module Joules
   # @return [Float]
   #   return value is in volts
   # @example
-  #   voltage_v1(1.8, 0.6) #=> 3.0
+  #   Joules.voltage_v1(1.8, 0.6) #=> 3.0
   # @note There is one other method for calculating voltage.
   def voltage_v1(energy, charge)
     return energy / charge.to_f
@@ -199,7 +199,7 @@ module Joules
   # @return [Float]
   #   return value is in volts
   # @example
-  #   voltage_v2(0.6, 3) #=> 1.8
+  #   Joules.voltage_v2(0.6, 3) #=> 1.8
   # @note There is one other method for calculating voltage.
   def voltage_v2(current, resistance)
     return current * resistance.to_f
@@ -213,7 +213,7 @@ module Joules
   # @return [Float]
   #   return value is in watts
   # @example
-  #   power_v3(1.8, 0.6) #=> 1.08
+  #   Joules.power_v3(1.8, 0.6) #=> 1.08
   # @note There are four other methods for calculating power.
   def power_v3(voltage, current)
     return voltage * current.to_f
@@ -227,7 +227,7 @@ module Joules
   # @return [Float]
   #   return value is in watts
   # @example
-  #   power_v4(0.6, 3) #=> 1.08
+  #   Joules.power_v4(0.6, 3) #=> 1.08
   # @note There are four other methods for calculating power.
   def power_v4(current, resistance)
     return (current ** 2.0) * resistance
@@ -241,7 +241,7 @@ module Joules
   # @return [Float]
   #   return value is in watts
   # @example
-  #   power_v5(1.8, 3) #=> 1.08
+  #   Joules.power_v5(1.8, 3) #=> 1.08
   # @note There are four other methods for calculating power.
   def power_v5(voltage, resistance)
     return (voltage ** 2.0) / resistance
@@ -257,7 +257,7 @@ module Joules
   # @return [Float]
   #   return value is in joules
   # @example
-  #   energy_v3(1.8, 0.6, 5) #=> 5.4
+  #   Joules.energy_v3(1.8, 0.6, 5) #=> 5.4
   # @note There are two other methods for calculating energy.
   def energy_v3(voltage, current, time)
     return power_v2(voltage, current) * time

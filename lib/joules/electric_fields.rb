@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons per coulomb/volts per metre
   # @example
-  #   electric_field_strength_v1(9, 0.1) #=> 90.0
+  #   Joules.electric_field_strength_v1(9, 0.1) #=> 90.0
   # @note There are two other method for calculating electric field strength.
   def electric_field_strength_v1(voltage, distance)
   	return voltage / distance.to_f
@@ -33,7 +33,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons per coulomb/volts per metre
   # @example
-  #   electric_field_strength_v2(50, 1.3e-6) #=> 38461538.461538464
+  #   Joules.electric_field_strength_v2(50, 1.3e-6) #=> 38461538.461538464
   # @note There are two other method for calculating electric field strength.
   def electric_field_strength_v2(force, charge)
     return force / charge.to_f
@@ -47,7 +47,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons per coulomb/volts per metre
   # @example
-  #   electric_field_strength_v3(3.2e-19, 0.2) #=> 7.193443755565889e-08
+  #   Joules.electric_field_strength_v3(3.2e-19, 0.2) #=> 7.193443755565889e-08
   # @note There are two other method for calculating electric field strength.
   def electric_field_strength_v3(charge, distance)
     return charge / (4 * Math::PI * FREE_SPACE_PERMITTIVITY * (distance ** 2))
@@ -61,7 +61,7 @@ module Joules
   # @return [Float]
   #   return value is in volts
   # @example
-  #   electric_potential(3.2e-19, 0.2) #=> 1.4386887511131779e-08
+  #   Joules.electric_potential(3.2e-19, 0.2) #=> 1.4386887511131779e-08
   def electric_potential(charge, distance)
     return charge / (4 * Math::PI * FREE_SPACE_PERMITTIVITY * distance)
   end

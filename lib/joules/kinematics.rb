@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in meters per second
   # @example
-  #   avg_speed(30, 2.4) #=> 12.5
+  #   Joules.avg_speed(30, 2.4) #=> 12.5
   def avg_speed(distance, time)
     return distance / time.to_f 
   end
@@ -32,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value is in meters per second
   # @example
-  #   avg_velocity(180, 4.8) #=> 37.5 
+  #   Joules.avg_velocity(180, 4.8) #=> 37.5 
   def avg_velocity(displacement, time)
     return displacement / time.to_f
   end
@@ -47,7 +47,7 @@ module Joules
   # @return [Float]
   #   return value is in meters per second squared
   # @example
-  #   acceleration(20, 35, 2.4) #=> 6.25
+  #   Joules.acceleration(20, 35, 2.4) #=> 6.25
   def acceleration(initial_velocity, final_velocity, time)
     return (final_velocity - initial_velocity) / time.to_f
   end
@@ -62,7 +62,7 @@ module Joules
   # @return [Float]
   #   return value is in meters per second
   # @example
-  #   final_velocity_v1(20, 6.25, 2.4) #=> 35.0
+  #   Joules.final_velocity_v1(20, 6.25, 2.4) #=> 35.0
   # @note There is one other method for calculating final velocity.
   def final_velocity_v1(initial_velocity, acceleration, time)
     return initial_velocity + (acceleration * time.to_f)
@@ -78,7 +78,7 @@ module Joules
   # @return [Float]
   #   return value is in meters per second
   # @example
-  #   final_velocity_v2(20, 6.25, 66) #=> 35.0
+  #   Joules.final_velocity_v2(20, 6.25, 66) #=> 35.0
   # @note There is one other method for calculating final velocity.
   def final_velocity_v2(initial_velocity, acceleration, displacement)
     return ((initial_velocity ** 2) + (2 * acceleration * displacement)) ** 0.5
@@ -94,7 +94,7 @@ module Joules
   # @return [Float]
   #   return value is in meters
   # @example
-  #   displacement_v1(20, 35, 2.4) #=> 66.0
+  #   Joules.displacement_v1(20, 35, 2.4) #=> 66.0
   # @note There are two other methods for calculating displacement.
   def displacement_v1(initial_velocity, final_velocity, time)
     return 0.5 * (initial_velocity + final_velocity) * time
@@ -110,7 +110,7 @@ module Joules
   # @return [Float]
   #   return value is in meters
   # @example
-  #   displacement_v2(20, 6.25, 2.4) #=> 66.0
+  #   Joules.displacement_v2(20, 6.25, 2.4) #=> 66.0
   # @note There are two other methods for calculating displacement.
   def displacement_v2(initial_velocity, acceleration, time)
     return (initial_velocity * time) + (0.5 * acceleration * (time ** 2))
@@ -126,7 +126,7 @@ module Joules
   # @return [Float]
   #   return value is in meters
   # @example
-  #   displacement_v3(35, 6.25, 2.4) #=> 66.0
+  #   Joules.displacement_v3(35, 6.25, 2.4) #=> 66.0
   # @note There are two other methods for calculating displacement.
   def displacement_v3(final_velocity, acceleration, time)
     return (final_velocity * time) - (0.5 * acceleration * (time ** 2))

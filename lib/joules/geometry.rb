@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as length
   # @example
-  #   rectangle_area(2, 3.4) #=> 6.8
+  #   Joules.rectangle_area(2, 3.4) #=> 6.8
   def rectangle_area(length, width)
     return length * width.to_f
   end
@@ -32,7 +32,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   arc_length(12, (Math::PI/4)) #=> 9.42477796076938
+  #   Joules.arc_length(12, (Math::PI/4)) #=> 9.42477796076938
   def arc_length(radius, central_angle)
     return radius * central_angle.to_f
   end
@@ -43,7 +43,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   circumference(12) #=> 75.398223686155 
+  #   Joules.circumference(12) #=> 75.398223686155 
   def circumference(radius)
     return 2 * Math::PI * radius
   end
@@ -54,7 +54,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   circle_area(12) #=> 452.38934211693 
+  #   Joules.circle_area(12) #=> 452.38934211693 
   def circle_area(radius)
     return Math::PI * (radius ** 2)
   end
@@ -65,7 +65,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   sphere_surface_area(12) #=> 1809.5573684677208
+  #   Joules.sphere_surface_area(12) #=> 1809.5573684677208
   def sphere_surface_area(radius)
     return 4 * circle_area(radius)
   end
@@ -76,7 +76,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   sphere_volume(12) #=> 7238.229473870883
+  #   Joules.sphere_volume(12) #=> 7238.229473870883
   def sphere_volume(radius)
     return (4 * circle_area(radius) * radius) / 3
   end
@@ -89,7 +89,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   cone_surface_area(3, 5.83) #=> 83.22078939359362
+  #   Joules.cone_surface_area(3, 5.83) #=> 83.22078939359362
   def cone_surface_area(radius, slant_height)
     return circle_area(radius) + (Math::PI * radius * slant_height)
   end
@@ -102,7 +102,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   cone_volume(6.5, 3) #=> 132.73228961416876
+  #   Joules.cone_volume(6.5, 3) #=> 132.73228961416876
   def cone_volume(radius, height)
     return (circle_area(radius) * height) / 3
   end
@@ -115,7 +115,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   cylinder_surface_area(6.5, 3) #=> 122.522113490002
+  #   Joules.cylinder_surface_area(6.5, 3) #=> 122.522113490002
   def cylinder_surface_area(radius, height)
     return circumference(radius) * height
   end
@@ -128,7 +128,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   cylinder_volume(6.5, 3) #=> 398.196868842506 
+  #   Joules.cylinder_volume(6.5, 3) #=> 398.196868842506 
   def cylinder_volume(radius, height)
     return circle_area(radius) * height
   end

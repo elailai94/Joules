@@ -19,7 +19,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons
   # @example
-  #   force_v1(120, 2.67) #=> 320.4
+  #   Joules.force_v1(120, 2.67) #=> 320.4
   # @note There are two other methods for calculating force. 
   def force_v1(mass, acceleration)
     return mass * acceleration.to_f
@@ -33,7 +33,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in newtons
   # @example
-  #   force_v2(81.75, 2.4) #=> 196.2
+  #   Joules.force_v2(81.75, 2.4) #=> 196.2
   # @note There are two other methods for calculating force.
   def force_v2(spring_constant, extension)
     return spring_constant * extension.to_f
@@ -51,7 +51,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons
   # @example
-  #   force_v3(20, 35, 50, 2.4) #=> 312.5
+  #   Joules.force_v3(20, 35, 50, 2.4) #=> 312.5
   # @note There are two other methods for calculating force.
   def force_v3(initial_velocity, final_velocity, mass, time)
     return ((final_velocity - initial_velocity) * mass) / time.to_f
@@ -65,7 +65,7 @@ module Joules
   # @return [Float]
   #   return value is in newton metres
   # @example
-  #   moment(23, 4.5) #=> 103.5
+  #   Joules.moment(23, 4.5) #=> 103.5
   def moment(force, distance)
     return force * distance.to_f
   end
