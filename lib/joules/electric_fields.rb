@@ -3,7 +3,7 @@
 #
 # @description: Module for providing electric fields formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Electric fields module (electric_fields.rb)
@@ -15,7 +15,7 @@ module Joules
   # @param voltage [Int, Float]
   #   voltage is in volts
   # @param distance [Int, Float]
-  #   distance > 0; distance is in meters
+  #   distance > 0; distance is in metres
   # @return [Float]
   #   return value is in newtons per coulomb/volts per metre
   # @example
@@ -43,7 +43,7 @@ module Joules
   # @param charge [Int, Float]
   #   charge is in coulombs
   # @param distance [Int, Float]
-  #   distance > 0; distance is in meters
+  #   distance > 0; distance is in metres
   # @return [Float]
   #   return value is in newtons per coulomb/volts per metre
   # @example
@@ -57,7 +57,7 @@ module Joules
   # @param charge [Int, Float]
   #   charge is in coulombs
   # @param distance [Int, Float]
-  #   distance > 0; distance is in meters
+  #   distance > 0; distance is in metres
   # @return [Float]
   #   return value is in volts
   # @example

@@ -45,8 +45,9 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
-  #   Joules.kinetic_energy(500, 22) #=> 121000.0 
-  def kinetic_energy(mass, velocity)
+  #   Joules.kinetic_energy_v1(500, 22) #=> 121000.0
+  # @note There is one other method for calculating kinetic energy.
+  def kinetic_energy_v1(mass, velocity)
     return 0.5 * mass * (velocity ** 2)
   end
 

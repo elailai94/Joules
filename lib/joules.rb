@@ -3,7 +3,7 @@
 #
 # @description: Module for providing Physics formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Joules module (joules.rb)
@@ -22,5 +22,6 @@ require 'joules/electricity'
 require 'joules/quantum'
 require 'joules/gravitational_fields'
 require 'joules/electric_fields'
+require 'joules/magnetic_fields'
 require 'joules/geometry'
 require 'joules/conversion'
