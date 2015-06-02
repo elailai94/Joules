@@ -26,12 +26,12 @@ require 'joules'
 ### Usage
 #### Simple Method Call
 ```Ruby
-gravitational_potential_energy(0.5, 6)
+Joules.gravitational_potential_energy(0.5, 6)
 ```
 This would return 29.43.
 #### Method Composition
 ```Ruby
-power(work_done(40, 2.34), 4)
+Joules.power(Joules.work_done(40, 2.34), 4)
 ```
 This would return 23.4.
 > Note: For documentation on methods and constants, please visit [http://www.rubydoc.info/gems/joules/](http://www.rubydoc.info/gems/joules/).
