@@ -15,7 +15,7 @@ gem build joules.gemspec
 
 ### Library Installation
 ```Bash
-gem install joules-0.3.0.gem
+gem install joules-0.3.1.gem
 ```
 
 ### Library Import
@@ -60,7 +60,8 @@ This would return 23.4.
 * Added Physics formulas in quantum
 * Added more geometric and conversion formulas commonly used in Physics
 
-#### Version 0.3.1 (Next Release)
+#### Version 0.3.1
+* Added Physics formulas in gravitational fields and electric fields 
 
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
