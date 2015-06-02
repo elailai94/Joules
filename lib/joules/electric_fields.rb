@@ -66,4 +66,18 @@ module Joules
     return charge / (4 * Math::PI * FREE_SPACE_PERMITTIVITY * distance)
   end
 
+  # Calculates the kinetic energy of an electron given voltage.
+  # @param voltage [Int, Float]
+  #   voltage is in volts
+  # @param charge [Int, Float]
+  #   charge is in coulombs
+  # @return [Float]
+  #   return value is in electronvolts
+  # @example
+  #   Joules.kinetic_energy_v2(20, 2) #=> 2.5e+20
+  # @note There is one other method for calculating kinetic energy.
+  def kinetic_energy_v2(voltage, charge)
+    return voltage * (charge / ELEMENTARY_CHARGE)
+  end
+
 end

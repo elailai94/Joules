@@ -23,7 +23,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons
   # @example
-  #   magnetic_force_v1(0.06, 20, 4.5) #=> 5.3999999999999995
+  #   Joules.magnetic_force_v1(0.06, 20, 4.5) #=> 5.3999999999999995
   # @note There is one other method for calculating magnetic force.
   def magnetic_force_v1(flux_density, current, conductor_length, angle = 90)
   	return flux_density * current * conductor_length * Math.sin(to_radians(angle))
@@ -41,7 +41,7 @@ module Joules
   # @return [Float]
   #   return value is in newtons
   # @example
-  #   magnetic_force_v2(0.06, 34, 60) #=> 122.4
+  #   Joules.magnetic_force_v2(0.06, 34, 60) #=> 122.4
   # @note There is one other method for calculating magnetic force.
   def magnetic_force_v2(flux_density, charge, velocity, angle = 90)
   	return flux_density * charge * velocity * Math.sin(to_radians(angle))
@@ -57,7 +57,7 @@ module Joules
   # @return [Float]
   #   return value is in webers
   # @example
-  #   magnetic_flux(0.945, 9e-4) #=> 0.0008504999999999999
+  #   Joules.magnetic_flux(0.945, 9e-4) #=> 0.0008504999999999999
   def magnetic_flux(flux_density, area, angle = 0)
     return flux_density * area * Math.cos(to_radians(angle))
   end
@@ -70,7 +70,7 @@ module Joules
   # @return [Float]
   #   return value is in webers
   # @example
-  #   magnetic_flux_linkage(9.4, 10) #=> 94.0
+  #   Joules.magnetic_flux_linkage(9.4, 10) #=> 94.0
   def magnetic_flux_linkage(magnetic_flux, number_of_coils)
     return magnetic_flux * number_of_coils.to_f
   end

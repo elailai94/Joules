@@ -3,7 +3,7 @@
 #
 # @description: Module for providing gravitational fields formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Gravitational fields module (gravitational_fields.rb)
