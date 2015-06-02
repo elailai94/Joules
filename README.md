@@ -64,6 +64,7 @@ This would return 23.4.
 * Added Physics formulas in gravitational fields and electric fields
 
 #### Version 0.3.2 (Next Release)
+* Added Physics formulas in magnetic fields
 
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
