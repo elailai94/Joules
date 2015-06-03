@@ -40,7 +40,7 @@ This would return 23.4.
 #### Kinematics
 Formula    | Method   
 :----------|:-------
-```tex
+```LaTeX
 \sum_{x=0}^n f(x)
 ```
 
