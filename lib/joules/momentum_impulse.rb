@@ -3,7 +3,7 @@
 #
 # @description: Module for providing momentum and impulse formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Momentum and impulse module (momentum_impulse.rb)
@@ -15,7 +15,7 @@ module Joules
   # @param mass [Int, Float]
   #   mass >= 0; mass is in kilograms
   # @param velocity [Int, Float]
-  #   velocity is in meters per second
+  #   velocity is in metres per second
   # @return [Float]
   #   return value is in newton seconds
   # @example
@@ -40,9 +40,9 @@ module Joules
 
   # Calculates the impulse given initial velocity, final velocity, and mass.
   # @param initial_velocity [Int, Float]
-  #   initial_velocity is in meters per second
+  #   initial_velocity is in metres per second
   # @param final_velocity [Int, Float]
-  #   final_velocity is in meters per second
+  #   final_velocity is in metres per second
   # @param mass [Int, Float]
   #   mass >= 0; mass is in kilograms
   # @return [Float]

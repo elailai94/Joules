@@ -3,7 +3,7 @@
 #
 # @description: Module for providing library (gem) specifications
 # @author: Elisha Lai
-# @version: 0.3.2 0/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Gemspec module (joules.gemspec)

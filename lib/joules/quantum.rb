@@ -3,7 +3,7 @@
 #
 # @description: Module for providing quantum formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Quantum module (quantum.rb)
@@ -39,10 +39,15 @@ module Joules
   #   decay_constant != 0; decay_constant is in per second
   # @return [Float]
   #   return value is in seconds
+  # @raise [ZeroDivisionError] if decay_constant = 0
   # @example
   #   Joules.half_life(7.7e4) #=> 9.001911435843445e-06
   def half_life(decay_constant)
-    return Math.log(2) / decay_constant
+    if decay_constant.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return Math.log(2) / decay_constant
+    end
   end
 
   # Calculates the decay constant of a decaying quantity given half-life.
@@ -50,10 +55,15 @@ module Joules
   #   half_life != 0; half_life is in seconds
   # @return [Float]
   #   return value is in per second
+  # @raise [ZeroDivisionError] if half_life = 0
   # @example
   #   Joules.decay_constant(9) #=> 0.0770163533955495
   def decay_constant(half_life)
-    return Math.log(2) / half_life
+    if half_life.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return Math.log(2) / half_life
+    end
   end
 
 end

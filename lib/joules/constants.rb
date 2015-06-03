@@ -11,15 +11,15 @@
 module Joules
   
   # Speed of light in free space.
-  # @note This quantity is in meters per second.
+  # @note This quantity is in metres per second.
   SPEED_OF_LIGHT = 3.00e8
 
   # Permeability of free space.
-  # @note This quantity is in henries per meter.
-  FREE_SPACE_PERMEABILITY = 4 * Math::PI * 1e-7
+  # @note This quantity is in henries per metre.
+  FREE_SPACE_PERMEABILITY = (4 * Math::PI * 1e-7)
 
   # Permittivity of free space.
-  # @note This quantity is in farads per meter.
+  # @note This quantity is in farads per metre.
   FREE_SPACE_PERMITTIVITY = 8.85e-12
 
   # Elementary charge.
@@ -59,11 +59,11 @@ module Joules
   BOLTZMANN_CONSTANT = 1.38e-23
 
   # Stefan constant.
-  # @note This quantity is in watts per meter squared kelvin to the fourth power.
+  # @note This quantity is in watts per metre squared kelvin to the fourth power.
   STEFAN_CONSTANT = 5.67e-8
 
   # Wien constant.
-  # @note This quantity is in meter kelvins.
+  # @note This quantity is in metre kelvins.
   WIEN_CONSTANT = 2.9e-3
 
   # Gravitational constant.
@@ -71,7 +71,7 @@ module Joules
   GRAVITATIONAL_CONSTANT = 6.67e-11
 
   # Acceleration of free fall.
-  # @note This quantity is in meters per second squared.
+  # @note This quantity is in metres per second squared.
   FREE_FALL_ACCELERATION = 9.81
 
 end

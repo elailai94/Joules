@@ -3,7 +3,7 @@
 #
 # @description: Module for providing kinematics formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Kinematics module (kinematics.rb)
@@ -13,54 +13,69 @@ module Joules
 
   # Calculates the average speed given distance and time.
   # @param distance [Int, Float]
-  #   distance >= 0; distance is in meters
+  #   distance >= 0; distance is in metres
   # @param time [Int, Float]
   #   time > 0; time is in seconds
   # @return [Float]
-  #   return value >= 0; return value is in meters per second
+  #   return value >= 0; return value is in metres per second
+  # @raise [ZeroDivisionError] if time = 0
   # @example
   #   Joules.avg_speed(30, 2.4) #=> 12.5
   def avg_speed(distance, time)
-    return distance / time.to_f 
+    if time.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return distance / time.to_f
+    end
   end
 
   # Calculates the average velocity given displacement and time.
   # @param displacement [Int, Float]
-  #   displacement is in meters
+  #   displacement is in metres
   # @param time [Int, Float]
   #   time > 0; time is in seconds
   # @return [Float]
-  #   return value is in meters per second
+  #   return value is in metres per second
+  # @raise [ZeroDivisionError] if time = 0
   # @example
   #   Joules.avg_velocity(180, 4.8) #=> 37.5 
   def avg_velocity(displacement, time)
-    return displacement / time.to_f
+    if time.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return displacement / time.to_f
+    end
   end
 
   # Calculates the acceleration given initial velocity, final velocity, and time.
   # @param initial_velocity [Int, Float]
-  #   initial_velocity is in meters per second
+  #   initial_velocity is in metres per second
   # @param final_velocity [Int, Float]
-  #   final_velocity is in meters per second
+  #   final_velocity is in metres per second
   # @param time [Int, Float]
   #   time > 0; time is in seconds
   # @return [Float]
-  #   return value is in meters per second squared
+  #   return value is in metres per second squared
+  # @raise [ZeroDivisionError] if time = 0
   # @example
   #   Joules.acceleration(20, 35, 2.4) #=> 6.25
   def acceleration(initial_velocity, final_velocity, time)
-    return (final_velocity - initial_velocity) / time.to_f
+    if time.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return (final_velocity - initial_velocity) / time.to_f
+    end
   end
 
   # Calculates the final velocity given initial velocity, acceleration, and time.
   # @param initial_velocity [Int, Float]
-  #   initial_velocity is in meters per second
+  #   initial_velocity is in metres per second
   # @param acceleration [Int, Float]
-  #   acceleration is in meters per second squared
+  #   acceleration is in metres per second squared
   # @param time [Int, Float]
   #   time >= 0; time is in seconds
   # @return [Float]
-  #   return value is in meters per second
+  #   return value is in metres per second
   # @example
   #   Joules.final_velocity_v1(20, 6.25, 2.4) #=> 35.0
   # @note There is one other method for calculating final velocity.
@@ -70,13 +85,13 @@ module Joules
 
   # Calculates the final velocity given initial velocity, acceleration, and displacement.
   # @param initial_velocity [Int, Float]
-  #   initial_velocity is in meters per second
+  #   initial_velocity is in metres per second
   # @param acceleration [Int, Float]
-  #   acceleration is in meters per second squared
+  #   acceleration is in metres per second squared
   # @param displacement [Int, Float]
-  #   displacement is in meters
+  #   displacement is in metres
   # @return [Float]
-  #   return value is in meters per second
+  #   return value is in metres per second
   # @example
   #   Joules.final_velocity_v2(20, 6.25, 66) #=> 35.0
   # @note There is one other method for calculating final velocity.
@@ -86,13 +101,13 @@ module Joules
 
   # Calculates the displacement given initial velocity, final velocity, and time.
   # @param initial_velocity [Int, Float]
-  #   initial_velocity is in meters per second
+  #   initial_velocity is in metres per second
   # @param final_velocity [Int, Float]
-  #   final_velocity is in meters per second
+  #   final_velocity is in metres per second
   # @param time [Int, Float]
   #   time >= 0; time is in seconds
   # @return [Float]
-  #   return value is in meters
+  #   return value is in metres
   # @example
   #   Joules.displacement_v1(20, 35, 2.4) #=> 66.0
   # @note There are two other methods for calculating displacement.
@@ -102,13 +117,13 @@ module Joules
 
   # Calculates the displacement given initial velocity, acceleration, and time.
   # @param initial_velocity [Int, Float]
-  #   initial_velocity is in meters per second
+  #   initial_velocity is in metres per second
   # @param acceleration [Int, Float]
-  #   acceleration is in meters per second squared
+  #   acceleration is in metres per second squared
   # @param time [Int, Float]
   #   time >= 0; time is in seconds
   # @return [Float]
-  #   return value is in meters
+  #   return value is in metres
   # @example
   #   Joules.displacement_v2(20, 6.25, 2.4) #=> 66.0
   # @note There are two other methods for calculating displacement.
@@ -118,13 +133,13 @@ module Joules
 
   # Calculates the displacement given final velocity, acceleration, and time.
   # @param final_velocity [Int, Float]
-  #   final_velocity is in meters per second
+  #   final_velocity is in metres per second
   # @param acceleration [Int, Float]
-  #   acceleration is in meters per second squared
+  #   acceleration is in metres per second squared
   # @param time [Int, Float]
   #   time >= 0; time is in seconds
   # @return [Float]
-  #   return value is in meters
+  #   return value is in metres
   # @example
   #   Joules.displacement_v3(35, 6.25, 2.4) #=> 66.0
   # @note There are two other methods for calculating displacement.

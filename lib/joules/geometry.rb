@@ -3,7 +3,7 @@
 #
 # @description: Module for providing geometry formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Geometry module (geometry.rb)
@@ -17,7 +17,7 @@ module Joules
   # @param width [Int, Float]
   #   width >= 0; width has the same units as length
   # @return [Float]
-  #   return value >= 0; return value has the same units as length
+  #   return value >= 0; return value has the same units squared as length 
   # @example
   #   Joules.rectangle_area(2, 3.4) #=> 6.8
   def rectangle_area(length, width)
@@ -52,7 +52,7 @@ module Joules
   # @param radius [Int, Float]
   #   radius >= 0; radius is in a unit of length
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units squared as radius
   # @example
   #   Joules.circle_area(12) #=> 452.38934211693 
   def circle_area(radius)
@@ -63,7 +63,7 @@ module Joules
   # @param radius [Int, Float]
   #   radius >= 0; radius is in a unit of length
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units squared as radius
   # @example
   #   Joules.sphere_surface_area(12) #=> 1809.5573684677208
   def sphere_surface_area(radius)
@@ -74,7 +74,7 @@ module Joules
   # @param radius [Int, Float]
   #   radius >= 0; radius is in a unit of length
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units cubed as radius
   # @example
   #   Joules.sphere_volume(12) #=> 7238.229473870883
   def sphere_volume(radius)
@@ -87,7 +87,7 @@ module Joules
   # @param slant_height [Int, Float]
   #   slant_height >= 0; slant_height has the same units as radius
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units squared as radius
   # @example
   #   Joules.cone_surface_area(3, 5.83) #=> 83.22078939359362
   def cone_surface_area(radius, slant_height)
@@ -100,7 +100,7 @@ module Joules
   # @param height [Int, Float]
   #   height >= 0; height has the same units as radius
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units cubed as radius
   # @example
   #   Joules.cone_volume(6.5, 3) #=> 132.73228961416876
   def cone_volume(radius, height)
@@ -113,7 +113,7 @@ module Joules
   # @param height [Int, Float]
   #   height >= 0; height has the same units as radius
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units squared as radius
   # @example
   #   Joules.cylinder_surface_area(6.5, 3) #=> 122.522113490002
   def cylinder_surface_area(radius, height)
@@ -126,7 +126,7 @@ module Joules
   # @param height [Int, Float]
   #   height >= 0; height has the same units as radius
   # @return [Float]
-  #   return value >= 0; return value has the same units as radius
+  #   return value >= 0; return value has the same units cubed as radius
   # @example
   #   Joules.cylinder_volume(6.5, 3) #=> 398.196868842506 
   def cylinder_volume(radius, height)

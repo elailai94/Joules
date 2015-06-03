@@ -3,7 +3,7 @@
 #
 # @description: Module for providing conversion formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Conversion module (conversion.rb)
@@ -55,25 +55,25 @@ module Joules
     return temperature - 273.15
   end
 
-  # Calculates the equivalent velocity in meters per second given kilometers per hour.
+  # Calculates the equivalent velocity in metres per second given kilometres per hour.
   # @param velocity [Int, Float]
-  #   velocity is in kilometers per hour
+  #   velocity is in kilometres per hour
   # @return [Float]
-  #   return value is in meters per second
+  #   return value is in metres per second
   # @example
-  #   Joules.to_meters_per_second(200) #=> 55.55555555555556 
-  def to_meters_per_second(velocity)
+  #   Joules.to_metres_per_second(200) #=> 55.55555555555556 
+  def to_metres_per_second(velocity)
     return (velocity * 1000) / 3600.0
   end
 
-  # Calculates the equivalent velocity in kilometers per hour given meters per second.
+  # Calculates the equivalent velocity in kilometres per hour given metres per second.
   # @param velocity [Int, Float]
-  #   velocity is in meters per second
+  #   velocity is in metres per second
   # @return [Float]
-  #   return value is in kilometers per hour
+  #   return value is in kilometres per hour
   # @example
-  #   Joules.to_kilometers_per_hour(50) #=> 180.0
-  def to_kilometers_per_hour(velocity)
+  #   Joules.to_kilometres_per_hour(50) #=> 180.0
+  def to_kilometres_per_hour(velocity)
     return (velocity * 3600) / 1000.0
   end
 

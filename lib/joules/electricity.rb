@@ -3,7 +3,7 @@
 #
 # @description: Module for providing electricity formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Electricity module (electricity.rb)
@@ -18,10 +18,15 @@ module Joules
   #   time > 0; time is in seconds
   # @return [Float]
   #   return value is in amperes
+  # @raise [ZeroDivisionError] if time = 0
   # @example
   #   Joules.current(325, 5) #=> 65.0
   def current(charge, time)
-    return charge / time.to_f
+    if time.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return charge / time.to_f
+    end
   end
 
   # Calculates the resistance given voltage and current.
@@ -31,27 +36,37 @@ module Joules
   #   current != 0; current is in amperes
   # @return [Float]
   #   return value is in ohms
+  # @raise [ZeroDivisionError] if current = 0
   # @example
   #   Joules.resistance_v1(1.8, 0.6) #=> 3.0
   # @note There is one other method for calculating resistance.
   def resistance_v1(voltage, current)
-    return voltage / current.to_f	
+    if current.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return voltage / current.to_f
+    end
   end
 
   # Calculates the resistance given resistivity, wire length, and cross sectional area.
   # @param resistivity [Int, Float]
   #   resistivity >= 0; resistivity is in ohm metres
   # @param wire_length [Int, Float]
-  #   wire_length >= 0; wire_length is in meters
+  #   wire_length >= 0; wire_length is in metres
   # @param cross_sectional_area [Int, Float]
-  #   cross_sectional_area > 0; cross_sectional_area is in meters squared
+  #   cross_sectional_area > 0; cross_sectional_area is in metres squared
   # @return [Float]
   #   return value >= 0; return value is in ohms
+  # @raise [ZeroDivisionError] if cross_sectional_area = 0
   # @example
   #   Joules.resistance_v2(1e13, 250, 0.4) #=> 6.25e+15
   # @note There is one other method for calculating resistance.
   def resistance_v2(resistivity, wire_length, cross_sectional_area)
-    return (resistivity * wire_length) / cross_sectional_area.to_f
+    if cross_sectional_area.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return (resistivity * wire_length) / cross_sectional_area.to_f
+    end
   end
 
   # Calculates the total resistance of resistors in series.
@@ -95,10 +110,15 @@ module Joules
   #   voltage != 0; voltage is in volts
   # @return [Float]
   #   return value is in farads
+  # @raise [ZeroDivisionError] if voltage = 0
   # @example
   #   Joules.capacitance(2e-3, 100) #=> 2.0e-05
   def capacitance(charge, voltage)
-    return charge / voltage.to_f
+    if voltage.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return charge / voltage.to_f
+    end
   end
 
   # Calculates the capacitor potential energy given charge and voltage.
@@ -133,14 +153,19 @@ module Joules
   # @param charge [Int, Float]
   #   charge is in coulombs
   # @param capacitance [Int, Float]
-  #   capacitance is in farads
+  #   capacitance != 0; capacitance is in farads
   # @return [Float]
   #   return value is in joules
+  # @raise [ZeroDivisionError] if capacitance = 0
   # @example
   #   Joules.capacitor_potential_energy_v3(25, 50) #=> 6.25
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v3(charge, capacitance)
-    return (0.5 * (charge ** 2)) / capacitance
+    if capacitance.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return (0.5 * (charge ** 2)) / capacitance
+    end
   end
 
   # Calculates the total capacitance of capacitors in series.
@@ -184,11 +209,16 @@ module Joules
   #   charge != 0; charge is in coulombs
   # @return [Float]
   #   return value is in volts
+  # @raise [ZeroDivisionError] if charge = 0
   # @example
   #   Joules.voltage_v1(1.8, 0.6) #=> 3.0
   # @note There is one other method for calculating voltage.
   def voltage_v1(energy, charge)
-    return energy / charge.to_f
+    if charge.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return energy / charge.to_f
+    end
   end
 
   # Calculates the voltage given current and resistance.
@@ -240,11 +270,16 @@ module Joules
   #   resistance != 0; resistance is in ohms
   # @return [Float]
   #   return value is in watts
+  # @raise [ZeroDivisionError] if resistance = 0
   # @example
   #   Joules.power_v5(1.8, 3) #=> 1.08
   # @note There are four other methods for calculating power.
   def power_v5(voltage, resistance)
-    return (voltage ** 2.0) / resistance
+    if resistance.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return (voltage ** 2.0) / resistance
+    end
   end
 
   # Calculates the energy given voltage, current, and time.

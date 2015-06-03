@@ -3,7 +3,7 @@
 #
 # @description: Module for providing energy, work, and power formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Energy, work, and power module (energy_work_power.rb)
@@ -15,7 +15,7 @@ module Joules
   # @param mass [Int, Float]
   #   mass >= 0; mass is in kilograms
   # @param height [Int, Float]
-  #   height >= 0; height is in meters
+  #   height >= 0; height is in metres
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
@@ -26,9 +26,9 @@ module Joules
 
   # Calculates the elastic potential energy given spring constant and extension.
   # @param spring_constant [Int, Float]
-  #   spring_constant >= 0; spring_constant is in newtons per meter
+  #   spring_constant >= 0; spring_constant is in newtons per metre
   # @param extension [Int, Float]
-  #   extension >= 0; extension is in meters
+  #   extension >= 0; extension is in metres
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
@@ -41,7 +41,7 @@ module Joules
   # @param mass [Int, Float]
   #   mass >= 0; mass is in kilograms
   # @param velocity [Int, Float]
-  #   velocity is in meters per second
+  #   velocity is in metres per second
   # @return [Float]
   #   return value >= 0; return value is in joules
   # @example
@@ -55,13 +55,15 @@ module Joules
   # @param force [Int, Float]
   #   force is in newtons
   # @param displacement [Int, Float]
-  #   displacement is in meters
+  #   displacement is in metres
+  # @param angle [Int, Float]
+  #   angle is in degrees
   # @return [Float]
   #   return value is in joules
   # @example
   #   Joules.work_done(40, 2.34) #=> 93.6
-  def work_done(force, displacement)
-    return force * displacement.to_f
+  def work_done(force, displacement, angle = 0)
+    return force * displacement.to_f * Math.cos(to_radians(angle))
   end
 
   # Calculates the power given work done and time.
@@ -71,11 +73,16 @@ module Joules
   #   time > 0; time is in seconds
   # @return [Float]
   #   return value is in watts
+  # @raise [ZeroDivisionError] if time = 0
   # @example
   #   Joules.power_v1(28, 7) #=> 4.0
   # @note There are four other methods for calculating power.
   def power_v1(work_done, time)
-    return work_done / time.to_f
+    if time.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return work_done / time.to_f
+    end
   end
 
   # Calculates the power given force and velocity.
@@ -99,10 +106,15 @@ module Joules
   #   energy_input > 0; energy_input is in joules
   # @return [Float]
   #   return value >= 0
+  # @raise [ZeroDivisionError] if energy_input = 0
   # @example
   #   Joules.energy_efficiency(16, 20) #=> 80.0 
   def energy_efficiency(useful_energy_output, energy_input)
-    return (useful_energy_output / energy_input.to_f) * 100
+    if energy_input.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return (useful_energy_output / energy_input.to_f) * 100
+    end
   end
 
   # Calculates the power efficiency given useful power output and power input.
@@ -112,10 +124,15 @@ module Joules
   #   power_input > 0; power_input is in watts
   # @return [Float]
   #   return value >= 0
+  # @raise [ZeroDivisionError] if power_input = 0
   # @example
   #   Joules.power_efficiency(26, 40) #=> 65.0
   def power_efficiency(useful_power_output, power_input)
-    return (useful_power_output / power_input.to_f) * 100
+    if power_input.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return (useful_power_output / power_input.to_f) * 100
+    end
   end
 
 end

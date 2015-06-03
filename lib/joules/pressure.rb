@@ -3,7 +3,7 @@
 #
 # @description: Module for providing pressure formulas
 # @author: Elisha Lai
-# @version: 0.3.1 01/06/2015
+# @version: 0.3.2 03/06/2015
 #==============================================================================
 
 # Pressure module (pressure.rb)
@@ -15,20 +15,25 @@ module Joules
   # @param force [Int, Float]
   #   force >= 0; force is in newtons
   # @param area [Int, Float]
-  #   area > 0; area is in meters cubed
+  #   area > 0; area is in metres squared
   # @return [Float]
   #   return value >= 0; return value is in pascals
+  # @raise [ZeroDivisionError] if area = 0
   # @example
   #   Joules.pressure(98, 0.04) #=> 2450.0 
   def pressure(force, area)
-    return force / area.to_f
+    if area.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return force / area.to_f
+    end
   end
 
   # Calculates the hydrostatic pressure given density and height.
   # @param density [Int, Float]
-  #   density >= 0; density is in kilograms per meter cubed
+  #   density >= 0; density is in kilograms per metre cubed
   # @param height [Int, Float]
-  #   height >= 0; height is in meters
+  #   height >= 0; height is in metres
   # @return [Float]
   #   return value >= 0; return value is in pascals
   # @example
