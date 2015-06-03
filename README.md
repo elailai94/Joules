@@ -36,15 +36,6 @@ Joules.power(Joules.work_done(40, 2.34), 4)
 This would return 23.4.
 > Note: For documentation on usage of methods and constants, please visit [http://www.rubydoc.info/gems/joules/](http://www.rubydoc.info/gems/joules/).
 
-### Physics Formulas Supported
-#### Kinematics
-Formula    | Method   
-:----------|:-------
-
-#### Mass & Weight
-Formula    | Method
-:----------|:-------
-
 ### Change Log
 #### Version 0.0.1
 * Added Physics formulas in kinematics, mass, weight, density, forces, momentum, impulse, energy, work, power, and pressure
