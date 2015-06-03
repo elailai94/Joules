@@ -66,7 +66,7 @@ module Joules
     if distance.zero?
       raise ZeroDivisionError.new('divided by 0')
     else
-  	  return (GRAVITATIONAL_CONSTANT * mass) / (distance ** 2)
+      return (GRAVITATIONAL_CONSTANT * mass) / (distance ** 2)
     end
   end
 
@@ -84,7 +84,7 @@ module Joules
     if distance.zero?
       raise ZeroDivisionError.new('divided by 0')
     else
-  	  return (-GRAVITATIONAL_CONSTANT * mass) / distance
+      return (-GRAVITATIONAL_CONSTANT * mass) / distance
     end
   end
 
