@@ -197,7 +197,7 @@ module Joules
   def capacitance_in_parallel(capacitances)
     total_capacitance = 0
     capacitances.each do |capacitance|
-  	  total_capacitance += capacitance
+      total_capacitance += capacitance
     end
     return total_capacitance.to_f
   end
