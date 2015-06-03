@@ -40,9 +40,10 @@ This would return 23.4.
 #### Kinematics
 Formula    | Method   
 :----------|:-------
-```LaTeX
-\sum_{x=0}^n f(x)
-```
+
+#### Mass & Weight
+Formula    | Method
+:----------|:-------
 
 ### Change Log
 #### Version 0.0.1
