@@ -26,7 +26,7 @@ module Joules
     if distance.zero?
       raise ZeroDivisionError.new('divided by 0')
     else
-  	  return voltage / distance.to_f
+      return voltage / distance.to_f
     end
   end
 
