@@ -51,7 +51,7 @@ module Joules
     return 0.5 * mass * (velocity ** 2)
   end
 
-  # Calculates the work done given force and displacement.
+  # Calculates the work done given force, displacement, and angle.
   # @param force [Int, Float]
   #   force is in newtons
   # @param displacement [Int, Float]
@@ -85,7 +85,7 @@ module Joules
     end
   end
 
-  # Calculates the power given force and velocity.
+  # Calculates the power given force, velocity, and angle.
   # @param force [Int, Float]
   #   force is in newtons
   # @param velocity [Int, Float]

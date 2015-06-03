@@ -11,7 +11,7 @@
 module Joules
   module_function
 
-  # Calculates the magnetic force on a current given flux density, current, and conductor length.
+  # Calculates the magnetic force on a current given flux density, current, conductor length, and angle.
   # @param flux_density [Int, Float]
   #   flux_density is in teslas
   # @param current [Int, Float]
@@ -29,7 +29,7 @@ module Joules
     return flux_density * current * conductor_length * Math.sin(to_radians(angle))
   end
 
-  # Calculates the magnetic force on a moving charge given flux density, charge, and velocity.
+  # Calculates the magnetic force on a moving charge given flux density, charge, velocity, and angle.
   # @param flux_density [Int, Float]
   #   flux_density is in teslas
   # @param charge [Int, Float]
@@ -47,7 +47,7 @@ module Joules
     return flux_density * charge * velocity * Math.sin(to_radians(angle))
   end
 
-  # Calculates the magnetic flux given flux density and area.
+  # Calculates the magnetic flux given flux density, area, and angle.
   # @param flux_density [Int, Float]
   #   flux_density is in teslas
   # @param area [Int, Float]

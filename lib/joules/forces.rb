@@ -75,17 +75,19 @@ module Joules
     return coefficient_of_friction * normal_force.to_f
   end
 
-  # Calculates the moment given force and distance.
+  # Calculates the moment given force, distance, and angle.
   # @param force [Int, Float]
   #   force is in newtons
   # @param distance [Int, Float]
   #   distance >= 0; distance is in metres
+  # @param angle [Int, Float]
+  #   angle is in degrees
   # @return [Float]
   #   return value is in newton metres
   # @example
   #   Joules.moment(23, 4.5) #=> 103.5
-  def moment(force, distance)
-    return force * distance.to_f
+  def moment(force, distance, angle = 90)
+    return force * distance * Math.sin(to_radians(angle))
   end
 
 end
