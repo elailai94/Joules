@@ -62,6 +62,19 @@ module Joules
     end
   end
 
+  # Calculates the maximum friction force given coefficient of friction and normal force.
+  # @param coefficient_of_friction [Int, Float]
+  #   coefficient_of_friction >= 0
+  # @param normal_force [Int, Force]
+  #   normal_force is in newtons
+  # @return [Float]
+  #   return value is in newtons
+  # @example
+  #   Joules.maximum_friction_force(0.4, 29.43) #=> 11.772
+  def maximum_friction_force(coefficient_of_friction, normal_force)
+    return coefficient_of_friction * normal_force.to_f
+  end
+
   # Calculates the moment given force and distance.
   # @param force [Int, Float]
   #   force is in newtons

@@ -63,7 +63,7 @@ module Joules
   # @example
   #   Joules.work_done(40, 2.34) #=> 93.6
   def work_done(force, displacement, angle = 0)
-    return force * displacement.to_f * Math.cos(to_radians(angle))
+    return force * displacement * Math.cos(to_radians(angle))
   end
 
   # Calculates the power given work done and time.
@@ -90,13 +90,15 @@ module Joules
   #   force is in newtons
   # @param velocity [Int, Float]
   #   velocity is in meters per second
+  # @param angle [Int, Float]
+  #   angle is in degrees
   # @return [Float]
   #   return value is in watts
   # @example
   #   Joules.power_v2(42, 2.3) #=> 96.6
   # @note There are four other methods for calculating power.
-  def power_v2(force, velocity)
-    return force * velocity.to_f
+  def power_v2(force, velocity, angle = 0)
+    return force * velocity * Math.cos(to_radians(angle))
   end
 
   # Calculates the energy efficiency given useful energy output and energy input.
