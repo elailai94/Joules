@@ -1,200 +1,161 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>
-  File: README
-  
-    &mdash; Documentation by YARD 0.8.7.6
-  
-</title>
-
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
-
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
-
-<script type="text/javascript" charset="utf-8">
-  hasFrames = window.top.frames.main ? true : false;
-  relpath = '';
-  framesUrl = "frames.html#!file.README.html";
-</script>
-
-
-  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-
-  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
-
-
+    <meta charset="UTF-8">
+    <title>Joules by elailai94</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <div id="header">
-      <div id="menu">
-  
-    <a href="_index.html">Index</a> &raquo; 
-    <span class="title">File: README</span>
-  
+    <section class="page-header">
+      <h1 class="project-name">Joules</h1>
+      <h2 class="project-tagline">A library (gem) for providing Physics formulas</h2>
+      <a href="https://github.com/elailai94/Joules" class="btn">View on GitHub</a>
+      <a href="https://github.com/elailai94/Joules/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/elailai94/Joules/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
-</div>
+    <section class="main-content">
+      <p><img src="https://cloud.githubusercontent.com/assets/7763904/7764836/ef617b0a-0024-11e5-8044-3cf354a4a306.png" alt="Joules Logo"></p>
 
-      <div id="search">
-  
-    <a class="full_list_link" id="class_list_link"
-        href="class_list.html">
-      Class List
-    </a>
-  
-    <a class="full_list_link" id="method_list_link"
-        href="method_list.html">
-      Method List
-    </a>
-  
-    <a class="full_list_link" id="file_list_link"
-        href="file_list.html">
-      File List
-    </a>
-  
-</div>
-      <div class="clear"></div>
-    </div>
+<p><a href="http://forthebadge.com"><img src="http://forthebadge.com/images/badges/built-with-ruby.svg" alt="forthebadge"></a></p>
 
-    <iframe id="search_frame"></iframe>
+<p><a href="http://badge.fury.io/rb/joules"><img src="https://badge.fury.io/rb/joules.svg" alt="Gem Version"></a></p>
 
-    <div id="content"><div id='filecontents'>
-<p><img
-src="https://cloud.githubusercontent.com/assets/7763904/7764836/ef617b0a-0024-11e5-8044-3cf354a4a306.png"
-/></p>
+<h3>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h3>
 
-<p><img
-src="http://forthebadge.com/images/badges/built-with-ruby.svg"
-/></p>
-
-<a href="https://www.rubygems.org/gems/joules">
-  <img src="https://badge.fury.io/rb/joules.svg">
-</a>
-
-<h3 id="label-About">About</h3>
-
-<p>Joules is a library (gem) for providing simple Physics formulas in
-kinematics, forces, waves, electricity, and so much more. A selection of
-fundamental constants are also provided. It is written entirely in Ruby.</p>
+<p>Joules is a library (gem) for providing simple Physics formulas in kinematics, forces, waves, electricity, and so much more. A selection of fundamental constants are also provided. It is written entirely in Ruby.</p>
 
 <blockquote>
-<p>Note: For library download, please visit <a
-href="https://www.rubygems.org/gems/joules">www.rubygems.org/gems/joules</a>.</p>
+<p>Note: For library download, please visit <a href="https://www.rubygems.org/gems/joules">https://www.rubygems.org/gems/joules</a>.</p>
 </blockquote>
 
-<h3 id="label-Library+Compilation">Library Compilation</h3>
+<h3>
+<a id="library-compilation" class="anchor" href="#library-compilation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Library Compilation</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_build'>build</span> <span class='id identifier rubyid_joules'>joules</span><span class='period'>.</span><span class='id identifier rubyid_gemspec'>gemspec</span></code></pre>
+<div class="highlight highlight-Bash"><pre>gem build joules.gemspec</pre></div>
 
-<h3 id="label-Library+Installation">Library Installation</h3>
+<h3>
+<a id="library-installation" class="anchor" href="#library-installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Library Installation</h3>
 
-<pre class="code ruby"><code class="ruby">gem install joules-0.3.2.gem</code></pre>
+<div class="highlight highlight-Bash"><pre>gem install joules-0.3.2.gem</pre></div>
 
-<h3 id="label-Library+Import">Library Import</h3>
+<h3>
+<a id="library-import" class="anchor" href="#library-import" aria-hidden="true"><span class="octicon octicon-link"></span></a>Library Import</h3>
 
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;joules&#39;</span>
-</pre>
+<div class="highlight highlight-Ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>joules<span class="pl-pds">'</span></span></pre></div>
 
-<h3 id="label-Usage">Usage</h3>
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<h4 id="label-Simple+Method+Call">Simple Method Call</h4>
+<h4>
+<a id="simple-method-call" class="anchor" href="#simple-method-call" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple Method Call</h4>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Joules</span><span class='period'>.</span><span class='id identifier rubyid_gravitational_potential_energy'>gravitational_potential_energy</span><span class='lparen'>(</span><span class='float'>0.5</span><span class='comma'>,</span> <span class='int'>6</span><span class='rparen'>)</span></code></pre>
+<div class="highlight highlight-Ruby"><pre><span class="pl-c1">Joules</span>.gravitational_potential_energy(<span class="pl-c1">0.5</span>, <span class="pl-c1">6</span>)</pre></div>
 
 <p>This would return 29.43.</p>
 
-<h4 id="label-Method+Composition">Method Composition</h4>
+<h4>
+<a id="method-composition" class="anchor" href="#method-composition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method Composition</h4>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Joules</span><span class='period'>.</span><span class='id identifier rubyid_power'>power</span><span class='lparen'>(</span><span class='const'>Joules</span><span class='period'>.</span><span class='id identifier rubyid_work_done'>work_done</span><span class='lparen'>(</span><span class='int'>40</span><span class='comma'>,</span> <span class='float'>2.34</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span></code></pre>
+<div class="highlight highlight-Ruby"><pre><span class="pl-c1">Joules</span>.power(<span class="pl-c1">Joules</span>.work_done(<span class="pl-c1">40</span>, <span class="pl-c1">2.34</span>), <span class="pl-c1">4</span>)</pre></div>
 
 <p>This would return 23.4.</p>
 
 <blockquote>
-<p>Note: For documentation on usage of methods and constants, please visit <a
-href="http://www.rubydoc.info/gems/joules/">www.rubydoc.info/gems/joules/</a>.</p>
+<p>Note: For documentation on usage of methods and constants, please visit <a href="http://www.rubydoc.info/gems/joules/">http://www.rubydoc.info/gems/joules/</a>.</p>
 </blockquote>
 
-<h3 id="label-Change+Log">Change Log</h3>
+<h3>
+<a id="change-log" class="anchor" href="#change-log" aria-hidden="true"><span class="octicon octicon-link"></span></a>Change Log</h3>
 
-<h4 id="label-Version+0.0.1">Version 0.0.1</h4>
-<ul><li>
-<p>Added Physics formulas in kinematics, mass, weight, density, forces,
-momentum, impulse, energy, work, power, and pressure</p>
-</li><li>
-<p>Added the following Physics constants: speed of light in free space and
-acceleration of free fall</p>
-</li></ul>
+<h4>
+<a id="version-001" class="anchor" href="#version-001" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.0.1</h4>
 
-<h4 id="label-Version+0.0.2">Version 0.0.2</h4>
-<ul><li>
-<p>Fixed publishing date in gem specification</p>
-</li></ul>
+<ul>
+<li>Added Physics formulas in kinematics, mass, weight, density, forces, momentum, impulse, energy, work, power, and pressure</li>
+<li>Added the following Physics constants: speed of light in free space and acceleration of free fall</li>
+</ul>
 
-<h4 id="label-Version+0.0.3">Version 0.0.3</h4>
-<ul><li>
-<p>Added the following Physics constants: permeability of free space,
-permittivity of free space, elementary charge, Planck constant, unified
-atomic mass unit, rest mass of electron, rest mass of proton, molar gas
-constant, avogadro constant, Boltzmann constant, and gravitational constant</p>
-</li></ul>
+<h4>
+<a id="version-002" class="anchor" href="#version-002" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.0.2</h4>
 
-<h4 id="label-Version+0.1.0">Version 0.1.0</h4>
-<ul><li>
-<p>Added Physics formulas in waves and thermodynamics</p>
-</li><li>
-<p>Added the following Physics constants: rest mass of neutron, Stefan
-constant, and Wien constant</p>
-</li><li>
-<p>Updated existing documentation style to YARD documentation style</p>
-</li></ul>
+<ul>
+<li>Fixed publishing date in gem specification</li>
+</ul>
 
-<h4 id="label-Version+0.2.0">Version 0.2.0</h4>
-<ul><li>
-<p>Added Physics formulas in electricity</p>
-</li><li>
-<p>Added geometric and conversion formulas commonly used in Physics</p>
-</li></ul>
+<h4>
+<a id="version-003" class="anchor" href="#version-003" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.0.3</h4>
 
-<h4 id="label-Version+0.3.0">Version 0.3.0</h4>
-<ul><li>
-<p>Added Physics formulas in quantum</p>
-</li><li>
-<p>Added more geometric and conversion formulas commonly used in Physics</p>
-</li></ul>
+<ul>
+<li>Added the following Physics constants: permeability of free space, permittivity of free space, elementary charge, Planck constant, unified atomic mass unit, rest mass of electron, rest mass of proton, molar gas constant, avogadro constant, Boltzmann constant, and gravitational constant</li>
+</ul>
 
-<h4 id="label-Version+0.3.1">Version 0.3.1</h4>
-<ul><li>
-<p>Added Physics formulas in gravitational fields and electric fields</p>
-</li></ul>
+<h4>
+<a id="version-010" class="anchor" href="#version-010" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.1.0</h4>
 
-<h4 id="label-Version+0.3.2">Version 0.3.2</h4>
-<ul><li>
-<p>Added Physics formulas in magnetic fields</p>
-</li><li>
-<p>Added Physics formulas in stress and strain</p>
-</li></ul>
+<ul>
+<li>Added Physics formulas in waves and thermodynamics</li>
+<li>Added the following Physics constants: rest mass of neutron, Stefan constant, and Wien constant</li>
+<li>Updated existing documentation style to YARD documentation style</li>
+</ul>
 
-<h3 id="label-Contribution">Contribution</h3>
+<h4>
+<a id="version-020" class="anchor" href="#version-020" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.2.0</h4>
 
-<p>Please feel free to submit any ideas, questions, or problems by reporting
-an issue.</p>
+<ul>
+<li>Added Physics formulas in electricity</li>
+<li>Added geometric and conversion formulas commonly used in Physics</li>
+</ul>
 
-<h3 id="label-License">License</h3>
-<ul><li>
-<p>Joules is licensed under the <a
-href="https://github.com/elailai94/Joules/blob/master/LICENSE.md">MIT
-license</a>.</p>
-</li></ul>
-</div></div>
+<h4>
+<a id="version-030" class="anchor" href="#version-030" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.3.0</h4>
 
-    <div id="footer">
-  Generated on Wed Jun  3 17:01:51 2015 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.0.0).
-</div>
+<ul>
+<li>Added Physics formulas in quantum</li>
+<li>Added more geometric and conversion formulas commonly used in Physics</li>
+</ul>
 
+<h4>
+<a id="version-031" class="anchor" href="#version-031" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.3.1</h4>
+
+<ul>
+<li>Added Physics formulas in gravitational fields and electric fields</li>
+</ul>
+
+<h4>
+<a id="version-032" class="anchor" href="#version-032" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version 0.3.2</h4>
+
+<ul>
+<li>Added Physics formulas in magnetic fields</li>
+<li>Added Physics formulas in stress and strain</li>
+</ul>
+
+<h3>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h3>
+
+<p>Please feel free to submit any ideas, questions, or problems by reporting an issue. </p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h3>
+
+<ul>
+<li>Joules is licensed under the <a href="https://github.com/elailai94/Joules/blob/master/LICENSE.md">MIT license</a>.</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/elailai94/Joules">Joules</a> is maintained by <a href="https://github.com/elailai94">elailai94</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
+
