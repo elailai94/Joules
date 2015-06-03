@@ -26,7 +26,7 @@ module Joules
   #   Joules.magnetic_force_v1(0.06, 20, 4.5) #=> 5.3999999999999995
   # @note There is one other method for calculating magnetic force.
   def magnetic_force_v1(flux_density, current, conductor_length, angle = 90)
-  	return flux_density * current * conductor_length * Math.sin(to_radians(angle))
+    return flux_density * current * conductor_length * Math.sin(to_radians(angle))
   end
 
   # Calculates the magnetic force on a moving charge given flux density, charge, and velocity.
@@ -44,7 +44,7 @@ module Joules
   #   Joules.magnetic_force_v2(0.06, 34, 60) #=> 122.4
   # @note There is one other method for calculating magnetic force.
   def magnetic_force_v2(flux_density, charge, velocity, angle = 90)
-  	return flux_density * charge * velocity * Math.sin(to_radians(angle))
+    return flux_density * charge * velocity * Math.sin(to_radians(angle))
   end
 
   # Calculates the magnetic flux given flux density and area.
