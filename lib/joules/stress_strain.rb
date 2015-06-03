@@ -22,9 +22,9 @@ module Joules
   # @example
   #   Joules.tensile_stress(98, 0.04) #=> 2450.0
   def tensile_stress(force, area)
-  	if area.zero?
+    if area.zero?
       raise ZeroDivisionError.new('divided by 0')
-  	else
+    else
       return force / area.to_f
     end
   end
@@ -40,9 +40,9 @@ module Joules
   # @example
   #   Joules.tensile_strain(2, 10) #=> 0.2
   def tensile_strain(extension, length)
-  	if length.zero?
+    if length.zero?
       raise ZeroDivisionError.new('divided by 0')
-  	else
+    else
       return extension / length.to_f
     end
   end
@@ -58,9 +58,9 @@ module Joules
   # @example
   #   Joules.young_modulus(2450, 0.2) #=> 12250.0
   def young_modulus(tensile_stress, tensile_strain)
-  	if tensile_strain.zero?
-  	  raise ZeroDivisionError.new('divided by 0')
-  	else
+    if tensile_strain.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
       return tensile_stress / tensile_strain.to_f
     end
   end
