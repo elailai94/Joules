@@ -64,8 +64,7 @@ This would return 23.4.
 * Added Physics formulas in gravitational fields and electric fields
 
 #### Version 0.3.2
-* Added Physics formulas in magnetic fields
-* Added Physics formulas in stress and strain
+* Added Physics formulas in magnetic fields, stress, and strain
 
 #### Version 0.4.0
 * Added Physics formulas in circular motion
