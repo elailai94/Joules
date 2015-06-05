@@ -3,7 +3,7 @@
 #
 # @description: Module for providing rakefile
 # @author: Elisha Lai
-# @version: 0.3.2 03/06/2015
+# @version: 0.4.0 06/06/2015
 #==============================================================================
 
 # Rakefile module (Rakefile)

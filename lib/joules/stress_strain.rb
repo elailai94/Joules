@@ -3,7 +3,7 @@
 #
 # @description: Module for providing stress and strain formulas
 # @author: Elisha Lai
-# @version: 0.3.2 03/06/2015
+# @version: 0.4.0 06/06/2015
 #==============================================================================
 
 # Stress and strain module (stress_strain.rb)
