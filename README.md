@@ -67,6 +67,8 @@ This would return 23.4.
 * Added Physics formulas in magnetic fields
 * Added Physics formulas in stress and strain
 
+#### Version 0.4.0 (Next Release)
+
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
 
