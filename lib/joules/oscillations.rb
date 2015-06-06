@@ -87,7 +87,7 @@ module Joules
   # @example
   #   Joules.maximum_acceleration(2.4, 5) #=> 28.799999999999997
   def max_particle_acceleration(angular_velocity, amplitude)
-  	return (angular_velocity ** 2.0) * amplitude
+    return (angular_velocity ** 2.0) * amplitude
   end
 
   # Calculates the time period of a mass-spring system given mass and spring constant.
