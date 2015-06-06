@@ -37,7 +37,7 @@ module Joules
   # @example
   #   Joules.particle_displacement(5, 2.4, 3) #=> 3.041756572661276
   def particle_displacement(amplitude, angular_velocity, time)
-  	return amplitude * Math.cos(angular_velocity * time)
+    return amplitude * Math.cos(angular_velocity * time)
   end
 
   # Calculates the velocity of a particle in oscillation given angular velocity, amplitude, and particle displacement.
@@ -54,7 +54,7 @@ module Joules
   # @example
   #   Joules.particle_velocity(2.4, 5, 3) #=> [9.6, -9.6]
   def particle_velocity(angular_velocity, amplitude, particle_displacement, return_sign = nil)
-  	return_value = angular_velocity * (((amplitude ** 2) - (particle_displacement ** 2)) ** 0.5)
+    return_value = angular_velocity * (((amplitude ** 2) - (particle_displacement ** 2)) ** 0.5)
     if sign == '-'
       return (- return_value)
     elsif sign == '+'
