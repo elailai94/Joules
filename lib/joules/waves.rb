@@ -82,11 +82,12 @@ module Joules
   # @param frequency [Int, Float]
   #   frequency > 0; frequency is in hertz
   # @return [Float]
-  #   return value > 0; return value is in hertz
+  #   return value > 0; return value is in seconds
   # @raise [ZeroDivisionError] if frequency = 0
   # @example
-  #   Joules.time_period(0.08) #=> 12.5
-  def time_period(frequency)
+  #   Joules.time_period_v1(0.08) #=> 12.5
+  # @note There are two other methods for calculating time period.
+  def time_period_v1(frequency)
     if frequency.zero?
       raise ZeroDivisionError.new('divided by 0')
     else
