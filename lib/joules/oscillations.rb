@@ -102,9 +102,9 @@ module Joules
   #   Joules.time_period_v2(20, 5) #=> 12.566370614359172
   # @note There are two other methods for calculating time period.
   def time_period_v2(mass, spring_constant)
-  	if spring_constant.zero?
-  	  raise ZeroDivisionError.new('divided by 0')
-  	else
+    if spring_constant.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
       return 2 * Math::PI * ((mass / spring_constant.to_f) ** 0.5)
     end
   end
