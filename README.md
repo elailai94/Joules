@@ -15,7 +15,7 @@ gem build joules.gemspec
 
 ### Library Installation
 ```Bash
-gem install joules-0.4.0.gem
+gem install joules-0.4.1.gem
 ```
 
 ### Library Import
@@ -68,6 +68,9 @@ This would return 23.4.
 
 #### Version 0.4.0
 * Added Physics formulas in circular motion
+
+#### Version 0.4.1
+* Added Physics formulas in oscillations
 
 ### Contribution
 Please feel free to submit any ideas, questions, or problems by reporting an issue. 
