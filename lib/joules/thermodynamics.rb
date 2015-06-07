@@ -3,7 +3,7 @@
 #
 # @description: Module for providing thermodynamics formulas
 # @author: Elisha Lai
-# @version: 0.4.0 06/06/2015
+# @version: 0.4.1 07/06/2015
 #==============================================================================
 
 # Thermodynamics module (thermodynamics.rb)

@@ -3,7 +3,7 @@
 #
 # @description: Module for providing mass and weight formulas
 # @author: Elisha Lai
-# @version: 0.4.0 06/06/2015
+# @version: 0.4.1 07/06/2015
 #==============================================================================
 
 # Mass and weight module (mass_weight.rb)

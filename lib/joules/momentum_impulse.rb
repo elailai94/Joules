@@ -3,7 +3,7 @@
 #
 # @description: Module for providing momentum and impulse formulas
 # @author: Elisha Lai
-# @version: 0.4.0 06/06/2015
+# @version: 0.4.1 07/06/2015
 #==============================================================================
 
 # Momentum and impulse module (momentum_impulse.rb)

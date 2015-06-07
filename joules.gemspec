@@ -3,15 +3,15 @@
 #
 # @description: Module for providing library (gem) specifications
 # @author: Elisha Lai
-# @version: 0.4.0 06/06/2015
+# @version: 0.4.1 07/06/2015
 #==============================================================================
 
 # Gemspec module (joules.gemspec)
 
 Gem::Specification.new do |s|
   s.name        = 'joules'
-  s.version     = '0.4.0'
-  s.date        = '2015-06-06'
+  s.version     = '0.4.1'
+  s.date        = '2015-06-07'
   s.summary     = 'A library (gem) for providing Physics formulas'
   s.description = <<-EOF
     Joules is a library (gem) for providing simple Physics formulas
