@@ -33,6 +33,6 @@
 #### Version 0.4.1
 * Added Physics formulas in oscillations
 
-#### Version 0.4.2 (Next Release)
+#### Version 0.4.2
 * Added more Physics formulas in electricity and force
 * Added more geometric formulas commonly used in Physics
