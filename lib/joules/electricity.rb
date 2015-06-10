@@ -3,7 +3,7 @@
 #
 # @description: Module for providing electricity formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Electricity module (electricity.rb)
@@ -20,13 +20,32 @@ module Joules
   #   return value is in amperes
   # @raise [ZeroDivisionError] if time = 0
   # @example
-  #   Joules.current(325, 5) #=> 65.0
-  def current(charge, time)
+  #   Joules.current_v1(325, 5) #=> 65.0
+  # @note There is one other method for calculating current.
+  def current_v1(charge, time)
     if time.zero?
       raise ZeroDivisionError.new('divided by 0')
     else
       return charge / time.to_f
     end
+  end
+
+  # Calculates the current given cross sectional area, charge density, drift velocity, and charge.
+  # @param cross_sectional_area [Int, Float]
+  #   cross_sectional_area >= 0; cross_sectional_area is in metres squared
+  # @param charge_density [Int, Float]
+  #   charge_density is in per metres cubed
+  # @param drift_velocity [Int, Float]
+  #   drift_velocity is in metres per second
+  # @param charge [Int, Float]
+  #   charge is in coulombs
+  # @return [Int, Float]
+  #   return value is in amperes
+  # @example
+  #   Joules.current_v2(0.9, 5e28, 8e-4, 1.6e-19) #=> 5759999.999999999
+  # @note There is one other method for calculating current.
+  def current_v2(cross_sectional_area, charge_density, drift_velocity, charge)
+    return cross_sectional_area * charge_density * drift_velocity * charge
   end
 
   # Calculates the resistance given voltage and current.

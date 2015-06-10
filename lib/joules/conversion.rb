@@ -3,13 +3,15 @@
 #
 # @description: Module for providing conversion formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Conversion module (conversion.rb)
 
 module Joules
   module_function
+
+  # @!group Angle Conversion Methods
 
   # Calculates the equivalent angle in degrees given radians.
   # @param angle [Int, Float]
@@ -33,6 +35,10 @@ module Joules
     return (angle * Math::PI) / 180
   end
 
+  # @!endgroup
+
+  # @!group Temperature Conversion Methods
+
   # Calculates the equivalent temperature in kelvins given celcius.
   # @param temperature [Int, Float]
   #   temperature is in celcius
@@ -55,6 +61,10 @@ module Joules
     return temperature - 273.15
   end
 
+  # @!endgroup
+
+  # @!group Velocity Conversion Methods
+
   # Calculates the equivalent velocity in metres per second given kilometres per hour.
   # @param velocity [Int, Float]
   #   velocity is in kilometres per hour
@@ -76,5 +86,7 @@ module Joules
   def to_kilometres_per_hour(velocity)
     return (velocity * 3600) / 1000.0
   end
+
+  # @!endgroup
 
 end

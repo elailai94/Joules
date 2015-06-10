@@ -3,13 +3,26 @@
 #
 # @description: Module for providing geometry formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Geometry module (geometry.rb)
 
 module Joules
   module_function
+
+  # Calculates the area of a triangle given base and height.
+  # @param base [Int, Float]
+  #   base >= 0; base is in a unit of length
+  # @param height [Int, Float]
+  #   height >= 0; height has the same units as base
+  # @return [Float]
+  #   return value >= 0; return value has the same units squared as base
+  # @example
+  #   Joules.triangle_area(2, 3.4) #=> 3.4
+  def triangle_area(base, height)
+    return 0.5 * base * height
+  end
 
   # Calculates the area of a rectangle given length and width.
   # @param length [Int, Float]

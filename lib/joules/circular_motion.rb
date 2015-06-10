@@ -3,13 +3,15 @@
 #
 # @description: Module for providing circular motion formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Circular motion module (circular_motion.rb)
 
 module Joules
   module_function
+  
+  # @!group Circular Motion Methods
 
   # Calculates the angular velocity given linear velocity and radius.
   # @param linear_velocity [Int, Float]
@@ -156,5 +158,7 @@ module Joules
   def angular_kinetic_energy(moment_of_inertia, angular_velocity)
     return 0.5 * moment_of_inertia * (angular_velocity ** 2)
   end
+
+  # @!endgroup
 
 end
