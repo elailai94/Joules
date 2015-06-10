@@ -3,6 +3,7 @@
 [![Ruby Badge](http://forthebadge.com/images/badges/built-with-ruby.svg)](http://forthebadge.com)
 
 [![Gem Version](https://badge.fury.io/rb/joules.svg)](http://badge.fury.io/rb/joules)
+[![Build Status](https://travis-ci.org/elailai94/Joules.svg?)](https://travis-ci.org/elailai94/Joules)
 [![Inline Docs](http://inch-ci.org/github/elailai94/joules.svg?style=shields)](https://inch-ci.org/github/elailai94/Joules)
 
 ### About
