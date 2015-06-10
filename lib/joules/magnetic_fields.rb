@@ -3,13 +3,15 @@
 #
 # @description: Module for providing magnetic fields formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Magnetic fields module (magnetic_fields.rb)
 
 module Joules
   module_function
+
+  # @!group Magnetic Fields Methods
 
   # Calculates the magnetic force on a current given flux density, current, conductor length, and angle.
   # @param flux_density [Int, Float]
@@ -74,5 +76,7 @@ module Joules
   def magnetic_flux_linkage(magnetic_flux, number_of_coils)
     return magnetic_flux * number_of_coils.to_f
   end
+
+  # @!endgroup
 
 end

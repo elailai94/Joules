@@ -11,6 +11,8 @@
 module Joules
   module_function
 
+  # @!group Electricity Methods
+
   # Calculates the current given charge and time.
   # @param charge [Int, Float]
   #   charge is in coulombs
@@ -39,7 +41,7 @@ module Joules
   #   drift_velocity is in metres per second
   # @param charge [Int, Float]
   #   charge is in coulombs
-  # @return [Int, Float]
+  # @return [Float]
   #   return value is in amperes
   # @example
   #   Joules.current_v2(0.9, 5e28, 8e-4, 1.6e-19) #=> 5759999.999999999
@@ -316,5 +318,7 @@ module Joules
   def energy_v3(voltage, current, time)
     return power_v2(voltage, current) * time
   end
+
+  # @!endgroup
 
 end

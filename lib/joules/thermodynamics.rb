@@ -3,13 +3,15 @@
 #
 # @description: Module for providing thermodynamics formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Thermodynamics module (thermodynamics.rb)
 
 module Joules
   module_function
+
+  # @!group Thermodynamics Methods
 
   # Calculates the energy given mass, specific heat capacity, and temperature change.
   # @param mass [Int, Float]
@@ -40,5 +42,7 @@ module Joules
   def energy_v2(mass, specific_latent_heat)
     return mass * specific_latent_heat.to_f
   end
+
+  # @!endgroup
 
 end

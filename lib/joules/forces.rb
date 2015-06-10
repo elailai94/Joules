@@ -3,13 +3,15 @@
 #
 # @description: Module for providing forces formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Forces module (forces.rb)
 
 module Joules
   module_function
+
+  # @!group Forces Methods
 
   # Calculates the force given mass and acceleration.
   # @param mass [Int, Float]
@@ -75,6 +77,19 @@ module Joules
     return coefficient_of_friction * normal_force.to_f
   end
 
+  # Calculates the buoyant force given density and volume of liquid displaced.
+  # @param density [Int, Float]
+  #   density >= 0; density is in kilograms per metre cubed
+  # @param volume_of_liquid_displaced [Int, Float]
+  #   volume_of_liquid_displaced >= 0; volume_of_liquid_displaced is in metres cubed
+  # @return [Float]
+  #   return value >= 0; return value is in newtons
+  # @example
+  #   Joules.buoyant_force(1000, 0.00150) #=> 14.715
+  def buoyant_force(density, volume_of_liquid_displaced)
+    return density * FREE_FALL_ACCELERATION * volume_of_liquid_displaced
+  end
+
   # Calculates the moment given force, distance, and angle.
   # @param force [Int, Float]
   #   force is in newtons
@@ -89,5 +104,7 @@ module Joules
   def moment(force, distance, angle = 90)
     return force * distance * Math.sin(to_radians(angle))
   end
+
+  # @!endgroup
 
 end

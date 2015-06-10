@@ -3,13 +3,15 @@
 #
 # @description: Module for providing waves formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Waves module (waves.rb)
 
 module Joules
   module_function
+
+  # @!group Waves Methods
 
   # Calculates the wave speed given frequency and wavelength.
   # @param frequency [Int, Float]
@@ -181,5 +183,7 @@ module Joules
       return 1.0 / focal_length
     end
   end
+
+  # @!endgroup
 
 end

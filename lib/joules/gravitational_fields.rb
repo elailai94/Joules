@@ -3,13 +3,15 @@
 #
 # @description: Module for providing gravitational fields formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Gravitational fields module (gravitational_fields.rb)
 
 module Joules
   module_function
+
+  # @!group Gravitational Fields Methods
 
   # Calculates the gravitational force given object mass 1, object mass 2, and distance between the centres of the two objects.
   # @param object_mass1 [Int, Float]
@@ -87,5 +89,7 @@ module Joules
       return (-GRAVITATIONAL_CONSTANT * mass) / distance
     end
   end
+
+  # @!endgroup
 
 end

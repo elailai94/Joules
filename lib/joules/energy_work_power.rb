@@ -3,13 +3,15 @@
 #
 # @description: Module for providing energy, work, and power formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Energy, work, and power module (energy_work_power.rb)
 
 module Joules
   module_function
+
+  # @!group Energy, Work, and Power Methods
 
   # Calculates the gravitational potential energy given mass and height.
   # @param mass [Int, Float]
@@ -136,5 +138,7 @@ module Joules
       return (useful_power_output / power_input.to_f) * 100
     end
   end
+
+  # @!endgroup
 
 end

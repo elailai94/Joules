@@ -3,13 +3,15 @@
 #
 # @description: Module for providing momentum and impulse formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Momentum and impulse module (momentum_impulse.rb)
 
 module Joules
   module_function
+
+  # @!group Momentum and Impulse Methods
 
   # Calculates the momentum given mass and velocity.
   # @param mass [Int, Float]
@@ -53,5 +55,7 @@ module Joules
   def impulse_v2(initial_velocity, final_velocity, mass)
     return (final_velocity - initial_velocity) * mass.to_f
   end
+
+  # @!endgroup
 
 end

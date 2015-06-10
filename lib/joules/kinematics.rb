@@ -3,13 +3,15 @@
 #
 # @description: Module for providing kinematics formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Kinematics module (kinematics.rb)
 
 module Joules
   module_function
+
+  # @!group Kinematics Methods
 
   # Calculates the average speed given distance and time.
   # @param distance [Int, Float]
@@ -146,5 +148,7 @@ module Joules
   def displacement_v3(final_velocity, acceleration, time)
     return (final_velocity * time) - (0.5 * acceleration * (time ** 2))
   end
+
+  # @!endgroup
 
 end

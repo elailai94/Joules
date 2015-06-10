@@ -3,15 +3,15 @@
 #
 # @description: Module for providing library (gem) specifications
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Gemspec module (joules.gemspec)
 
 Gem::Specification.new do |s|
   s.name        = 'joules'
-  s.version     = '0.4.1'
-  s.date        = '2015-06-07'
+  s.version     = '0.4.2'
+  s.date        = '2015-06-10'
   s.summary     = 'A library (gem) for providing Physics formulas'
   s.description = <<-EOF
     Joules is a library (gem) for providing simple Physics formulas
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   EOF
   s.authors     = ['Elisha Lai']
   s.email       = 'elisha.lai@outlook.com'
-  s.files       = Dir['lib/**/*.rb'] + ['README.md','LICENSE.md']
+  s.files       = Dir['{lib,test}/**/*.rb'] + Dir['*.md']
   s.homepage    = 'http://elailai94.github.io/Joules'
   s.license     = 'MIT'
 end

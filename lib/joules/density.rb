@@ -3,13 +3,15 @@
 #
 # @description: Module for providing density formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Density module (density.rb)
 
 module Joules
   module_function
+
+  # @!group Density Methods
 
   # Calculates the density given mass and volume.
   # @param mass [Int, Float]
@@ -28,5 +30,7 @@ module Joules
       return mass / volume.to_f
     end
   end
+
+  # @!endgroup
 
 end

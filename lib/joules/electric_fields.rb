@@ -3,13 +3,15 @@
 #
 # @description: Module for providing electric fields formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Electric fields module (electric_fields.rb)
 
 module Joules
   module_function
+
+  # @!group Electric Fields Methods
 
   # Calculates the electric field strength given voltage and distance between two plates.
   # @param voltage [Int, Float]
@@ -99,5 +101,7 @@ module Joules
   def kinetic_energy_v2(voltage, charge)
     return voltage * (charge / ELEMENTARY_CHARGE)
   end
+
+  # @!endgroup
 
 end

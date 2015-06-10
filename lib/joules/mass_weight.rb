@@ -3,13 +3,15 @@
 #
 # @description: Module for providing mass and weight formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Mass and weight module (mass_weight.rb)
 
 module Joules
   module_function
+
+  # @!group Mass and Weight Methods
 
   # Calculates the weight given mass.
   # @param mass [Int, Float]
@@ -32,5 +34,7 @@ module Joules
   def mass(weight)
     return weight / FREE_FALL_ACCELERATION
   end
+
+  # @!endgroup
 
 end

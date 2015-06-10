@@ -3,13 +3,15 @@
 #
 # @description: Module for providing stress and strain formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Stress and strain module (stress_strain.rb)
 
 module Joules
   module_function
+
+  # @!group Stress and Strain Methods
 
   # Calculates the tensile stress given force and area.
   # @param force [Int, Float]
@@ -65,4 +67,6 @@ module Joules
     end
   end
 	
+  # @!endgroup
+
 end

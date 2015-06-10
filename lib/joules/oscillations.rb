@@ -3,13 +3,15 @@
 #
 # @description: Module for providing oscillations formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Oscillations module (oscillations.rb)
 
 module Joules
   module_function
+
+  # @!group Oscillations Methods
 
   # Calculates the acceleration of a particle in oscillation given angular velocity and particle displacement.
   # @param angular_velocity [Int, Float]
@@ -120,5 +122,7 @@ module Joules
   def time_period_v3(pendulum_length)
     return 2 * Math::PI * ((pendulum_length / FREE_FALL_ACCELERATION) ** 0.5)
   end
+
+  # @!endgroup
 
 end

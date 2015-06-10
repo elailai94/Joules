@@ -3,13 +3,15 @@
 #
 # @description: Module for providing quantum formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Quantum module (quantum.rb)
 
 module Joules
   module_function
+
+  # @!group Quantum Methods
 
   # Calculates the photon energy given frequency.
   # @param frequency [Int, Float]
@@ -65,5 +67,7 @@ module Joules
       return Math.log(2) / half_life
     end
   end
+
+  # @!endgroup
 
 end

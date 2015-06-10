@@ -3,13 +3,15 @@
 #
 # @description: Module for providing pressure formulas
 # @author: Elisha Lai
-# @version: 0.4.1 07/06/2015
+# @version: 0.4.2 10/06/2015
 #==============================================================================
 
 # Pressure module (pressure.rb)
 
 module Joules
   module_function
+
+  # @!group Pressure Methods
 
   # Calculates the pressure given force and area.
   # @param force [Int, Float]
@@ -41,5 +43,7 @@ module Joules
   def hydrostatic_pressure(density, height)
     return density * FREE_FALL_ACCELERATION * height
   end
+
+  # @!endgroup
 
 end
