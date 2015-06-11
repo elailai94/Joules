@@ -57,9 +57,9 @@ module Joules
   # @example
   #   Joules.angular_acceleration(20, 35, 2.4) #=> 6.25
   def angular_acceleration(initial_angular_velocity, final_angular_velocity, time)
-  	if time.zero?
+    if time.zero?
       raise ZeroDivisionError.new('divided by 0')
-  	else
+    else
       return (final_angular_velocity - initial_angular_velocity) / time.to_f
     end
   end
@@ -76,10 +76,10 @@ module Joules
   #   Joules.centripetal_acceleration_v1(9, 3) #=> 27.0
   # @note There is one other method for calculating centripetal acceleration.
   def centripetal_acceleration_v1(linear_velocity, radius)
-  	if radius.zero?
+    if radius.zero?
       raise ZeroDivisionError.new('divided by 0')
-  	else 
-  	  return (linear_velocity ** 2.0) / radius
+    else
+      return (linear_velocity ** 2.0) / radius
     end
   end
 
@@ -94,7 +94,7 @@ module Joules
   #   Joules.centripetal_acceleration_v2(3, 3) #=> 27.0
   # @note There is one other method for calculating centripetal acceleration.
   def centripetal_acceleration_v2(angular_velocity, radius)
-  	return (angular_velocity ** 2.0) * radius
+    return (angular_velocity ** 2.0) * radius
   end
 
   # Calculates the centripetal force given mass, linear velocity, and radius.
@@ -110,9 +110,9 @@ module Joules
   #   Joules.centripetal_force_v1(2000, 5.56, 2.1) #=> 29441.523809523802
   # @note There is one other method for calculating centripetal force.
   def centripetal_force_v1(mass, linear_velocity, radius)
-  	if radius.zero?
+    if radius.zero?
       raise ZeroDivisionError.new('divided by 0')
-  	else
+    else
       return (mass * (linear_velocity ** 2.0)) / radius
     end 
   end
@@ -130,7 +130,7 @@ module Joules
   #   Joules.centripetal_force_v2(53.5, 3, 3) #=> 1444.5
   # @note There is one other method for calculating centripetal force.
   def centripetal_force_v2(mass, angular_velocity, radius)
-  	return mass * (angular_velocity ** 2.0) * radius
+    return mass * (angular_velocity ** 2.0) * radius
   end
 
   # Calculates the angular momentum given moment of inertia and angular velocity.
