@@ -25,9 +25,9 @@ module Joules
   #   Joules.angular_velocity_v1(9, 3) #=> 3.0
   # @note There is one other method for calculating angular velocity. 
   def angular_velocity_v1(linear_velocity, radius)
-  	if radius.zero?
+    if radius.zero?
       raise ZeroDivisionError.new('divided by 0')
-  	else 
+    else
       return linear_velocity / radius.to_f
     end
   end
@@ -41,7 +41,7 @@ module Joules
   #   Joules.angular_velocity_v2(1.5) #=> 9.42477796076938
   # @note There is one other method for calculating angular velocity. 
   def angular_velocity_v2(frequency_of_rotation)
-  	return 2 * Math::PI * frequency_of_rotation
+    return 2 * Math::PI * frequency_of_rotation
   end
 
   # Calculates the angular acceleration given initial angular velocity, final angular velocity, and time.
