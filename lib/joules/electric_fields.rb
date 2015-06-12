@@ -3,7 +3,7 @@
 #
 # @description: Module for providing electric fields formulas
 # @author: Elisha Lai
-# @version: 0.4.2 10/06/2015
+# @version: 0.4.3 13/06/2015
 #==============================================================================
 
 # Electric fields module (electric_fields.rb)
