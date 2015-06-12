@@ -35,7 +35,7 @@ class CircularMotionTests < Test::Unit::TestCase
   end
 
   def test_angular_velocity_v1_example
-  	assert_in_epsilon(3, angular_velocity_v1(9, 3), EPSILON)
+    assert_in_epsilon(3, angular_velocity_v1(9, 3), EPSILON)
   end
 end
 
