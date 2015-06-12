@@ -36,3 +36,6 @@
 #### Version 0.4.2
 * Added more Physics formulas in electricity and force
 * Added more geometric formulas commonly used in Physics
+
+#### Version 0.4.3
+* Added more Physics formulas in waves
