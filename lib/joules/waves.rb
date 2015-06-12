@@ -3,7 +3,7 @@
 #
 # @description: Module for providing waves formulas
 # @author: Elisha Lai
-# @version: 0.4.2 10/06/2015
+# @version: 0.4.3 13/06/2015
 #==============================================================================
 
 # Waves module (waves.rb)
@@ -94,6 +94,24 @@ module Joules
       raise ZeroDivisionError.new('divided by 0')
     else
       return 1.0 / frequency
+    end
+  end
+
+  # Calculates the intensity of a wave given power and area.
+  # @param power [Int, Float]
+  #   power is in watts
+  # @param area [Int, Float]
+  #   area > 0; area is in metres squared
+  # @return [Float]
+  #   return value is in watts per metre squared
+  # @raise [ZeroDivisionError] if area = 0
+  # @example
+  #   Joules.intensity(50, 2) #=> 25.0
+  def intensity(power, area)
+    if area.zero?
+      raise ZeroDivisionError.new('divided by 0')
+    else
+      return power / area.to_f
     end
   end
 
