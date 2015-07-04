@@ -39,3 +39,6 @@
 
 #### Version 0.4.3
 * Added more Physics formulas in waves
+
+#### Version 0.4.4
+* Fixed particle acceleration method in oscillations module file
