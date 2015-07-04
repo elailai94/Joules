@@ -24,7 +24,7 @@ module Joules
   #   Joules.particle_acceleration(2.4, 3) #=> -17.28
   # @note There is one other method for calculating acceleration.
   def particle_acceleration(angular_velocity, particle_displacement)
-    return (- (angular_velocity ** 2.0) * displacement)
+    return (- (angular_velocity ** 2.0) * particle_displacement)
   end
 
   # Calculates the displacement of a particle in oscillation given amplitude, angular velocity, and time.
