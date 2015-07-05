@@ -26,6 +26,8 @@ We'd love to have your help in making Joules better.
    rake test
    ```
 
+### Coding Conventions
+
 ### Issues
 The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used to track bugs and features. 
 #### Bug Report
@@ -33,8 +35,8 @@ When submitting a bug report, please use the following guidelines:
 
 1. **Use the GitHub issue search** to check if the issue has already been reported.
 2. **Check if the issue has been fixed** by trying to reproduce it using the latest master in the repository.
-3. **Isolate the problem** 
-4. **Elaborate as much as possible in your report**
+3. **Isolate the problem** by creating a reduced test case and a live example.
+4. **Elaborate as much as possible in your report** by including specific information about the environment (e.g.: operating system and version, library (gem) version, etc.) and steps required to reproduce the issue.
 
 #### Feature Request
 When submitting a feature request, please use the following guidelines:
