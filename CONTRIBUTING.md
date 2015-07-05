@@ -6,11 +6,11 @@ We'd love to have your help in making Joules better.
 2. [Fork](https://help.github.com/articles/fork-a-repo/) the project.
 
    ```Bash
-   # Clone your fork of the repo into the current directory
+   # Clone your fork of the repository into the current directory
    git clone https://github.com/<your-username>/Joules
    # Navigate to the newly cloned directory
    cd <repo-name>
-   # Assign the original repo to a remote called "upstream"
+   # Assign the original repository to a remote called "upstream"
    git remote add upstream git://github.com/elailai94/Joules
    ```
 3. Get the latest changes from upstream if you forked awhile ago.
@@ -31,8 +31,8 @@ The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used t
 #### Bug Report
 When submitting a bug report, please use the following guidelines:
 
-1. **Use the GitHub issue search**
-2. **Check if the issue has been fixed**
+1. **Use the GitHub issue search** to check if the issue has already been reported.
+2. **Check if the issue has been fixed** by trying to reproduce it using the lastest master in the repository.
 3. **Isolate the problem**
 4. **Elaborate as much as possible in your report**
 
