@@ -33,14 +33,19 @@ The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used t
 #### Bug Report
 When submitting a bug report, please use the following guidelines:
 
-1. **Use the GitHub issue search** to check if the issue has already been reported.
+1. **Use the GitHub issue search** to check if the bug has already been reported.
 2. **Check if the issue has been fixed** by trying to reproduce it using the latest master in the repository.
 3. **Isolate the problem** by creating a reduced test case and a live example.
 4. **Elaborate as much as possible in your report** by including specific information about the environment (e.g.: operating system and version, library (gem) version, etc.) and steps required to reproduce the issue.
 
 #### Feature Request
 When submitting a feature request, please use the following guidelines:
-1. 
+
+1. **Use the GitHub issue search** to check if the feature has already been suggested.
+2. **Check if the feature has been introduced** by trying to test for it using the latest master in the repostory.
+3. **Elaborate as much as possible in your report** by providing as much detail and context as possible on why your idea fits the scope and aims of the project.
+
+> Note: Contribution enquiries should take place before any significant pull request. Otherwise, you risk spending a lot of time working on something that might be rejected for good reasons.
 
 ### License
 By contributing to Joules, you agree that your contributions will be licensed under its [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
