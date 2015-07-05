@@ -3,7 +3,7 @@
 #
 # @description: Module for providing mass and weight formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Mass and weight module (mass_weight.rb)
@@ -21,7 +21,7 @@ module Joules
   # @example
   #   Joules.weight(79.41) #=> 779.0121
   def weight(mass)
-    return mass * FREE_FALL_ACCELERATION 
+    return mass * FREE_FALL_ACCELERATION
   end
 
   # Calculates the mass given weight.

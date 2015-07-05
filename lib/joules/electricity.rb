@@ -3,7 +3,7 @@
 #
 # @description: Module for providing electricity formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Electricity module (electricity.rb)
@@ -115,7 +115,7 @@ module Joules
   def resistance_in_parallel(resistances)
     total_resistance = 0
     if resistances.empty?
-      return total_resistance.to_f 
+      return total_resistance.to_f
     else
       resistances.each do |resistance|
         total_resistance += (1.0 / resistance)

@@ -3,7 +3,7 @@
 #
 # @description: Module for providing waves formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Waves module (waves.rb)
@@ -159,7 +159,7 @@ module Joules
   #   return value >= 0
   # @raise [ZeroDivisionError] if object_height = 0
   # @example
-  #   Joules.magnification(10, 5) #=> 2.0 
+  #   Joules.magnification(10, 5) #=> 2.0
   def magnification(image_height, object_height)
     if object_height.zero?
       raise ZeroDivisionError.new('divided by 0')

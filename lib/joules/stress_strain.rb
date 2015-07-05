@@ -3,7 +3,7 @@
 #
 # @description: Module for providing stress and strain formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Stress and strain module (stress_strain.rb)
@@ -38,7 +38,7 @@ module Joules
   #   length > 0; length is in metres
   # @return [Float]
   #   return value >= 0
-  # @raise [ZeroDivisionError] if length = 0 
+  # @raise [ZeroDivisionError] if length = 0
   # @example
   #   Joules.tensile_strain(2, 10) #=> 0.2
   def tensile_strain(extension, length)
@@ -66,7 +66,7 @@ module Joules
       return tensile_stress / tensile_strain.to_f
     end
   end
-	
+
   # @!endgroup
 
 end

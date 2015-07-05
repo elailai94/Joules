@@ -3,7 +3,7 @@
 #
 # @description: Module for providing forces formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Forces module (forces.rb)
@@ -22,7 +22,7 @@ module Joules
   #   return value is in newtons
   # @example
   #   Joules.force_v1(120, 2.67) #=> 320.4
-  # @note There are two other methods for calculating force. 
+  # @note There are two other methods for calculating force.
   def force_v1(mass, acceleration)
     return mass * acceleration.to_f
   end

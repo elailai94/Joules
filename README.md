@@ -17,7 +17,7 @@ gem build joules.gemspec
 
 ### Library Installation
 ```Bash
-gem install joules-0.4.3.gem
+gem install joules-0.4.4.gem
 ```
 
 ### Library Import
@@ -39,7 +39,7 @@ This would return 23.4.
 > Note: For documentation on usage of methods and constants, please visit [http://www.rubydoc.info/gems/joules/](http://www.rubydoc.info/gems/joules/).
 
 ### Contribution
-Please feel free to submit any ideas, questions, or problems by reporting an issue. 
+Please feel free to submit any ideas, questions, or problems by reporting an issue.
 
 ### License
 * Joules is licensed under the [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).

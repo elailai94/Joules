@@ -3,14 +3,14 @@
 #
 # @description: Module for providing circular motion formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Circular motion module (circular_motion.rb)
 
 module Joules
   module_function
-  
+
   # @!group Circular Motion Methods
 
   # Calculates the angular velocity given linear velocity and radius.
@@ -23,7 +23,7 @@ module Joules
   # @raise [ZeroDivisionError] if radius = 0
   # @example
   #   Joules.angular_velocity_v1(9, 3) #=> 3.0
-  # @note There is one other method for calculating angular velocity. 
+  # @note There is one other method for calculating angular velocity.
   def angular_velocity_v1(linear_velocity, radius)
     if radius.zero?
       raise ZeroDivisionError.new('divided by 0')
@@ -39,7 +39,7 @@ module Joules
   #   return value >= 0; return value is in radians per second
   # @example
   #   Joules.angular_velocity_v2(1.5) #=> 9.42477796076938
-  # @note There is one other method for calculating angular velocity. 
+  # @note There is one other method for calculating angular velocity.
   def angular_velocity_v2(frequency_of_rotation)
     return 2 * Math::PI * frequency_of_rotation
   end
@@ -114,7 +114,7 @@ module Joules
       raise ZeroDivisionError.new('divided by 0')
     else
       return (mass * (linear_velocity ** 2.0)) / radius
-    end 
+    end
   end
 
   # Calculates the centripetal force given mass, angular velocity, and radius.

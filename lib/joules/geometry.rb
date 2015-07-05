@@ -3,7 +3,7 @@
 #
 # @description: Module for providing geometry formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Geometry module (geometry.rb)
@@ -36,7 +36,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units as radius
   # @example
-  #   Joules.circumference(12) #=> 75.398223686155 
+  #   Joules.circumference(12) #=> 75.398223686155
   def circumference(radius)
     return 2 * Math::PI * radius
   end
@@ -79,7 +79,7 @@ module Joules
   # @param width [Int, Float]
   #   width >= 0; width has the same units as length
   # @return [Float]
-  #   return value >= 0; return value has the same units squared as length 
+  #   return value >= 0; return value has the same units squared as length
   # @example
   #   Joules.rectangle_area(2, 3.4) #=> 6.8
   def rectangle_area(length, width)
@@ -92,7 +92,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units squared as radius
   # @example
-  #   Joules.circle_area(12) #=> 452.38934211693 
+  #   Joules.circle_area(12) #=> 452.38934211693
   def circle_area(radius)
     return Math::PI * (radius ** 2)
   end
@@ -133,7 +133,7 @@ module Joules
   # @return [Float]
   #   return value >= 0; return value has the same units cubed as radius
   # @example
-  #   Joules.cylinder_volume(6.5, 3) #=> 398.196868842506 
+  #   Joules.cylinder_volume(6.5, 3) #=> 398.196868842506
   def cylinder_volume(radius, height)
     return circle_area(radius) * height
   end
@@ -179,6 +179,6 @@ module Joules
     return circumference(radius) * height
   end
 
-  # @!group  
+  # @!group
 
 end

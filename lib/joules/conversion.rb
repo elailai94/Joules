@@ -3,7 +3,7 @@
 #
 # @description: Module for providing conversion formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Conversion module (conversion.rb)
@@ -71,7 +71,7 @@ module Joules
   # @return [Float]
   #   return value is in metres per second
   # @example
-  #   Joules.to_metres_per_second(200) #=> 55.55555555555556 
+  #   Joules.to_metres_per_second(200) #=> 55.55555555555556
   def to_metres_per_second(velocity)
     return (velocity * 1000) / 3600.0
   end

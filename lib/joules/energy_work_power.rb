@@ -3,7 +3,7 @@
 #
 # @description: Module for providing energy, work, and power formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Energy, work, and power module (energy_work_power.rb)
@@ -112,7 +112,7 @@ module Joules
   #   return value >= 0
   # @raise [ZeroDivisionError] if energy_input = 0
   # @example
-  #   Joules.energy_efficiency(16, 20) #=> 80.0 
+  #   Joules.energy_efficiency(16, 20) #=> 80.0
   def energy_efficiency(useful_energy_output, energy_input)
     if energy_input.zero?
       raise ZeroDivisionError.new('divided by 0')

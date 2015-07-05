@@ -3,7 +3,7 @@
 #
 # @description: Module for providing magnetic fields formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Magnetic fields module (magnetic_fields.rb)

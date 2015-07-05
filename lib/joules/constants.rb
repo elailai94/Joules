@@ -3,13 +3,13 @@
 #
 # @description: Module for providing constants
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Constants module (constants.rb)
 
 module Joules
-  
+
   # Speed of light in free space.
   # @note This quantity is in metres per second.
   SPEED_OF_LIGHT = 3.00e8
@@ -51,7 +51,7 @@ module Joules
   MOLAR_GAS_CONSTANT = 8.31
 
   # Avogadro constant.
-  # @note This quantity is in per mole. 
+  # @note This quantity is in per mole.
   AVOGADRO_CONSTANT = 6.02e23
 
   # Boltzmann constant.

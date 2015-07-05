@@ -3,7 +3,7 @@
 #
 # @description: Module for providing pressure formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Pressure module (pressure.rb)
@@ -22,7 +22,7 @@ module Joules
   #   return value >= 0; return value is in pascals
   # @raise [ZeroDivisionError] if area = 0
   # @example
-  #   Joules.pressure(98, 0.04) #=> 2450.0 
+  #   Joules.pressure(98, 0.04) #=> 2450.0
   def pressure(force, area)
     if area.zero?
       raise ZeroDivisionError.new('divided by 0')

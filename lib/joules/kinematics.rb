@@ -3,7 +3,7 @@
 #
 # @description: Module for providing kinematics formulas
 # @author: Elisha Lai
-# @version: 0.4.3 13/06/2015
+# @version: 0.4.4 05/07/2015
 #==============================================================================
 
 # Kinematics module (kinematics.rb)
@@ -40,7 +40,7 @@ module Joules
   #   return value is in metres per second
   # @raise [ZeroDivisionError] if time = 0
   # @example
-  #   Joules.avg_velocity(180, 4.8) #=> 37.5 
+  #   Joules.avg_velocity(180, 4.8) #=> 37.5
   def avg_velocity(displacement, time)
     if time.zero?
       raise ZeroDivisionError.new('divided by 0')
