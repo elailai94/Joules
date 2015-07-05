@@ -39,7 +39,7 @@ This would return 23.4.
 > Note: For documentation on usage of methods and constants, please visit [http://www.rubydoc.info/gems/joules/](http://www.rubydoc.info/gems/joules/).
 
 ### Contributing
-> Note: For information on contributing, please read the [Contributing Guide](https://www.github.com/elailai94/Joules/blob/master/CONTRIBUTING.md).
+We'd love to have your help in making Joules better. If you're interested, please read our [Guide to Contributing](https://www.github.com/elailai94/Joules/blob/master/CONTRIBUTING.md).
 
 ### License
 * Joules is licensed under the [MIT license](https://www.github.com/elailai94/Joules/blob/master/LICENSE.md).
