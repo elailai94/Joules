@@ -30,6 +30,7 @@ We'd love to have your help in making Joules better.
 The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used to track bugs and features. 
 #### Bug Report
 When submitting a bug report, please use the following guidelines:
+
 1. **Use the GitHub issue search**
 2. **Check if the issue has been fixed**
 3. **Isolate the problem**
