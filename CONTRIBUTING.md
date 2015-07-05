@@ -32,8 +32,8 @@ The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used t
 When submitting a bug report, please use the following guidelines:
 
 1. **Use the GitHub issue search** to check if the issue has already been reported.
-2. **Check if the issue has been fixed** by trying to reproduce it using the lastest master in the repository.
-3. **Isolate the problem**
+2. **Check if the issue has been fixed** by trying to reproduce it using the latest master in the repository.
+3. **Isolate the problem** 
 4. **Elaborate as much as possible in your report**
 
 #### Feature Request
