@@ -26,6 +26,16 @@ We'd love to have your help in making Joules better.
    rake test
    ```
 
+### Ways to Contribute
+Here are some ways you can contribute:
+* by using alpha, beta, and pre-release versions
+* by reporting bugs
+* by suggesting new features
+* by writing or editing documentation
+* by writing code
+* by refactoring code
+* by closing [issues](https://www.github.com/elailai94/Joules/issues)
+
 ### Issues
 The [GitHub issue tracker](https://www.github.com/elailai94/Joules/issues) is used to track bugs and features. 
 #### Bug Reports
@@ -44,6 +54,17 @@ When submitting a feature request, please use the following guidelines:
 3. **Elaborate as much as possible in your report** by providing as much detail and context as possible on why your idea fits the scope and aims of the project.
 
 > Note: Contribution enquiries should take place before any significant pull request. Otherwise, you risk spending a lot of time working on something that might be rejected for good reasons.
+
+### Pull Requests
+1. [Fork](https://help.github.com/articles/fork-a-repo/) the project.
+
+   ```Bash
+   # Clone your fork of the repository into the current directory
+   git clone https://github.com/<your-username>/Joules
+   # Navigate to the newly cloned directory
+   cd <repo-name>
+   # Assign the original repository to a remote called "upstream"
+   git remote add upstream git://github.com/elailai94/Joules
 
 ### Coding Convention
 Although there is currently no strict set of coding or style guidelines, it is advised that you use common sense when contributing code and make an effort to use a similar style to nearby existing code. It is strongly recommended that you read through the [Ruby style guide](https://www.github.com/styleguide/ruby).
