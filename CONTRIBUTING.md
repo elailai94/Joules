@@ -50,7 +50,7 @@ When submitting a bug report, please use the following guidelines:
 When submitting a feature request, please use the following guidelines:
 
 1. **Use the GitHub issue search** to check if the feature has already been suggested.
-2. **Check if the feature has been introduced** by trying to test for it using the latest master in the repostory.
+2. **Check if the feature has been introduced** by trying to test for it using the latest *master* in the repostory.
 3. **Elaborate as much as possible in your report** by providing as much detail and context as possible on why your idea fits the scope and aims of the project.
 
 > Note: Contribution enquiries should take place before any significant pull request. Otherwise, you risk spending a lot of time working on something that might be rejected for good reasons.
@@ -60,7 +60,7 @@ When submitting a feature request, please use the following guidelines:
 2. Create a topic branch.
 3. Implement your feature or bug fix.
 4. Add documentation for your feature or bug fix.
-5. Run ```Bash rake doc:yard``` or ```Bash yard doc```. If your changes are not 100% documented, go back to step 4.
+5. Run ```rake doc:yard``` or ```yard doc```. If your changes are not 100% documented, go back to step 4.
 6. Commit and push your changes.
 7. Submit a pull request. Please do not include changes to the gemspec, version, or history file. (If you want to create your own version for some reason, please do so in a separate commit.)
 
