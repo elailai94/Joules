@@ -26,7 +26,7 @@ module Joules
   # @note There is one other method for calculating current.
   def current_v1(charge, time)
     if time.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return charge / time.to_f
     end
@@ -47,7 +47,7 @@ module Joules
   #   Joules.current_v2(0.9, 5e28, 8e-4, 1.6e-19) #=> 5759999.999999999
   # @note There is one other method for calculating current.
   def current_v2(cross_sectional_area, charge_density, drift_velocity, charge)
-    return cross_sectional_area * charge_density * drift_velocity * charge
+    cross_sectional_area * charge_density * drift_velocity * charge
   end
 
   # Calculates the resistance given voltage and current.
@@ -63,7 +63,7 @@ module Joules
   # @note There is one other method for calculating resistance.
   def resistance_v1(voltage, current)
     if current.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return voltage / current.to_f
     end
@@ -84,7 +84,7 @@ module Joules
   # @note There is one other method for calculating resistance.
   def resistance_v2(resistivity, wire_length, cross_sectional_area)
     if cross_sectional_area.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return (resistivity * wire_length) / cross_sectional_area.to_f
     end
@@ -102,7 +102,7 @@ module Joules
     resistances.each do |resistance|
       total_resistance += resistance
     end
-    return total_resistance.to_f
+    total_resistance.to_f
   end
 
   # Calculates the total resistance of resistors in parallel.
@@ -136,7 +136,7 @@ module Joules
   #   Joules.capacitance(2e-3, 100) #=> 2.0e-05
   def capacitance(charge, voltage)
     if voltage.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return charge / voltage.to_f
     end
@@ -153,7 +153,7 @@ module Joules
   #   Joules.capacitor_potential_energy_v1(1.5, 30) #=> 22.5
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v1(charge, voltage)
-    return 0.5 * charge * voltage
+    0.5 * charge * voltage
   end
 
   # Calculates the capacitor potential energy given capacitance and voltage.
@@ -167,7 +167,7 @@ module Joules
   #   Joules.capacitor_potential_energy_v2(10e-6, 20) #=> 0.002
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v2(capacitance, voltage)
-    return 0.5 * capacitance * (voltage ** 2)
+    0.5 * capacitance * (voltage**2)
   end
 
   # Calculates the capacitor potential energy given charge and capacitance.
@@ -183,9 +183,9 @@ module Joules
   # @note There are two other methods for calculating capacitor potential energy.
   def capacitor_potential_energy_v3(charge, capacitance)
     if capacitance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return (0.5 * (charge ** 2)) / capacitance
+      return (0.5 * (charge**2)) / capacitance
     end
   end
 
@@ -220,7 +220,7 @@ module Joules
     capacitances.each do |capacitance|
       total_capacitance += capacitance
     end
-    return total_capacitance.to_f
+    total_capacitance.to_f
   end
 
   # Calculates the voltage given energy and charge.
@@ -236,7 +236,7 @@ module Joules
   # @note There is one other method for calculating voltage.
   def voltage_v1(energy, charge)
     if charge.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return energy / charge.to_f
     end
@@ -253,7 +253,7 @@ module Joules
   #   Joules.voltage_v2(0.6, 3) #=> 1.8
   # @note There is one other method for calculating voltage.
   def voltage_v2(current, resistance)
-    return current * resistance.to_f
+    current * resistance.to_f
   end
 
   # Calculates the power given voltage and current.
@@ -267,7 +267,7 @@ module Joules
   #   Joules.power_v3(1.8, 0.6) #=> 1.08
   # @note There are four other methods for calculating power.
   def power_v3(voltage, current)
-    return voltage * current.to_f
+    voltage * current.to_f
   end
 
   # Calculates the power given current and resistance.
@@ -281,7 +281,7 @@ module Joules
   #   Joules.power_v4(0.6, 3) #=> 1.08
   # @note There are four other methods for calculating power.
   def power_v4(current, resistance)
-    return (current ** 2.0) * resistance
+    (current**2.0) * resistance
   end
 
   # Calculates the power given voltage and resistance.
@@ -297,9 +297,9 @@ module Joules
   # @note There are four other methods for calculating power.
   def power_v5(voltage, resistance)
     if resistance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return (voltage ** 2.0) / resistance
+      return (voltage**2.0) / resistance
     end
   end
 
@@ -316,9 +316,8 @@ module Joules
   #   Joules.energy_v3(1.8, 0.6, 5) #=> 5.4
   # @note There are two other methods for calculating energy.
   def energy_v3(voltage, current, time)
-    return power_v2(voltage, current) * time
+    power_v2(voltage, current) * time
   end
 
   # @!endgroup
-
 end

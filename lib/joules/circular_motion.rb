@@ -26,7 +26,7 @@ module Joules
   # @note There is one other method for calculating angular velocity.
   def angular_velocity_v1(linear_velocity, radius)
     if radius.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return linear_velocity / radius.to_f
     end
@@ -41,7 +41,7 @@ module Joules
   #   Joules.angular_velocity_v2(1.5) #=> 9.42477796076938
   # @note There is one other method for calculating angular velocity.
   def angular_velocity_v2(frequency_of_rotation)
-    return 2 * Math::PI * frequency_of_rotation
+    2 * Math::PI * frequency_of_rotation
   end
 
   # Calculates the angular acceleration given initial angular velocity, final angular velocity, and time.
@@ -58,7 +58,7 @@ module Joules
   #   Joules.angular_acceleration(20, 35, 2.4) #=> 6.25
   def angular_acceleration(initial_angular_velocity, final_angular_velocity, time)
     if time.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return (final_angular_velocity - initial_angular_velocity) / time.to_f
     end
@@ -77,9 +77,9 @@ module Joules
   # @note There is one other method for calculating centripetal acceleration.
   def centripetal_acceleration_v1(linear_velocity, radius)
     if radius.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return (linear_velocity ** 2.0) / radius
+      return (linear_velocity**2.0) / radius
     end
   end
 
@@ -94,7 +94,7 @@ module Joules
   #   Joules.centripetal_acceleration_v2(3, 3) #=> 27.0
   # @note There is one other method for calculating centripetal acceleration.
   def centripetal_acceleration_v2(angular_velocity, radius)
-    return (angular_velocity ** 2.0) * radius
+    (angular_velocity**2.0) * radius
   end
 
   # Calculates the centripetal force given mass, linear velocity, and radius.
@@ -111,9 +111,9 @@ module Joules
   # @note There is one other method for calculating centripetal force.
   def centripetal_force_v1(mass, linear_velocity, radius)
     if radius.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return (mass * (linear_velocity ** 2.0)) / radius
+      return (mass * (linear_velocity**2.0)) / radius
     end
   end
 
@@ -130,7 +130,7 @@ module Joules
   #   Joules.centripetal_force_v2(53.5, 3, 3) #=> 1444.5
   # @note There is one other method for calculating centripetal force.
   def centripetal_force_v2(mass, angular_velocity, radius)
-    return mass * (angular_velocity ** 2.0) * radius
+    mass * (angular_velocity**2.0) * radius
   end
 
   # Calculates the angular momentum given moment of inertia and angular velocity.
@@ -143,7 +143,7 @@ module Joules
   # @example
   #   Joules.angular_momentum(2, 2.5) #=> 5.0
   def angular_momentum(moment_of_inertia, angular_velocity)
-    return moment_of_inertia * angular_velocity.to_f
+    moment_of_inertia * angular_velocity.to_f
   end
 
   # Calculates the angular kinetic energy given moment of inertia and angular velocity.
@@ -156,9 +156,8 @@ module Joules
   # @example
   #   Joules.angular_kinetic_energy(5, 2.3) #=> 13.224999999999998
   def angular_kinetic_energy(moment_of_inertia, angular_velocity)
-    return 0.5 * moment_of_inertia * (angular_velocity ** 2)
+    0.5 * moment_of_inertia * (angular_velocity**2)
   end
 
   # @!endgroup
-
 end

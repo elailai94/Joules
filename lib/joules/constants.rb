@@ -9,7 +9,6 @@
 # Constants module (constants.rb)
 
 module Joules
-
   # Speed of light in free space.
   # @note This quantity is in metres per second.
   SPEED_OF_LIGHT = 3.00e8
@@ -73,5 +72,4 @@ module Joules
   # Acceleration of free fall.
   # @note This quantity is in metres per second squared.
   FREE_FALL_ACCELERATION = 9.81
-
 end

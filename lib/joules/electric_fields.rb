@@ -26,7 +26,7 @@ module Joules
   # @note There are two other method for calculating electric field strength.
   def electric_field_strength_v1(voltage, distance)
     if distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return voltage / distance.to_f
     end
@@ -45,7 +45,7 @@ module Joules
   # @note There are two other method for calculating electric field strength.
   def electric_field_strength_v2(force, charge)
     if charge.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return force / charge.to_f
     end
@@ -64,9 +64,9 @@ module Joules
   # @note There are two other method for calculating electric field strength.
   def electric_field_strength_v3(charge, distance)
     if distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return charge / (4 * Math::PI * FREE_SPACE_PERMITTIVITY * (distance ** 2))
+      return charge / (4 * Math::PI * FREE_SPACE_PERMITTIVITY * (distance**2))
     end
   end
 
@@ -82,7 +82,7 @@ module Joules
   #   Joules.electric_potential(3.2e-19, 0.2) #=> 1.4386887511131779e-08
   def electric_potential(charge, distance)
     if distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return charge / (4 * Math::PI * FREE_SPACE_PERMITTIVITY * distance)
     end
@@ -99,9 +99,8 @@ module Joules
   #   Joules.kinetic_energy_v2(20, 2) #=> 2.5e+20
   # @note There is one other method for calculating kinetic energy.
   def kinetic_energy_v2(voltage, charge)
-    return voltage * (charge / ELEMENTARY_CHARGE)
+    voltage * (charge / ELEMENTARY_CHARGE)
   end
 
   # @!endgroup
-
 end

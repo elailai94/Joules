@@ -21,7 +21,7 @@ module Joules
   # @example
   #   Joules.photon_energy(509337860780984.75) #=> 3.376910016977929e-19
   def photon_energy(frequency)
-    return PLANCK_CONSTANT * frequency
+    PLANCK_CONSTANT * frequency
   end
 
   # Calculates the energy given mass.
@@ -33,7 +33,7 @@ module Joules
   #   Joules.energy_v4(60.5) #=> 5.445e+18
   # @note There are three other methods for calculating energy.
   def energy_v4(mass)
-    return mass * (SPEED_OF_LIGHT ** 2)
+    mass * (SPEED_OF_LIGHT**2)
   end
 
   # Calculates the half-life of a decaying quantity given decay constant.
@@ -46,7 +46,7 @@ module Joules
   #   Joules.half_life(7.7e4) #=> 9.001911435843445e-06
   def half_life(decay_constant)
     if decay_constant.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return Math.log(2) / decay_constant
     end
@@ -62,12 +62,11 @@ module Joules
   #   Joules.decay_constant(9) #=> 0.0770163533955495
   def decay_constant(half_life)
     if half_life.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return Math.log(2) / half_life
     end
   end
 
   # @!endgroup
-
 end

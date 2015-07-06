@@ -25,12 +25,11 @@ module Joules
   #   Joules.density(8.96, 0.002) #=> 4480.0
   def density(mass, volume)
     if volume.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return mass / volume.to_f
     end
   end
 
   # @!endgroup
-
 end
