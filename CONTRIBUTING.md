@@ -57,14 +57,12 @@ When submitting a feature request, please use the following guidelines:
 
 ### Pull Requests
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the project.
-
-   ```Bash
-   # Clone your fork of the repository into the current directory
-   git clone https://github.com/<your-username>/Joules
-   # Navigate to the newly cloned directory
-   cd <repo-name>
-   # Assign the original repository to a remote called "upstream"
-   git remote add upstream git://github.com/elailai94/Joules
+2. Create a topic branch.
+3. Implement your feature or bug fix.
+4. Add documentation for your feature or bug fix.
+5. Run ```Bash rake doc:yard``` or ```Bash yard doc```. If your changes are not 100% documented, go back to step 4.
+6. Commit and push your changes.
+7. Submit a pull request. Please do not include changes to the gemspec, version, or history file. (If you want to create your own version for some reason, please do so in a separate commit.)
 
 ### Coding Convention
 Although there is currently no strict set of coding or style guidelines, it is advised that you use common sense when contributing code and make an effort to use a similar style to nearby existing code. It is strongly recommended that you read through the [Ruby style guide](https://www.github.com/styleguide/ruby).
