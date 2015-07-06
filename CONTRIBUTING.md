@@ -1,5 +1,5 @@
 ## Contributing to Joules
-In order to make Joules better, everyone is encouraged to help improve this project. Before diving into the code, please familiarize yourself with the following guidelines and conventions.
+In order to make Joules better, **everyone** is encouraged to help improve this project. Before diving into the code, please familiarize yourself with the following guidelines and conventions.
 
 ### Getting Started
 1. Install the [Ruby programming language](https://www.ruby-lang.org/en/documentation/installation/) for your platform.
