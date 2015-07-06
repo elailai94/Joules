@@ -27,7 +27,7 @@ We'd love to have your help in making Joules better.
    ```
 
 ### Issues
-The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used to track bugs and features. 
+The [GitHub issue tracker](https://www.github.com/elailai94/Joules/issues) is used to track bugs and features. 
 #### Bug Reports
 When submitting a bug report, please use the following guidelines:
 
@@ -46,10 +46,10 @@ When submitting a feature request, please use the following guidelines:
 > Note: Contribution enquiries should take place before any significant pull request. Otherwise, you risk spending a lot of time working on something that might be rejected for good reasons.
 
 ### Coding Convention
-Although there is currently no strict set of coding or style guidelines, it is advised that you use common sense when contributing code and make an effort to use a similar style to nearby existing code. It is strongly recommended that you read through the [Ruby style guide](https://github.com/styleguide/ruby).
+Although there is currently no strict set of coding or style guidelines, it is advised that you use common sense when contributing code and make an effort to use a similar style to nearby existing code. It is strongly recommended that you read through the [Ruby style guide](https://www.github.com/styleguide/ruby).
 
 ### Documentation Convention
-The YARD documentation
+The [YARD documentation style](http://www.rubydoc.info/gems/yard/file/docs/GettingStarted.md) is used to document code.
 
 ### License
-By contributing to Joules, you agree that your contributions will be licensed under its [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
+By contributing to Joules, you agree that your contributions will be licensed under its [MIT license](https://www.github.com/elailai94/Joules/blob/master/LICENSE.md).
