@@ -26,11 +26,9 @@ We'd love to have your help in making Joules better.
    rake test
    ```
 
-### Coding Conventions
-
 ### Issues
 The [GitHub issue tracker](https://github.com/elailai94/Joules/issues) is used to track bugs and features. 
-#### Bug Report
+#### Bug Reports
 When submitting a bug report, please use the following guidelines:
 
 1. **Use the GitHub issue search** to check if the bug has already been reported.
@@ -38,7 +36,7 @@ When submitting a bug report, please use the following guidelines:
 3. **Isolate the problem** by creating a reduced test case and a live example.
 4. **Elaborate as much as possible in your report** by including specific information about the environment (e.g.: operating system and version, library (gem) version, etc.) and steps required to reproduce the issue.
 
-#### Feature Request
+#### Feature Requests
 When submitting a feature request, please use the following guidelines:
 
 1. **Use the GitHub issue search** to check if the feature has already been suggested.
@@ -46,6 +44,12 @@ When submitting a feature request, please use the following guidelines:
 3. **Elaborate as much as possible in your report** by providing as much detail and context as possible on why your idea fits the scope and aims of the project.
 
 > Note: Contribution enquiries should take place before any significant pull request. Otherwise, you risk spending a lot of time working on something that might be rejected for good reasons.
+
+### Coding Convention
+Although there is currently no strict set of coding or style guidelines, it is advised that you use common sense when contributing code and make an effort to use a similar style to nearby existing code. It is strongly recommended that you read through the [Ruby style guide](https://github.com/styleguide/ruby).
+
+### Documentation Convention
+The YARD documentation
 
 ### License
 By contributing to Joules, you agree that your contributions will be licensed under its [MIT license](https://github.com/elailai94/Joules/blob/master/LICENSE.md).
