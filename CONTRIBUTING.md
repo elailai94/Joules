@@ -1,5 +1,5 @@
 ## Contributing to Joules
-We'd love to have your help in making Joules better. 
+In order to make Joules better, everyone is encouraged to help improve this project. Before diving into the code, please familiarize yourself with the following guidelines and conventions.
 
 ### Getting Started
 1. Install the [Ruby programming language](https://www.ruby-lang.org/en/documentation/installation/) for your platform.
@@ -62,7 +62,7 @@ When submitting a feature request, please use the following guidelines:
 4. Add documentation for your feature or bug fix.
 5. Run ```rake doc:yard``` or ```yard doc```. If your changes are not 100% documented, go back to step 4.
 6. Commit and push your changes.
-7. Submit a pull request. Please do not include changes to the gemspec, version, or history file. (If you want to create your own version for some reason, please do so in a separate commit.)
+7. Submit a [pull request](https://help.github.com/articles/using-pull-requests/) with a clear title and description. Please do not include changes to the gemspec, version, or history file. (If you want to create your own version for some reason, please do so in a separate commit.)
 
 ### Coding Convention
 Although there is currently no strict set of coding or style guidelines, it is advised that you use common sense when contributing code and make an effort to use a similar style to nearby existing code. It is strongly recommended that you read through the [Ruby style guide](https://www.github.com/styleguide/ruby).
