@@ -1,6 +1,6 @@
 ![Joules Logo](https://cloud.githubusercontent.com/assets/7763904/7764836/ef617b0a-0024-11e5-8044-3cf354a4a306.png)
 
-[![Ruby Badge](http://forthebadge.com/images/badges/built-with-ruby.svg)](http://forthebadge.com)
+[![Ruby Badge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
 
 [![Gem Version](https://badge.fury.io/rb/joules.svg)](http://badge.fury.io/rb/joules)
 [![Build Status](https://travis-ci.org/elailai94/Joules.svg?)](https://travis-ci.org/elailai94/Joules)
