@@ -24,7 +24,7 @@ module Joules
   #   Joules.particle_acceleration(2.4, 3) #=> -17.28
   # @note There is one other method for calculating acceleration.
   def particle_acceleration(angular_velocity, particle_displacement)
-    return (- (angular_velocity ** 2.0) * particle_displacement)
+    (- (angular_velocity**2.0) * particle_displacement)
   end
 
   # Calculates the displacement of a particle in oscillation given amplitude, angular velocity, and time.
@@ -39,7 +39,7 @@ module Joules
   # @example
   #   Joules.particle_displacement(5, 2.4, 3) #=> 3.041756572661276
   def particle_displacement(amplitude, angular_velocity, time)
-    return amplitude * Math.cos(angular_velocity * time)
+    amplitude * Math.cos(angular_velocity * time)
   end
 
   # Calculates the velocity of a particle in oscillation given angular velocity, amplitude, and particle displacement.
@@ -56,7 +56,7 @@ module Joules
   # @example
   #   Joules.particle_velocity(2.4, 5, 3) #=> [9.6, -9.6]
   def particle_velocity(angular_velocity, amplitude, particle_displacement, return_sign = nil)
-    return_value = angular_velocity * (((amplitude ** 2) - (particle_displacement ** 2)) ** 0.5)
+    return_value = angular_velocity * (((amplitude**2) - (particle_displacement**2))**0.5)
     if return_sign == '-'
       return (- return_value)
     elsif return_sign == '+'
@@ -76,7 +76,7 @@ module Joules
   # @example
   #   Joules.maximum_speed(2.4, 5) #=> 12.0
   def max_particle_speed(angular_velocity, amplitude)
-    return angular_velocity * amplitude.to_f
+    angular_velocity * amplitude.to_f
   end
 
   # Calculates the maximum acceleration of a particle in oscillation given angular velocity and amplitude.
@@ -89,7 +89,7 @@ module Joules
   # @example
   #   Joules.maximum_acceleration(2.4, 5) #=> 28.799999999999997
   def max_particle_acceleration(angular_velocity, amplitude)
-    return (angular_velocity ** 2.0) * amplitude
+    (angular_velocity**2.0) * amplitude
   end
 
   # Calculates the time period of a mass-spring system given mass and spring constant.
@@ -105,9 +105,9 @@ module Joules
   # @note There are two other methods for calculating time period.
   def time_period_v2(mass, spring_constant)
     if spring_constant.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return 2 * Math::PI * ((mass / spring_constant.to_f) ** 0.5)
+      return 2 * Math::PI * ((mass / spring_constant.to_f)**0.5)
     end
   end
 
@@ -120,9 +120,8 @@ module Joules
   #   Joules.time_period_v3(8.4) #=> 5.814133609631141
   # @note There are two other methods for calculating time period.
   def time_period_v3(pendulum_length)
-    return 2 * Math::PI * ((pendulum_length / FREE_FALL_ACCELERATION) ** 0.5)
+    2 * Math::PI * ((pendulum_length / FREE_FALL_ACCELERATION)**0.5)
   end
 
   # @!endgroup
-
 end

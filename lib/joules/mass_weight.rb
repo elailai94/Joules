@@ -21,7 +21,7 @@ module Joules
   # @example
   #   Joules.weight(79.41) #=> 779.0121
   def weight(mass)
-    return mass * FREE_FALL_ACCELERATION
+    mass * FREE_FALL_ACCELERATION
   end
 
   # Calculates the mass given weight.
@@ -32,9 +32,8 @@ module Joules
   # @example
   #   Joules.mass(779.0121) #=> 79.41
   def mass(weight)
-    return weight / FREE_FALL_ACCELERATION
+    weight / FREE_FALL_ACCELERATION
   end
 
   # @!endgroup
-
 end

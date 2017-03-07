@@ -27,10 +27,10 @@ module Joules
   #   Joules.gravitational_force(2e30, 1.9e27, 7.8e11) #=> 4.166009204470743e+23
   def gravitational_force(object_mass1, object_mass2, distance)
     if distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return (GRAVITATIONAL_CONSTANT * object_mass1 * object_mass2) /
-             (distance ** 2)
+        (distance**2)
     end
   end
 
@@ -47,7 +47,7 @@ module Joules
   # @note There is one other method for calculating gravitational field strength.
   def gravitational_field_strength_v1(force, mass)
     if mass.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return force / mass.to_f
     end
@@ -66,9 +66,9 @@ module Joules
   # @note There is one other method for calculating gravitational field strength.
   def gravitational_field_strength_v2(mass, distance)
     if distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
-      return (GRAVITATIONAL_CONSTANT * mass) / (distance ** 2)
+      return (GRAVITATIONAL_CONSTANT * mass) / (distance**2)
     end
   end
 
@@ -84,12 +84,11 @@ module Joules
   #   Joules.gravitational_potential(6e24, 6.4e6) #=> -62531250.0
   def gravitational_potential(mass, distance)
     if distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return (-GRAVITATIONAL_CONSTANT * mass) / distance
     end
   end
 
   # @!endgroup
-
 end

@@ -24,7 +24,7 @@ module Joules
   #   Joules.force_v1(120, 2.67) #=> 320.4
   # @note There are two other methods for calculating force.
   def force_v1(mass, acceleration)
-    return mass * acceleration.to_f
+    mass * acceleration.to_f
   end
 
   # Calculates the force given spring constant and extension.
@@ -38,7 +38,7 @@ module Joules
   #   Joules.force_v2(81.75, 2.4) #=> 196.2
   # @note There are two other methods for calculating force.
   def force_v2(spring_constant, extension)
-    return spring_constant * extension.to_f
+    spring_constant * extension.to_f
   end
 
   # Calculates the force given initial velocity, final velocity, mass, and time.
@@ -58,7 +58,7 @@ module Joules
   # @note There are two other methods for calculating force.
   def force_v3(initial_velocity, final_velocity, mass, time)
     if time.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return ((final_velocity - initial_velocity) * mass) / time.to_f
     end
@@ -74,7 +74,7 @@ module Joules
   # @example
   #   Joules.maximum_friction_force(0.4, 29.43) #=> 11.772
   def maximum_friction_force(coefficient_of_friction, normal_force)
-    return coefficient_of_friction * normal_force.to_f
+    coefficient_of_friction * normal_force.to_f
   end
 
   # Calculates the buoyant force given density and volume of liquid displaced.
@@ -87,7 +87,7 @@ module Joules
   # @example
   #   Joules.buoyant_force(1000, 0.00150) #=> 14.715
   def buoyant_force(density, volume_of_liquid_displaced)
-    return density * FREE_FALL_ACCELERATION * volume_of_liquid_displaced
+    density * FREE_FALL_ACCELERATION * volume_of_liquid_displaced
   end
 
   # Calculates the moment given force, distance, and angle.
@@ -102,9 +102,8 @@ module Joules
   # @example
   #   Joules.moment(23, 4.5) #=> 103.5
   def moment(force, distance, angle = 90)
-    return force * distance * Math.sin(to_radians(angle))
+    force * distance * Math.sin(to_radians(angle))
   end
 
   # @!endgroup
-
 end

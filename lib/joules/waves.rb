@@ -23,7 +23,7 @@ module Joules
   # @example
   #   Joules.wave_speed(3250, 0.1) #=> 325.0
   def wave_speed(frequency, wavelength)
-    return frequency * wavelength.to_f
+    frequency * wavelength.to_f
   end
 
   # Calculates the wavelength given wave speed and frequency.
@@ -38,7 +38,7 @@ module Joules
   #   Joules.wavelength(325, 3250) #=> 0.1
   def wavelength(wave_speed, frequency)
     if frequency.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return wave_speed / frequency.to_f
     end
@@ -57,7 +57,7 @@ module Joules
   # @note There is one other method for calculating frequency.
   def frequency_v1(wave_speed, wavelength)
     if wavelength.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return wave_speed / wavelength.to_f
     end
@@ -74,7 +74,7 @@ module Joules
   # @note There is one other method for calculating frequency.
   def frequency_v2(time_period)
     if time_period.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return 1.0 / time_period
     end
@@ -91,7 +91,7 @@ module Joules
   # @note There are two other methods for calculating time period.
   def time_period_v1(frequency)
     if frequency.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return 1.0 / frequency
     end
@@ -109,7 +109,7 @@ module Joules
   #   Joules.intensity(50, 2) #=> 25.0
   def intensity(power, area)
     if area.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return power / area.to_f
     end
@@ -127,10 +127,10 @@ module Joules
   # @note There is one other method for calculating refractive index.
   def refractive_index_v1(angle_of_incidence, angle_of_refraction)
     if angle_of_refraction.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return Math.sin(to_radians(angle_of_incidence)) /
-             Math.sin(to_radians(angle_of_refraction))
+        Math.sin(to_radians(angle_of_refraction))
     end
   end
 
@@ -144,7 +144,7 @@ module Joules
   # @note There is one other method for calculating refractive index.
   def refractive_index_v2(critical_angle)
     if critical_angle.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return 1.0 / Math.sin(to_radians(critical_angle))
     end
@@ -162,7 +162,7 @@ module Joules
   #   Joules.magnification(10, 5) #=> 2.0
   def magnification(image_height, object_height)
     if object_height.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return image_height / object_height.to_f
     end
@@ -180,7 +180,7 @@ module Joules
   #   Joules.focal_length(45.7, 22.8) #=> 15.21109489051095
   def focal_length(object_distance, image_distance)
     if object_distance.zero? || image_distance.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return 1 / ((1.0 / object_distance) + (1.0 / image_distance))
     end
@@ -196,12 +196,11 @@ module Joules
   #   Joules.power_of_lens(2) #=> 0.5
   def power_of_lens(focal_length)
     if focal_length.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return 1.0 / focal_length
     end
   end
 
   # @!endgroup
-
 end

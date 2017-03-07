@@ -26,7 +26,7 @@ module Joules
   #   Joules.energy_v1(500, 2.46, 3.6) #=> 4428.0
   # @note There are two other methods for calculating energy.
   def energy_v1(mass, specific_heat_capacity, temperature_change)
-    return mass * specific_heat_capacity * temperature_change.to_f
+    mass * specific_heat_capacity * temperature_change.to_f
   end
 
   # Calculates the energy given mass and specific latent heat.
@@ -40,9 +40,8 @@ module Joules
   #   Joules.energy_v2(84.3, 72.1) #=> 6078.03
   # @note There are two other methods for calculating energy.
   def energy_v2(mass, specific_latent_heat)
-    return mass * specific_latent_heat.to_f
+    mass * specific_latent_heat.to_f
   end
 
   # @!endgroup
-
 end

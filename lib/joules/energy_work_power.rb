@@ -23,7 +23,7 @@ module Joules
   # @example
   #   Joules.gravitational_potential_energy(0.5, 6) #=> 29.43
   def gravitational_potential_energy(mass, height)
-    return mass * FREE_FALL_ACCELERATION * height
+    mass * FREE_FALL_ACCELERATION * height
   end
 
   # Calculates the elastic potential energy given spring constant and extension.
@@ -36,7 +36,7 @@ module Joules
   # @example
   #   Joules.elastic_potential_energy(81.75, 2.4) #=> 235.44
   def elastic_potential_energy(spring_constant, extension)
-    return 0.5 * spring_constant * (extension ** 2)
+    0.5 * spring_constant * (extension**2)
   end
 
   # Calculates the kinetic energy given mass and velocity.
@@ -50,7 +50,7 @@ module Joules
   #   Joules.kinetic_energy_v1(500, 22) #=> 121000.0
   # @note There is one other method for calculating kinetic energy.
   def kinetic_energy_v1(mass, velocity)
-    return 0.5 * mass * (velocity ** 2)
+    0.5 * mass * (velocity**2)
   end
 
   # Calculates the work done given force, displacement, and angle.
@@ -65,7 +65,7 @@ module Joules
   # @example
   #   Joules.work_done(40, 2.34) #=> 93.6
   def work_done(force, displacement, angle = 0)
-    return force * displacement * Math.cos(to_radians(angle))
+    force * displacement * Math.cos(to_radians(angle))
   end
 
   # Calculates the power given work done and time.
@@ -81,7 +81,7 @@ module Joules
   # @note There are four other methods for calculating power.
   def power_v1(work_done, time)
     if time.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return work_done / time.to_f
     end
@@ -100,7 +100,7 @@ module Joules
   #   Joules.power_v2(42, 2.3) #=> 96.6
   # @note There are four other methods for calculating power.
   def power_v2(force, velocity, angle = 0)
-    return force * velocity * Math.cos(to_radians(angle))
+    force * velocity * Math.cos(to_radians(angle))
   end
 
   # Calculates the energy efficiency given useful energy output and energy input.
@@ -115,7 +115,7 @@ module Joules
   #   Joules.energy_efficiency(16, 20) #=> 80.0
   def energy_efficiency(useful_energy_output, energy_input)
     if energy_input.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return (useful_energy_output / energy_input.to_f) * 100
     end
@@ -133,12 +133,11 @@ module Joules
   #   Joules.power_efficiency(26, 40) #=> 65.0
   def power_efficiency(useful_power_output, power_input)
     if power_input.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return (useful_power_output / power_input.to_f) * 100
     end
   end
 
   # @!endgroup
-
 end

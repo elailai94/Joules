@@ -25,7 +25,7 @@ module Joules
   #   Joules.pressure(98, 0.04) #=> 2450.0
   def pressure(force, area)
     if area.zero?
-      raise ZeroDivisionError.new('divided by 0')
+      fail ZeroDivisionError.new('divided by 0')
     else
       return force / area.to_f
     end
@@ -41,9 +41,8 @@ module Joules
   # @example
   #   Joules.hydrostatic_pressure(1000, 5) #=> 49050.0
   def hydrostatic_pressure(density, height)
-    return density * FREE_FALL_ACCELERATION * height
+    density * FREE_FALL_ACCELERATION * height
   end
 
   # @!endgroup
-
 end

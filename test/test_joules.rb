@@ -17,15 +17,15 @@ EPSILON = 0.00001
 # Unit tests for circular motion module
 class CircularMotionTests < Test::Unit::TestCase
   def test_angular_velocity_v1_extreme_1
-    assert_in_epsilon(0, angular_velocity_v1(0,0.001), EPSILON)
+    assert_in_epsilon(0, angular_velocity_v1(0, 0.001), EPSILON)
   end
 
   def test_angular_velocity_v1_extreme_2
-    assert_in_epsilon(1.03010, angular_velocity_v1(928476103, 901348726), EPSILON)
+    assert_in_epsilon(1.03010, angular_velocity_v1(928_476_103, 901_348_726), EPSILON)
   end
 
   def test_angular_velocity_v1_big_divisor
-    assert_in_epsilon(6.32386e-09, angular_velocity_v1(5.7, 901348726), EPSILON)
+    assert_in_epsilon(6.32386e-09, angular_velocity_v1(5.7, 901_348_726), EPSILON)
   end
 
   def test_angular_velocity_v1_zero_division
@@ -42,15 +42,15 @@ end
 # Unit tests for kinematics module
 class KinematicsTests < Test::Unit::TestCase
   def test_avg_speed_extreme_1
-    assert_in_epsilon(0, avg_speed(0,0.001), EPSILON)
+    assert_in_epsilon(0, avg_speed(0, 0.001), EPSILON)
   end
 
   def test_avg_speed_extreme_2
-    assert_in_epsilon(1.03010, avg_speed(928476103, 901348726), EPSILON)
+    assert_in_epsilon(1.03010, avg_speed(928_476_103, 901_348_726), EPSILON)
   end
 
   def test_avg_speed_big_divisor
-    assert_in_epsilon(6.32386e-09, avg_speed(5.7, 901348726), EPSILON)
+    assert_in_epsilon(6.32386e-09, avg_speed(5.7, 901_348_726), EPSILON)
   end
 
   def test_avg_speed_zero_division

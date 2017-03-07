@@ -23,7 +23,7 @@ module Joules
   # @example
   #   Joules.arc_length(12, (Math::PI/4)) #=> 9.42477796076938
   def arc_length(radius, central_angle)
-    return radius * central_angle.to_f
+    radius * central_angle.to_f
   end
 
   # @!endgroup
@@ -38,7 +38,7 @@ module Joules
   # @example
   #   Joules.circumference(12) #=> 75.398223686155
   def circumference(radius)
-    return 2 * Math::PI * radius
+    2 * Math::PI * radius
   end
 
   # @!endgroup
@@ -55,7 +55,7 @@ module Joules
   # @example
   #   Joules.triangle_area(2, 3.4) #=> 3.4
   def triangle_area(base, height)
-    return 0.5 * base * height
+    0.5 * base * height
   end
 
   # Calculates the area of a trapezium given top base, bottom base, and height.
@@ -70,7 +70,7 @@ module Joules
   # @example
   #   Joules.trapezium_area(10, 15, 3) #=> 37.5
   def trapezium_area(top_base, bottom_base, height)
-    return 0.5 * (top_base + bottom_base) * height
+    0.5 * (top_base + bottom_base) * height
   end
 
   # Calculates the area of a rectangle given length and width.
@@ -83,7 +83,7 @@ module Joules
   # @example
   #   Joules.rectangle_area(2, 3.4) #=> 6.8
   def rectangle_area(length, width)
-    return length * width.to_f
+    length * width.to_f
   end
 
   # Calculates the area of a circle given radius.
@@ -94,7 +94,7 @@ module Joules
   # @example
   #   Joules.circle_area(12) #=> 452.38934211693
   def circle_area(radius)
-    return Math::PI * (radius ** 2)
+    Math::PI * (radius**2)
   end
 
   # @!endgroup
@@ -109,7 +109,7 @@ module Joules
   # @example
   #   Joules.sphere_volume(12) #=> 7238.229473870883
   def sphere_volume(radius)
-    return (4 * circle_area(radius) * radius) / 3
+    (4 * circle_area(radius) * radius) / 3
   end
 
   # Calculates the volume of a cone given radius and height.
@@ -122,7 +122,7 @@ module Joules
   # @example
   #   Joules.cone_volume(6.5, 3) #=> 132.73228961416876
   def cone_volume(radius, height)
-    return (circle_area(radius) * height) / 3
+    (circle_area(radius) * height) / 3
   end
 
   # Calculates the volume of a cylinder given radius and height.
@@ -135,7 +135,7 @@ module Joules
   # @example
   #   Joules.cylinder_volume(6.5, 3) #=> 398.196868842506
   def cylinder_volume(radius, height)
-    return circle_area(radius) * height
+    circle_area(radius) * height
   end
 
   # @!endgroup
@@ -150,7 +150,7 @@ module Joules
   # @example
   #   Joules.sphere_surface_area(12) #=> 1809.5573684677208
   def sphere_surface_area(radius)
-    return 4 * circle_area(radius)
+    4 * circle_area(radius)
   end
 
   # Calculates the surface area of a cone given radius and slant height.
@@ -163,7 +163,7 @@ module Joules
   # @example
   #   Joules.cone_surface_area(3, 5.83) #=> 83.22078939359362
   def cone_surface_area(radius, slant_height)
-    return circle_area(radius) + (Math::PI * radius * slant_height)
+    circle_area(radius) + (Math::PI * radius * slant_height)
   end
 
   # Calulates the surface area of a cylinder given radius and height.
@@ -176,9 +176,8 @@ module Joules
   # @example
   #   Joules.cylinder_surface_area(6.5, 3) #=> 122.522113490002
   def cylinder_surface_area(radius, height)
-    return circumference(radius) * height
+    circumference(radius) * height
   end
 
   # @!group
-
 end
